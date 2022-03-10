@@ -14,5 +14,6 @@ reference:
   - title: "Log utilities"
     desc: "Log utilities"
     contents:
+      - log_system_info
       - register_logger
       - suppress_logs

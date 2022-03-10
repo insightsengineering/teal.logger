@@ -1,7 +1,7 @@
 #' Logs the basic information about the session.
 #'
 #' @return `invisible(NULL)`
-#' @keywords internal
+#' @export
 #'
 log_system_info <- function() {
   paste_pkgs_name_with_version <- function(names) {
