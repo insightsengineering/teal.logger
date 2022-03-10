@@ -1,0 +1,17 @@
+---
+url: https://github.com/insightsengineering/teal.logger
+
+template:
+  params:
+    bootswatch: cerulean
+
+navbar:
+  right:
+    - icon: fa-github
+      href: https://github.com/insightsengineering/teal.logger
+
+reference:
+  - title: "Log utilities"
+    desc: "Log utilities"
+    contents:
+      - register_logger
