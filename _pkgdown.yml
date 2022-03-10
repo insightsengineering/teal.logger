@@ -15,3 +15,4 @@ reference:
     desc: "Log utilities"
     contents:
       - register_logger
+      - suppress_logs

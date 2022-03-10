@@ -10,9 +10,15 @@ suppress_logs()
 \code{NULL} invisible
 }
 \description{
-This function will suppress the logger when running tests
-in order to suppress logs for a single test add this function
-call within the test_that function. To suppress logs for an entire
-test file, call this function at the start of the file
+This function suppresses \code{logger} when running tests via \code{testthat}.
+To suppress logs for a single test, add this function
+call within the \code{testthat::test_that} expression. To suppress logs for an entire
+test file, call this function at the start of the file.
 }
-\keyword{internal}
+\examples{
+testthat::test_that("An example test", {
+  suppress_logs()
+  testthat::expect_true(TRUE)
+})
+
+}
