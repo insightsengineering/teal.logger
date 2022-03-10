@@ -30,6 +30,8 @@ Suggests:
     testthat (>= 2.0)
 VignetteBuilder:
     knitr
+RdMacros:
+    lifecycle
 Encoding: UTF-8
 Language: en-US
 LazyData: true
