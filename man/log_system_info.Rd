@@ -12,4 +12,3 @@ log_system_info()
 \description{
 Logs the basic information about the session.
 }
-\keyword{internal}
