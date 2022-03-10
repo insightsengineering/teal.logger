@@ -16,4 +16,3 @@ downstream_repos:
   insightsengineering/teal:
     repo: insightsengineering/teal
     host: https://github.com
-  
