@@ -4,9 +4,9 @@
 \name{teal.logger-package}
 \alias{teal.logger}
 \alias{teal.logger-package}
-\title{teal.logger: Logging setup for the teal family of packages}
+\title{teal.logger: Logging Setup For The `teal` Family Of Packages}
 \description{
-Logging setup for the teal family of packages.
+Logging setup for the \code{teal} family of packages.
 }
 \author{
 \strong{Maintainer}: NEST \email{basel.nestcicd@roche.com}

@@ -1,5 +1,5 @@
 Package: teal.logger
-Title: Logging setup for the teal family of packages
+Title: Logging Setup For The `teal` Family Of Packages
 Version: 0.0.0.9001
 Date: 2022-03-10
 Authors@R: c(
