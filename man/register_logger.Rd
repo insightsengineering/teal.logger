@@ -64,3 +64,6 @@ logger::log_info("Hello from new_namespace", namespace = "new_namespace")
 }
 
 }
+\seealso{
+The package vignettes for more help: \code{browseVignettes("teal.logger")}.
+}
