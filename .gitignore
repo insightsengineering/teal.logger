@@ -12,10 +12,10 @@
 .project
 .settings/**
 /.project
-Meta
+/Meta/
 coverage.*
 devel/*
-doc
+/doc/
 docs
 inst/outputs/*
 logs
