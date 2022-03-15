@@ -2,12 +2,7 @@
 title: "Getting started"
 author: "NEST CoreDev Team"
 date: "15.03.2022"
-output:
-  rmarkdown::html_document:
-    theme: "spacelab"
-    highlight: "kate"
-    toc: true
-    toc_float: true
+output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Getting started}
   %\VignetteEngine{knitr::rmarkdown}

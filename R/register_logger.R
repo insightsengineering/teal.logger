@@ -25,6 +25,8 @@
 #' The logs are output to `stdout` by default. Check `logger` for more information
 #' about layouts and how to use `logger`.
 #'
+#' @seealso The package vignettes for more help: `browseVignettes("teal.logger")`.
+#'
 #' @param namespace (`character(1)` or `NA`)\cr
 #'  the name of the logging namespace
 #' @param layout (`character(1)`)\cr
