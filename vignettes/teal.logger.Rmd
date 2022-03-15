@@ -35,7 +35,7 @@ Look at the [`logger` documentation](https://daroczig.github.io/logger/articles/
 information on what different logging levels mean and how to interpret the layout.
 
 ## Customizing the log level
-When using `register_logger` the logging level of the new logger defaults to `logger::INFO`. You can customize this behaviour in 4 different ways:
+When using `register_logger` the logging level of the new logger defaults to `logger::INFO`. You can customize this behavior in 4 different ways:
 1. Using the `logger` interface.
 ```r
 library(teal.logger)
@@ -106,7 +106,7 @@ register_logger('teal.logger')
 For more information, have a look at the [`logger` documentation](https://daroczig.github.io/logger/articles/customize_logger.html) and the documentation for `teal::register_logger`.
 
 ## Customizing the log layout
-When using `register_logger` the log layout of the new logger defaults to `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`. You can customize this behaviour in 4 different ways:
+When using `register_logger` the log layout of the new logger defaults to `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`. You can customize this behavior in 4 different ways:
 1. Using the `logger` interface.
 ```r
 library(teal.logger)
@@ -177,7 +177,7 @@ register_logger('teal.logger')
 For more information, have a look at the [`logger` documentation](https://daroczig.github.io/logger/articles/customize_logger.html) and the documentation for `teal::register_logger`.
 
 ## Customizing the log destination
-`teal.logger`, by default emits logs to `stdout`. If you want to change its behaviour, you have to use [`logger`'s API](https://daroczig.github.io/logger/articles/customize_logger.html#delivering-log-records-to-their-destination-1).
+`teal.logger`, by default emits logs to `stdout`. If you want to change its behavior, you have to use [`logger`'s API](https://daroczig.github.io/logger/articles/customize_logger.html#delivering-log-records-to-their-destination-1).
 
 Example of redirecting `teal`'s logs to `stderr` using `logger`'s API:
 ```r
