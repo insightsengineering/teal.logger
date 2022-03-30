@@ -12,6 +12,7 @@ vignette: >
 ## Introduction
 The `teal.logger` package uses the `logger` framework to log events in a package. `logger` is an R package supporting logging namespaces, hierarchical logging, variety of log destinations, vectorization, etc.
 More information on  `logger` can be found on:
+
 * [GitHub](https://github.com/daroczig/logger)
 * [CRAN](https://cran.r-project.org/web/packages/logger/vignettes/Intro.html)
 
@@ -22,6 +23,7 @@ More information on  `logger` can be found on:
 filter panel, records of merging the data slices inside the modules, etc.
 
 `teal.logger`'s defaults:
+
 * logging level: `logger.INFO`
 * logging layout: `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`
 * logs emitted to `stdout`
