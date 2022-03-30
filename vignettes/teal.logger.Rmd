@@ -33,6 +33,7 @@ information on what different logging levels mean and how to interpret the layou
 
 ## Customizing the log level
 When using `register_logger` the logging level of the new logger defaults to `logger::INFO`. You can customize this behavior in 4 different ways:
+
 1. Using the `logger` interface.
 ```r
 library(teal.logger)
@@ -56,7 +57,7 @@ library(teal.logger)
 register_logger(namespace = "teal", level = logger::TRACE)
 ```
 
-3. Setting an environmental variable.
+3. Setting an environment variable.
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
@@ -80,7 +81,7 @@ options(teal.log_level = logger::TRACE)
 library(teal.logger)
 ```
 
-Please, note that packages in the `teal` framework register their loggers when loading a library, which means that if you want to change its default logging level via an option or a system environmental variable, you should change the variable first, then load the library. Example below:
+Please, note that packages in the `teal` framework register their loggers when loading a library, which means that if you want to change its default logging level via an option or a system environment variable, you should change the variable first, then load the library. Example below:
 ```r
 # library(teal)
 # Sys.setenv(TEAL.LOG_LEVEL = "TRACE") # won't change the default
@@ -104,6 +105,7 @@ For more information, have a look at the [`logger` documentation](https://darocz
 
 ## Customizing the log layout
 When using `register_logger` the log layout of the new logger defaults to `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`. You can customize this behavior in 4 different ways:
+
 1. Using the `logger` interface.
 ```r
 library(teal.logger)
@@ -127,7 +129,7 @@ library(teal.logger)
 register_logger(namespace = "teal", layout = "{level} {msg}")
 ```
 
-3. Setting an environmental variable.
+3. Setting an environment variable.
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
@@ -151,7 +153,7 @@ options(teal.log_layout = "{level} {msg}")
 library(teal.logger)
 ```
 
-Please, note that `teal` registers its logger when loading the library, which means that if you want to change its default logging layout via an option or a system environmental variable, you should change the variable first, then load the library. Example below:
+Please, note that `teal` registers its logger when loading the library, which means that if you want to change its default logging layout via an option or a system environment variable, you should change the variable first, then load the library. Example below:
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}") # won't change the default
