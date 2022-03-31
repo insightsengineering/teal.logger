@@ -12,6 +12,7 @@ vignette: >
 ## Introduction
 The `teal.logger` package uses the `logger` framework to log events in a package. `logger` is an R package supporting logging namespaces, hierarchical logging, variety of log destinations, vectorization, etc.
 More information on  `logger` can be found on:
+
 * [GitHub](https://github.com/daroczig/logger)
 * [CRAN](https://cran.r-project.org/web/packages/logger/vignettes/Intro.html)
 
@@ -22,6 +23,7 @@ More information on  `logger` can be found on:
 filter panel, records of merging the data slices inside the modules, etc.
 
 `teal.logger`'s defaults:
+
 * logging level: `logger.INFO`
 * logging layout: `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`
 * logs emitted to `stdout`
@@ -31,6 +33,7 @@ information on what different logging levels mean and how to interpret the layou
 
 ## Customizing the log level
 When using `register_logger` the logging level of the new logger defaults to `logger::INFO`. You can customize this behavior in 4 different ways:
+
 1. Using the `logger` interface.
 ```r
 library(teal.logger)
@@ -54,7 +57,7 @@ library(teal.logger)
 register_logger(namespace = "teal", level = logger::TRACE)
 ```
 
-3. Setting an environmental variable.
+3. Setting an environment variable.
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
@@ -78,7 +81,7 @@ options(teal.log_level = logger::TRACE)
 library(teal.logger)
 ```
 
-Please, note that packages in the `teal` framework register their loggers when loading a library, which means that if you want to change its default logging level via an option or a system environmental variable, you should change the variable first, then load the library. Example below:
+Please, note that packages in the `teal` framework register their loggers when loading a library, which means that if you want to change its default logging level via an option or a system environment variable, you should change the variable first, then load the library. Example below:
 ```r
 # library(teal)
 # Sys.setenv(TEAL.LOG_LEVEL = "TRACE") # won't change the default
@@ -102,6 +105,7 @@ For more information, have a look at the [`logger` documentation](https://darocz
 
 ## Customizing the log layout
 When using `register_logger` the log layout of the new logger defaults to `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`. You can customize this behavior in 4 different ways:
+
 1. Using the `logger` interface.
 ```r
 library(teal.logger)
@@ -125,7 +129,7 @@ library(teal.logger)
 register_logger(namespace = "teal", layout = "{level} {msg}")
 ```
 
-3. Setting an environmental variable.
+3. Setting an environment variable.
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
@@ -149,7 +153,7 @@ options(teal.log_layout = "{level} {msg}")
 library(teal.logger)
 ```
 
-Please, note that `teal` registers its logger when loading the library, which means that if you want to change its default logging layout via an option or a system environmental variable, you should change the variable first, then load the library. Example below:
+Please, note that `teal` registers its logger when loading the library, which means that if you want to change its default logging layout via an option or a system environment variable, you should change the variable first, then load the library. Example below:
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}") # won't change the default
@@ -181,7 +185,7 @@ logger::log_appender(logger::appender_stderr, namespace = "teal")
 ```
 
 ## Logging in other `teal.X` packages
-The other `teal.X` packages, like `teal.modules.general` use `teal.logger::register_logger` to register loggers in their namespace. Each package registers a logger in the namespace equal to the package name. E.g. `teal.modules.general` registers a logger in `teal.modules.general` namespace. A package instantiates its logger during the package loading, the same as `teal`, using `teal`'s default logging settings subject to the same modifications as `teal`'s logger.
+The other `teal.X` packages, like `teal.data` use `teal.logger::register_logger` to register loggers in their namespace. Each package registers a logger in the namespace equal to the package name. E.g. `teal.data` registers a logger in `teal.data` namespace. A package instantiates its logger during the package loading, the same as `teal`, using `teal`'s default logging settings subject to the same modifications as `teal`'s logger.
 
 ## Example of usage
 A minimal working example of logging using `teal`'s logging setup. By default `TEAL.LOG.LEVEL = "INFO"` which means that logs of level above `level = 400` won't be passed to the `stdout`.
