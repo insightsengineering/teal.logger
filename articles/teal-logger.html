@@ -33,39 +33,21 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">teal.logger</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9003</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.1</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="../reference/index.html">Reference</a>
+  <a href="../articles/teal-logger.html">Get started</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/teal.logger.html">Getting started</a>
-    </li>
-  </ul>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
-<!-- start_releases -->
-<li class="dropdown">
-	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-Other releases
-<span class="caret"></span></a><ul class="dropdown-menu" role="menu">
-   <li><a href="../index.html">latest</a></li>
-   <li><a href="..//index.html"></a></li>
-</ul></li>
-<!-- end_releases -->
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -94,7 +76,7 @@ Team</h4>
             <h4 data-toc-skip class="date">15.03.2022</h4>
       
       
-      <div class="hidden name"><code>teal.logger.Rmd</code></div>
+      <div class="hidden name"><code>teal-logger.Rmd</code></div>
 
     </div>
 
@@ -107,7 +89,11 @@ Team</h4>
 framework to log events in a package. <code>logger</code> is an R
 package supporting logging namespaces, hierarchical logging, variety of
 log destinations, vectorization, etc. More information on
-<code>logger</code> can be found on: * <a href="https://github.com/daroczig/logger" class="external-link">GitHub</a> * <a href="https://cran.r-project.org/web/packages/logger/vignettes/Intro.html" class="external-link">CRAN</a></p>
+<code>logger</code> can be found on:</p>
+<ul>
+<li><a href="https://github.com/daroczig/logger" class="external-link">GitHub</a></li>
+<li><a href="https://cran.r-project.org/web/packages/logger/vignettes/Intro.html" class="external-link">CRAN</a></li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="teal-loggers-default-logging-setup">
@@ -121,10 +107,16 @@ pair of default layout and logging level. Other packages in the
 important events, e.g. setup of <code>teal</code> data, changes in the
 filter panel, records of merging the data slices inside the modules,
 etc.</p>
-<p><code>teal.logger</code>’s defaults: * logging level:
-<code>logger.INFO</code> * logging layout:
+<p><code>teal.logger</code>’s defaults:</p>
+<ul>
+<li>logging level: <code>logger.INFO</code>
+</li>
+<li>logging layout:
 <code>[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}</code>
-* logs emitted to <code>stdout</code></p>
+</li>
+<li>logs emitted to <code>stdout</code>
+</li>
+</ul>
 <p>Look at the <a href="https://daroczig.github.io/logger/articles/customize_logger.html" class="external-link"><code>logger</code>
 documentation</a> for more information on what different logging levels
 mean and how to interpret the layout.</p>
@@ -134,8 +126,10 @@ mean and how to interpret the layout.</p>
 </h2>
 <p>When using <code>register_logger</code> the logging level of the new
 logger defaults to <code><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">logger::INFO</a></code>. You can customize this
-behavior in 4 different ways: 1. Using the <code>logger</code>
-interface.</p>
+behavior in 4 different ways:</p>
+<ol style="list-style-type: decimal">
+<li>Using the <code>logger</code> interface.</li>
+</ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
 <span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span>
@@ -155,7 +149,7 @@ interface.</p>
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
 <span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span>namespace <span class="op">=</span> <span class="st">"teal"</span>, level <span class="op">=</span> <span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span><span class="op">)</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Setting an environmental variable.</li>
+<li>Setting an environment variable.</li>
 </ol>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
@@ -179,7 +173,7 @@ interface.</p>
 <p>Please, note that packages in the <code>teal</code> framework
 register their loggers when loading a library, which means that if you
 want to change its default logging level via an option or a system
-environmental variable, you should change the variable first, then load
+environment variable, you should change the variable first, then load
 the library. Example below:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># library(teal)</span>
@@ -208,8 +202,10 @@ documentation</a> and the documentation for
 <p>When using <code>register_logger</code> the log layout of the new
 logger defaults to
 <code>[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}</code>.
-You can customize this behavior in 4 different ways: 1. Using the
-<code>logger</code> interface.</p>
+You can customize this behavior in 4 different ways:</p>
+<ol style="list-style-type: decimal">
+<li>Using the <code>logger</code> interface.</li>
+</ol>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
 <span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span>
@@ -229,7 +225,7 @@ You can customize this behavior in 4 different ways: 1. Using the
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
 <span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span>namespace <span class="op">=</span> <span class="st">"teal"</span>, layout <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
-<li>Setting an environmental variable.</li>
+<li>Setting an environment variable.</li>
 </ol>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
@@ -252,8 +248,8 @@ You can customize this behavior in 4 different ways: 1. Using the
 <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span></code></pre></div>
 <p>Please, note that <code>teal</code> registers its logger when loading
 the library, which means that if you want to change its default logging
-layout via an option or a system environmental variable, you should
-change the variable first, then load the library. Example below:</p>
+layout via an option or a system environment variable, you should change
+the variable first, then load the library. Example below:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">teal.logger</span><span class="op">)</span>
 <span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LAYOUT <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span> <span class="co"># won't change the default</span></code></pre></div>
@@ -291,15 +287,13 @@ API</a>.</p>
 <div class="section level2">
 <h2 id="logging-in-other-teal-x-packages">Logging in other <code>teal.X</code> packages<a class="anchor" aria-label="anchor" href="#logging-in-other-teal-x-packages"></a>
 </h2>
-<p>The other <code>teal.X</code> packages, like
-<code>teal.modules.general</code> use
-<code><a href="../reference/register_logger.html">teal.logger::register_logger</a></code> to register loggers in their
-namespace. Each package registers a logger in the namespace equal to the
-package name. E.g. <code>teal.modules.general</code> registers a logger
-in <code>teal.modules.general</code> namespace. A package instantiates
-its logger during the package loading, the same as <code>teal</code>,
-using <code>teal</code>’s default logging settings subject to the same
-modifications as <code>teal</code>’s logger.</p>
+<p>The other <code>teal.X</code> packages, like <code>teal.data</code>,
+use <code><a href="../reference/register_logger.html">teal.logger::register_logger</a></code> to register loggers in
+their namespace. Each package registers a logger in the namespace equal
+to the package name. E.g. <code>teal.data</code> registers a logger in
+<code>teal.data</code> namespace. A package instantiates its logger
+during the package loading and using the default logging settings
+subject to the modifications described in the sections above.</p>
 </div>
 <div class="section level2">
 <h2 id="example-of-usage">Example of usage<a class="anchor" aria-label="anchor" href="#example-of-usage"></a>
