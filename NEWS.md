@@ -1,4 +1,4 @@
-# teal.logger 0.0.1
+# teal.logger 0.0.1.9000
 
 * Initial release of `teal.logger`, a package for the logging setup for `teal` applications.
 
