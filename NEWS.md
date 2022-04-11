@@ -1,3 +1,7 @@
+# teal.logger 0.0.1.9000
+
+* No changes yet
+
 # teal.logger 0.1.0
 
 * Initial release of `teal.logger`, a package for the logging setup for `teal` applications.
