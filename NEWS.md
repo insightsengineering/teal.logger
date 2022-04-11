@@ -1,4 +1,4 @@
-# teal.logger 0.1.0.9000
+# teal.logger 0.1.0.9001
 
 * No changes since last release
 
