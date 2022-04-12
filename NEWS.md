@@ -1,6 +1,7 @@
 # teal.logger 0.1.0.9001
 
-* No changes since last release
+### Miscellaneous
+* Added a template to the `pkgdown` site.
 
 # teal.logger 0.1.0
 
