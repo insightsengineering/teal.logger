@@ -2,6 +2,7 @@
 
 ### Miscellaneous
 * Added a template to the `pkgdown` site.
+* Updated package authors.
 
 # teal.logger 0.1.0
 
