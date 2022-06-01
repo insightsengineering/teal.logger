@@ -2,7 +2,8 @@
 url: https://github.com/insightsengineering/teal.logger
 
 template:
-  package: nesttemplate
+  params:
+    bootswatch: cerulean
 
 navbar:
   right:
