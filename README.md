@@ -8,8 +8,10 @@ It is recommended that you [create and use a Github PAT](https://docs.github.com
 
 ```r
 Sys.setenv(GITHUB_PAT = "your_access_token_here")
-if (!require("devtools")) install.packages("devtools")
-devtools::install_github("insightsengineering/teal.logger@*release")
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("insightsengineering/teal.logger@*release")
 ```
+
+A stable release of all `NEST` packages is also available [here](https://github.com/insightsengineering/depository#readme).
 
 See package vignettes `browseVignettes(package = "teal.logger")` for usage of this package.
