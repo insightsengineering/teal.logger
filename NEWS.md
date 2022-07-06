@@ -1,4 +1,4 @@
-# teal.logger 0.1.0.9007
+# teal.logger 0.1.0.9008
 
 ### Miscellaneous
 * Added a template to the `pkgdown` site.
