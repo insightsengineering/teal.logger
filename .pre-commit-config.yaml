@@ -34,7 +34,7 @@ repos:
           .*\.sh|
           .*\.svg|
           .*\.xml|
-          (.*/|)\_pkgdown.yml|
+          (.*/|)\_pkgdown.y[a]ml|
           (.*/|)\.gitignore|
           (.*/|)\.gitlab-ci\.yml|
           (.*/|)\.lintr|
