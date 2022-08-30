@@ -15,3 +15,11 @@ remotes::install_github("insightsengineering/teal.logger@*release")
 A stable release of all `NEST` packages from June 2022 is also available [here](https://github.com/insightsengineering/depository#readme).
 
 See package vignettes `browseVignettes(package = "teal.logger")` for usage of this package.
+
+
+[![Stargazers repo roster for @insightsengineering/teal.logger](https://reporoster.com/stars/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/stargazers)
+[![Forkers repo roster for @insightsengineering/teal.logger](https://reporoster.com/forks/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/network/members)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/insightsengineering/teal.logger.svg)](https://starchart.cc/insightsengineering/teal.logger)
