@@ -29,4 +29,3 @@ See package vignettes `browseVignettes(package = "teal.logger")` for usage of th
 ### Forkers
 
 [![Forkers repo roster for @insightsengineering/teal.logger](https://reporoster.com/forks/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/network/members)
-
