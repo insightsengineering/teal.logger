@@ -4,9 +4,9 @@
 \name{teal.logger-package}
 \alias{teal.logger}
 \alias{teal.logger-package}
-\title{teal.logger: Logging Setup For The `teal` Family Of Packages}
+\title{teal.logger: Logging Setup for the `teal` Family of Packages}
 \description{
-Logging setup for the \code{teal} family of packages.
+Logging Setup for the \code{teal} Family of Packages.
 }
 \author{
 \strong{Maintainer}: Dawid Kaledkowski \email{dawid.kaledkowski@roche.com}

@@ -14,7 +14,7 @@ The `teal.logger` package uses the `logger` framework to log events in a package
 More information on  `logger` can be found on:
 
 * [GitHub](https://github.com/daroczig/logger)
-* [CRAN](https://cran.r-project.org/web/packages/logger/vignettes/Intro.html)
+* [CRAN](https://CRAN.R-project.org/package=logger)
 
 ## `teal.logger`'s default logging setup
 `teal.logger` uses a function (`register_logger`) to instantiate a new logger in a namespace of the user's choosing.
