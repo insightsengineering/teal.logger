@@ -1,4 +1,4 @@
-#' @description Logging setup for the `teal` family of packages.
+#' @description Logging Setup for the `teal` Family of Packages.
 #'
 #' @keywords internal
 "_PACKAGE"
