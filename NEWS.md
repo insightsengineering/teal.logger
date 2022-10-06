@@ -2,14 +2,13 @@
 
 ### Miscellaneous
 * Added a template to the `pkgdown` site.
-* DESCRIPTION file is updated, added new author and updated the package's title.
-* GitHub issue template added.
-* Contribution guidelines, Code of Conduct, and Security information added.
-* teal.modules.helios is added to staged.dependencies.yaml file as a downstream repo.
-* Installation instruction is updated in README file.
-* Update was done to GitHub workflow.
-* Vignette was updated to update `logger` URL in CRAN.
-* testthat.R was updated.
+* Updated DESCRIPTION file to add new author and fix the package's title.
+* Created GitHub issue template.
+* Added Contribution guidelines, Code of Conduct, and Security information.
+* Updated staged.dependencies file.
+* Updated installation instruction in README.
+* Updated GitHub workflow.
+* Updated `logger` URL in vignette.
 
 # teal.logger 0.1.0
 
