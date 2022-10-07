@@ -1,14 +1,6 @@
 # teal.logger 0.1.0.9014
 
-### Miscellaneous
-* Added a template to the `pkgdown` site.
-* Updated DESCRIPTION file to add new author and fix the package's title.
-* Created GitHub issue template.
-* Added Contribution guidelines, Code of Conduct, and Security information.
-* Updated staged.dependencies file.
 * Updated installation instruction in README.
-* Updated GitHub workflow.
-* Updated `logger` URL in vignette.
 
 # teal.logger 0.1.0
 
