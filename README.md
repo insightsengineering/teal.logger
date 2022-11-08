@@ -1,5 +1,9 @@
 # teal.logger
 
+<!-- start badges -->
+[![Code Coverage](https://raw.githubusercontent.com/insightsengineering/teal.logger/_xml_coverage_reports/data/main/badge.svg)](https://raw.githubusercontent.com/insightsengineering/teal.logger/_xml_coverage_reports/data/main/coverage.xml)
+<!-- end badges -->
+
 `teal.logger` is an `R` package providing a unified setup for generating logs using the `logger` package.
 
 ## Installation
