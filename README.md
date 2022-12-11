@@ -19,7 +19,6 @@
 [![Open Issues](https://img.shields.io/github/issues-raw/insightsengineering/teal.logger?color=red\&label=open%20issues)](https://github.com/insightsengineering/teal.logger/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 <!-- end badges -->
 
-
 `teal.logger` is an `R` package providing a unified setup for generating logs using the `logger` package.
 
 ## Installation
