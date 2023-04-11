@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage line-rate="0.9" branch-rate="0" lines-covered="72" lines-valid="80" branches-covered="0" branches-valid="0" complexity="0" version="3.6.1" timestamp="2023-04-06 13:51:46">
-  <sources/>
+<!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
+<coverage line-rate="0.9" branch-rate="0" lines-covered="72" lines-valid="80" branches-covered="0" branches-valid="0" complexity="0" version="3.6.2" timestamp="2023-04-11 13:51:52">
+  <sources>
+    <source>/__w/teal.logger/teal.logger/teal.logger</source>
+  </sources>
   <packages>
     <package name="teal.logger" line-rate="0.9" branch-rate="0" complexity="0">
       <classes>
         <class name="register_logger.R" filename="R/register_logger.R" line-rate="0.982142857142857" branch-rate="0" complexity="0">
           <methods>
-            <method name="register_logger" signature="" line-rate="1" branch-rate="0">
+            <method name="register_logger" signature="" line-rate="1" branch-rate="0" complexity="0">
               <lines>
                 <line number="54" hits="9" branch="false"/>
                 <line number="55" hits="1" branch="false"/>
@@ -46,7 +49,7 @@
                 <line number="94" hits="6" branch="false"/>
               </lines>
             </method>
-            <method name="layout_teal_glue_generator" signature="" line-rate="0.95" branch-rate="0">
+            <method name="layout_teal_glue_generator" signature="" line-rate="0.95" branch-rate="0" complexity="0">
               <lines>
                 <line number="107" hits="7" branch="false"/>
                 <line number="108" hits="7" branch="false"/>
@@ -132,7 +135,7 @@
         </class>
         <class name="supress_logs.R" filename="R/supress_logs.R" line-rate="0" branch-rate="0" complexity="0">
           <methods>
-            <method name="suppress_logs" signature="" line-rate="0" branch-rate="0">
+            <method name="suppress_logs" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
                 <line number="17" hits="0" branch="false"/>
                 <line number="18" hits="0" branch="false"/>
@@ -152,7 +155,7 @@
         </class>
         <class name="utils.R" filename="R/utils.R" line-rate="1" branch-rate="0" complexity="0">
           <methods>
-            <method name="log_system_info" signature="" line-rate="1" branch-rate="0">
+            <method name="log_system_info" signature="" line-rate="1" branch-rate="0" complexity="0">
               <lines>
                 <line number="7" hits="1" branch="false"/>
                 <line number="8" hits="1" branch="false"/>
@@ -196,7 +199,7 @@
         </class>
         <class name="zzz.R" filename="R/zzz.R" line-rate="0" branch-rate="0" complexity="0">
           <methods>
-            <method name=".onLoad" signature="" line-rate="0" branch-rate="0">
+            <method name=".onLoad" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
                 <line number="3" hits="0" branch="false"/>
                 <line number="4" hits="0" branch="false"/>
