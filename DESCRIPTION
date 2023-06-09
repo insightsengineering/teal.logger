@@ -31,3 +31,12 @@ Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Config/Needs/verdepcheck: 
+    tidyverse/glue,
+    r-lib/lifecycle,
+    daroczig/logger,
+    rstudio/shiny,
+    r-lib/withr,
+    yihui/knitr,
+    rstudio/rmarkdown,
+    r-lib/testthat
