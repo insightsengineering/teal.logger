@@ -106,380 +106,11 @@ table.table-condensed {
       </ul>
       <div class="tab-content" data-tabsetid="covr">
         <div class="tab-pane active" title="Files" data-value="Files" id="tab-covr-1">
-          <div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-575ce9b582dc52a3ca5d" style="width:100%;height:500px;"></div>
-          <script type="application/json" data-for="htmlwidget-575ce9b582dc52a3ca5d">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["<a href=\"#\">R/supress_logs.R<\/a>","<a href=\"#\">R/zzz.R<\/a>","<a href=\"#\">R/register_logger.R<\/a>","<a href=\"#\">R/utils.R<\/a>"],[22,5,127,29],[5,2,42,15],[0,0,41,15],[5,2,1,0],["0","0","5","1"],["0.00%","0.00%","97.62%","100.00%"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>File<\/th>\n      <th>Lines<\/th>\n      <th>Relevant<\/th>\n      <th>Covered<\/th>\n      <th>Missed<\/th>\n      <th>Hits / Line<\/th>\n      <th>Coverage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"dom":"t","paging":false,"columnDefs":[{"targets":6,"createdCell":"function(td, cellData, rowData, row, col) {\n  var percent = cellData.replace(\"%\", \"\");\n  if (percent > 90) {\n    var grad = \"linear-gradient(90deg, #edfde7 \" + cellData + \", white \" + cellData + \")\";\n  } else if (percent > 75) {\n    var grad = \"linear-gradient(90deg, #f9ffe5 \" + cellData + \", white \" + cellData + \")\";\n  } else {\n    var grad = \"linear-gradient(90deg, #fcece9 \" + cellData + \", white \" + cellData + \")\";\n  }\n  $(td).css(\"background\", grad);\n}\n"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false},"callback":"function(table) {\ntable.on('click.dt', 'a', function() {\n  files = $('div#files div');\n  files.not('div.hidden').addClass('hidden');\n  id = $(this).text();\n  files.filter('div[id=\\'' + id + '\\']').removeClass('hidden');\n  $('ul.nav a[data-value=Source]').text(id).tab('show');\n});\n}","selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.columnDefs.0.createdCell","callback"],"jsHooks":[]}</script>
+          <div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-66f82f37b4f3f0e6ec25" style="width:100%;height:500px;"></div>
+          <script type="application/json" data-for="htmlwidget-66f82f37b4f3f0e6ec25">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["<a href=\"#\">R/supress_logs.R<\/a>","<a href=\"#\">R/zzz.R<\/a>","<a href=\"#\">R/register_logger.R<\/a>","<a href=\"#\">R/utils.R<\/a>"],[22,5,127,29],[5,2,42,15],[0,0,41,15],[5,2,1,0],["0","0","5","1"],["0.00%","0.00%","97.62%","100.00%"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>File<\/th>\n      <th>Lines<\/th>\n      <th>Relevant<\/th>\n      <th>Covered<\/th>\n      <th>Missed<\/th>\n      <th>Hits / Line<\/th>\n      <th>Coverage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"dom":"t","paging":false,"columnDefs":[{"targets":6,"createdCell":"function(td, cellData, rowData, row, col) {\n  var percent = cellData.replace(\"%\", \"\");\n  if (percent > 90) {\n    var grad = \"linear-gradient(90deg, #edfde7 \" + cellData + \", white \" + cellData + \")\";\n  } else if (percent > 75) {\n    var grad = \"linear-gradient(90deg, #f9ffe5 \" + cellData + \", white \" + cellData + \")\";\n  } else {\n    var grad = \"linear-gradient(90deg, #fcece9 \" + cellData + \", white \" + cellData + \")\";\n  }\n  $(td).css(\"background\", grad);\n}\n"},{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"autoWidth":false,"orderClasses":false},"callback":"function(table) {\ntable.on('click.dt', 'a', function() {\n  files = $('div#files div');\n  files.not('div.hidden').addClass('hidden');\n  id = $(this).text();\n  files.filter('div[id=\\'' + id + '\\']').removeClass('hidden');\n  $('ul.nav a[data-value=Source]').text(id).tab('show');\n});\n}","selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.columnDefs.0.createdCell","callback"],"jsHooks":[]}</script>
         </div>
         <div class="tab-pane" title="Source" data-value="Source" id="tab-covr-2">
           <div id="files">
-            <div id="R/supress_logs.R" class="hidden">
-              <table class="table-condensed">
-                <tbody>
-                  <tr class="never">
-                    <td class="num">1</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Suppress logger logs</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">2</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">3</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' This function suppresses `logger` when running tests via `testthat`.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">4</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' To suppress logs for a single test, add this function</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">5</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' call within the `testthat::test_that` expression. To suppress logs for an entire</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">6</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' test file, call this function at the start of the file.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">7</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">8</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return `NULL` invisible</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">9</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @export</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">10</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @examples</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">11</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' testthat::test_that("An example test", {</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">12</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   suppress_logs()</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">13</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   testthat::expect_true(TRUE)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">14</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' })</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">15</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">16</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">suppress_logs &lt;- function() {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">17</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  old_log_appenders &lt;- lapply(logger::log_namespaces(), function(ns) logger::log_appender(namespace = ns))</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">18</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  old_log_namespaces &lt;- logger::log_namespaces()</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">19</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_appender(logger::appender_file(nullfile()), namespace = logger::log_namespaces())</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">20</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  withr::defer_parent(mapply(logger::log_appender, old_log_appenders, old_log_namespaces))</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">21</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  invisible(NULL)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">22</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div id="R/utils.R" class="hidden">
-              <table class="table-condensed">
-                <tbody>
-                  <tr class="never">
-                    <td class="num">1</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Logs the basic information about the session.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">2</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">3</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return `invisible(NULL)`</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">4</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @export</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">5</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">6</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">log_system_info &lt;- function() {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">7</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  paste_pkgs_name_with_version &lt;- function(names) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">8</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    vapply(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">9</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      names,</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">10</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      FUN = function(name) paste(name, utils::packageVersion(name)),</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">11</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      FUN.VALUE = character(1),</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">12</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      USE.NAMES = FALSE</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">13</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">14</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">15</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">16</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  info &lt;- utils::sessionInfo()</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">17</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">18</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Platform: { info$platform }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">19</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Running under: { info$running }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">20</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("{ info$R.version$version.string }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">21</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Base packages: { paste(info$basePkgs, collapse = ' ') }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">22</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">23</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  # Paste package names and versions</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">24</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$otherPkgs)), collapse = ", ")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">25</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Other attached packages: { pasted_names_and_versions }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">26</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">27</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$loadedOnly)), collapse = ", ")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">28</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Loaded packages: { pasted_names_and_versions }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">29</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
             <div id="R/register_logger.R" class="hidden">
               <table class="table-condensed">
                 <tbody>
@@ -1367,6 +998,375 @@ table.table-condensed {
                   </tr>
                   <tr class="never">
                     <td class="num">127</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="R/utils.R" class="hidden">
+              <table class="table-condensed">
+                <tbody>
+                  <tr class="never">
+                    <td class="num">1</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Logs the basic information about the session.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">2</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">3</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return `invisible(NULL)`</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">4</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">5</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">6</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">log_system_info &lt;- function() {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">7</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  paste_pkgs_name_with_version &lt;- function(names) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">8</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    vapply(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">9</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      names,</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">10</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      FUN = function(name) paste(name, utils::packageVersion(name)),</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">11</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      FUN.VALUE = character(1),</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">12</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      USE.NAMES = FALSE</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">13</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">14</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">15</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">16</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  info &lt;- utils::sessionInfo()</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">17</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">18</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Platform: { info$platform }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">19</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Running under: { info$running }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">20</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("{ info$R.version$version.string }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">21</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Base packages: { paste(info$basePkgs, collapse = ' ') }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">22</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">23</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  # Paste package names and versions</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">24</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$otherPkgs)), collapse = ", ")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">25</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Other attached packages: { pasted_names_and_versions }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">26</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">27</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$loadedOnly)), collapse = ", ")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">28</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Loaded packages: { pasted_names_and_versions }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">29</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="R/supress_logs.R" class="hidden">
+              <table class="table-condensed">
+                <tbody>
+                  <tr class="never">
+                    <td class="num">1</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Suppress logger logs</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">2</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">3</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' This function suppresses `logger` when running tests via `testthat`.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">4</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' To suppress logs for a single test, add this function</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">5</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' call within the `testthat::test_that` expression. To suppress logs for an entire</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">6</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' test file, call this function at the start of the file.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">7</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">8</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return `NULL` invisible</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">9</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">10</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">11</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' testthat::test_that("An example test", {</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">12</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   suppress_logs()</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">13</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   testthat::expect_true(TRUE)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">14</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' })</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">15</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">16</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">suppress_logs &lt;- function() {</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">17</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  old_log_appenders &lt;- lapply(logger::log_namespaces(), function(ns) logger::log_appender(namespace = ns))</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">18</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  old_log_namespaces &lt;- logger::log_namespaces()</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">19</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_appender(logger::appender_file(nullfile()), namespace = logger::log_namespaces())</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">20</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  withr::defer_parent(mapply(logger::log_appender, old_log_appenders, old_log_namespaces))</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">21</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  invisible(NULL)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">22</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
                       <pre class="language-r">}</pre>
