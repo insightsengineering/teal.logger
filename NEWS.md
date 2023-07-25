@@ -9,6 +9,8 @@
 * Updated usage and installation instructions in `README`.
 * Updated phrasing of the `Getting Started` vignette.
 
+* Specify minimal version of dependent packages.
+
 # teal.logger 0.1.1
 
 * Updated installation instruction in `README`.
