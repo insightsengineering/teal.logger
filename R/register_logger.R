@@ -57,6 +57,7 @@ register_logger <- function(namespace = NA_character_,
 
   if (is.null(level)) level <- Sys.getenv("TEAL.LOG_LEVEL")
   if (is.null(level) || level == "") level <- getOption("teal.log_level", default = "INFO")
+
   tryCatch(
     logger::log_threshold(level, namespace = namespace),
     error = function(condition) {
