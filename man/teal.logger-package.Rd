@@ -13,7 +13,7 @@ Logging Setup for the \code{teal} Family of Packages.
 
 Authors:
 \itemize{
-  \item Konrad Pagacz \email{konrad.pagacz@contractors.roche.com}
+  \item Konrad Pagacz
 }
 
 Other contributors:
