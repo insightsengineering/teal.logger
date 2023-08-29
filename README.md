@@ -2,10 +2,10 @@
 
 <!-- start badges -->
 
-[![](https://www.r-pkg.org/badges/version/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
-[![](http://cranlogs.r-pkg.org/badges/grand-total/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
-[![](http://cranlogs.r-pkg.org/badges/last-month/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
-[![](http://cranlogs.r-pkg.org/badges/last-week/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![CRAN Version](https://www.r-pkg.org/badges/version/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![Last Month Downloads](http://cranlogs.r-pkg.org/badges/last-month/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![Last Week Downloads](http://cranlogs.r-pkg.org/badges/last-week/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
 
 
 [![Check 🛠](https://github.com/insightsengineering/teal.logger/actions/workflows/check.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/main/unit-test-report/)
