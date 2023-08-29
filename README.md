@@ -1,6 +1,13 @@
 # teal.logger
 
 <!-- start badges -->
+
+[![](https://www.r-pkg.org/badges/version/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![](http://cranlogs.r-pkg.org/badges/grand-total/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![](http://cranlogs.r-pkg.org/badges/last-month/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![](http://cranlogs.r-pkg.org/badges/last-week/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+
+
 [![Check 🛠](https://github.com/insightsengineering/teal.logger/actions/workflows/check.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/main/unit-test-report/)
 [![Docs 📚](https://github.com/insightsengineering/teal.logger/actions/workflows/docs.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/)
 [![Code Coverage 📔](https://raw.githubusercontent.com/insightsengineering/teal.logger/_xml_coverage_reports/data/main/badge.svg)](https://insightsengineering.github.io/teal.logger/main/coverage-report/)
@@ -29,11 +36,27 @@ From July 2023 `insightsengineering` packages are available on [r-universe](http
 # stable versions
 install.packages('teal.logger', repos = c('https://insightsengineering.r-universe.dev', 'https://cloud.r-project.org'))
 
-# beta versions
-install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org'))
+# install.packages("pak")
+pak::pak("insightsengineering/teal@*release")
 ```
 
-See package vignettes `browseVignettes(package = "teal.logger")` for usage of this package.
+Alternatively, you might also use the development version.
+
+```r
+# beta versions
+install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org'))
+
+# install.packages("pak")
+pak::pak("insightsengineering/teal")
+```
+
+## Usage
+
+For usage of this package see package vignettes `browseVignettes(package = "teal.logger")` or package website [insightsengineering.github.io/teal.logger](https://insightsengineering.github.io/teal.logger/).
+
+## Getting help
+
+If you encounter a bug or you have a feature request - please file an issue. For questions, discussions and staying up to date, please use the "teal" channel in the [pharmaverse slack workspace](https://pharmaverse.slack.com).
 
 ## Stargazers and Forkers
 
