@@ -51,7 +51,7 @@ pak::pak("insightsengineering/teal.logger")
 
 ## Usage
 
-For usage of this package see package vignettes `browseVignettes(package = "teal.logger")` or package website [`insightsengineering.github.io/teal.logger`](https://insightsengineering.github.io/teal.logger/).
+To understand how to use this package, please refer to the [Getting Started](https://insightsengineering.github.io/teal.logger/latest-tag/articles/teal-logger.html) article, which provides multiple examples of code implementation.
 
 ## Getting help
 
