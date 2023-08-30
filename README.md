@@ -46,7 +46,7 @@ Alternatively, you might also use the development version.
 install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org'))
 
 # install.packages("pak")
-pak::pak("insightsengineering/teal")
+pak::pak("insightsengineering/teal.logger")
 ```
 
 ## Usage
