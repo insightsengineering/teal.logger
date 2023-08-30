@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="register_logger" timestamp="2023-08-30T09:44:50Z" hostname="5c626a882e59" tests="10" skipped="0" failures="0" errors="0" time="0.219">
+  <testsuite name="register_logger" timestamp="2023-08-30T09:49:30Z" hostname="2fe13ca0a761" tests="10" skipped="0" failures="0" errors="0" time="0.218">
     <testcase time="0.018" classname="register_logger" name="register_logger_accepts_a_scalar_character"/>
-    <testcase time="0.0680000000000001" classname="register_logger" name="register_logger_throws_an_error_when_passed_an_invalid_namespace_argument"/>
-    <testcase time="0.0369999999999999" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
-    <testcase time="0.016" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
+    <testcase time="0.072" classname="register_logger" name="register_logger_throws_an_error_when_passed_an_invalid_namespace_argument"/>
+    <testcase time="0.036" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
+    <testcase time="0.012" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
     <testcase time="0.0130000000000001" classname="register_logger" name="An_additional_logging_namespace_is_created_after_register_logger"/>
     <testcase time="0.0089999999999999" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_layout"/>
-    <testcase time="0.00900000000000012" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_level"/>
-    <testcase time="0.00800000000000001" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_either_log_layout_or_log_level_and_valid_options_are_set"/>
+    <testcase time="0.00800000000000001" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_level"/>
+    <testcase time="0.00900000000000012" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_either_log_layout_or_log_level_and_valid_options_are_set"/>
     <testcase time="0.0089999999999999" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_arguments_options_are_not_set_and_the_system_variables_are_set_to_valid_value"/>
     <testcase time="0.032" classname="register_logger" name="log_system_info_does_not_throw_an_error"/>
   </testsuite>
