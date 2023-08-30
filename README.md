@@ -36,7 +36,7 @@ From July 2023 `insightsengineering` packages are available on [r-universe](http
 install.packages('teal.logger', repos = c('https://insightsengineering.r-universe.dev', 'https://cloud.r-project.org'))
 
 # install.packages("pak")
-pak::pak("insightsengineering/teal@*release")
+pak::pak("insightsengineering/teal.logger@*release")
 ```
 
 Alternatively, you might also use the development version.
