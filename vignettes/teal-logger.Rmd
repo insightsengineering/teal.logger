@@ -115,7 +115,7 @@ library(teal.logger)
 logger::log_layout("{level} {msg}", namespace = "teal")
 ```
 
-2. Utilizing the function argument of `register_logger`.
+2. Utilizing the function argument of `register_logger()`.
 ```r
 library(teal.logger)
 register_logger("my_namespace", layout = "{level} {msg}")
