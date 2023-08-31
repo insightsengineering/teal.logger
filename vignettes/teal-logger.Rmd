@@ -1,7 +1,6 @@
 ---
 title: "Getting started"
 author: "NEST CoreDev Team"
-date: "15.03.2022"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{Getting started}
