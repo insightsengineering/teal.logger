@@ -55,7 +55,7 @@ To understand how to use this package, please refer to the [Getting Started](htt
 
 Below is the showcase of the example usage
 
-```{R}
+```r
 library(teal.logger)
 register_logger(namespace = "namespace1", level = "INFO")
 logger::log_info("Hello from namespace1", namespace = "namespace1")
