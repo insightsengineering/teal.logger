@@ -4,12 +4,12 @@
 
 * Fixed CRAN requirements for the first CRAN submission.
 
+* Specify minimal version of dependent packages.
+
 # teal.logger 0.1.2
 
 * Updated usage and installation instructions in `README`.
 * Updated phrasing of the `Getting Started` vignette.
-
-* Specify minimal version of dependent packages.
 
 # teal.logger 0.1.1
 
