@@ -24,8 +24,7 @@ Imports:
     shiny (>= 1.6.0),
     withr (>= 2.1.0)
 Suggests:
-    knitr (>= 1.34),
-    rmarkdown (>= 2.19),
+    knitr (>= 1.42),
     testthat (>= 3.0.4)
 VignetteBuilder:
     knitr
@@ -36,7 +35,6 @@ Config/Needs/verdepcheck:
     r-lib/lifecycle,
     daroczig/logger,
     yihui/knitr,
-    rstudio/rmarkdown,
     rstudio/shiny,
     r-lib/testthat,
     r-lib/withr
