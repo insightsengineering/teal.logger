@@ -1,4 +1,9 @@
-# teal.logger 0.1.1.9012
+# teal.logger 0.1.2.9000
+
+# teal.logger 0.1.2
+
+* Updated usage and installation instructions in `README`.
+* Updated phrasing of the `Getting Started` vignette.
 
 # teal.logger 0.1.1
 

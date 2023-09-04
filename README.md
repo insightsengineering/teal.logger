@@ -1,6 +1,12 @@
 # teal.logger
 
 <!-- start badges -->
+
+[![CRAN Version](https://www.r-pkg.org/badges/version/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![Total Downloads](http://cranlogs.r-pkg.org/badges/grand-total/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![Last Month Downloads](http://cranlogs.r-pkg.org/badges/last-month/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+[![Last Week Downloads](http://cranlogs.r-pkg.org/badges/last-week/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
+
 [![Check 🛠](https://github.com/insightsengineering/teal.logger/actions/workflows/check.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/main/unit-test-report/)
 [![Docs 📚](https://github.com/insightsengineering/teal.logger/actions/workflows/docs.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/)
 [![Code Coverage 📔](https://raw.githubusercontent.com/insightsengineering/teal.logger/_xml_coverage_reports/data/main/badge.svg)](https://insightsengineering.github.io/teal.logger/main/coverage-report/)
@@ -29,11 +35,47 @@ From July 2023 `insightsengineering` packages are available on [r-universe](http
 # stable versions
 install.packages('teal.logger', repos = c('https://insightsengineering.r-universe.dev', 'https://cloud.r-project.org'))
 
-# beta versions
-install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org'))
+# install.packages("pak")
+pak::pak("insightsengineering/teal.logger@*release")
 ```
 
-See package vignettes `browseVignettes(package = "teal.logger")` for usage of this package.
+Alternatively, you might also use the development version.
+
+```r
+# beta versions
+install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org'))
+
+# install.packages("pak")
+pak::pak("insightsengineering/teal.logger")
+```
+
+## Usage
+
+To understand how to use this package, please refer to the [Getting Started](https://insightsengineering.github.io/teal.logger/latest-tag/articles/teal-logger.html) article, which provides multiple examples of code implementation.
+
+Below is the showcase of the example usage
+
+```r
+library(teal.logger)
+register_logger(namespace = "namespace1", level = "INFO")
+logger::log_info("Hello from namespace1", namespace = "namespace1")
+logger::log_warn("Hello from namespace1", namespace = "namespace1")
+logger::log_success("Hello from namespace1", namespace = "namespace1")
+# [INFO] 2023-08-31 12:02:41.0678 pid:7128 token:[] namespace1 Hello from namespace1
+# [WARN] 2023-08-31 12:02:42.4872 pid:7128 token:[] namespace1 Hello from namespace
+# [SUCCESS] 2023-08-31 12:02:58.7155 pid:7128 token:[] namespace1 Hello from namespace
+
+register_logger(namespace = "namespace2", level = "WARN")
+logger::log_info("Hello from namespace2", namespace = "namespace2")
+logger::log_warn("Hello from namespace2", namespace = "namespace2")
+logger::log_error("Hello from namespace2", namespace = "namespace2")
+# [WARN] 2023-08-31 12:04:34.9361 pid:7128 token:[] namespace2 Hello from namespace2
+# [ERROR] 2023-08-31 12:04:35.5721 pid:7128 token:[] namespace2 Hello from namespace2
+```
+
+## Getting help
+
+If you encounter a bug or you have a feature request - please file an issue. For questions, discussions and staying up to date, please use the "teal" channel in the [`pharmaverse` slack workspace](https://pharmaverse.slack.com).
 
 ## Stargazers and Forkers
 
