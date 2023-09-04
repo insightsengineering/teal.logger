@@ -1,5 +1,5 @@
 Package: teal.logger
-Title: Logging Setup for the `teal` Family of Packages
+Title: Logging Setup for the 'teal' Family of Packages
 Version: 0.1.2.9000
 Date: 2023-08-31
 Authors@R: c(
@@ -7,8 +7,10 @@ Authors@R: c(
     person("Konrad", "Pagacz", role = "aut"),
     person("F. Hoffmann-La Roche AG", role = c("cph", "fnd"))
   )
-Description: Logging setup for the teal family of packages.
-License: Apache License 2.0 | file LICENSE
+Description: 
+    Utilizing the 'logger' framework to record events within a package, specific to 'teal' family of packages. 
+    Supports logging namespaces, hierarchical logging, various log destinations, vectorization, and more.
+License: Apache License 2.0
 Depends:
     R (>= 3.6)
 Imports:

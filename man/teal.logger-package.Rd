@@ -4,7 +4,7 @@
 \name{teal.logger-package}
 \alias{teal.logger}
 \alias{teal.logger-package}
-\title{teal.logger: Logging Setup for the `teal` Family of Packages}
+\title{teal.logger: Logging Setup for the 'teal' Family of Packages}
 \description{
 Logging Setup for the \code{teal} Family of Packages.
 }

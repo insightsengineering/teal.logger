@@ -1,5 +1,7 @@
 # teal.logger 0.1.2.9000
 
+* Fixed CRAN requirements for the first CRAN submission.
+
 # teal.logger 0.1.2
 
 * Updated usage and installation instructions in `README`.
