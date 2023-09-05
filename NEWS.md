@@ -1,4 +1,4 @@
-# teal.logger 0.1.2.9000
+# teal.logger 0.1.3
 
 * Fixed CRAN requirements for the first CRAN submission.
 
