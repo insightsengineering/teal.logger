@@ -4,7 +4,7 @@
 
 * Fixed CRAN requirements for the first CRAN submission.
 
-* Specify minimal version of dependent packages.
+* Specified minimal version of package dependencies.
 
 # teal.logger 0.1.2
 
