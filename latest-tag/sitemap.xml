@@ -1,54 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/404.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/404.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/CODE_OF_CONDUCT.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/CONTRIBUTING.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/LICENSE-text.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/SECURITY.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/SECURITY.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/articles/index.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/articles/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/articles/teal-logger.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/articles/teal-logger.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/authors.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/authors.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/index.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/news/index.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/news/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/pull_request_template.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/pull_request_template.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/reference/index.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/reference/layout_teal_glue_generator.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/reference/layout_teal_glue_generator.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/reference/log_system_info.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/reference/log_system_info.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/reference/register_logger.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/reference/register_logger.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/reference/suppress_logs.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/reference/suppress_logs.html</loc>
   </url>
   <url>
-    <loc>https://github.com/insightsengineering/teal.logger/v0.1.1/reference/teal.logger-package.html</loc>
+    <loc>https://github.com/insightsengineering/teal.logger/reference/teal.logger-package.html</loc>
   </url>
 </urlset>
