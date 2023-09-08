@@ -44,7 +44,7 @@
 #' options(teal.log_layout = "{msg}")
 #' options(teal.log_level = "ERROR")
 #' register_logger(namespace = "new_namespace")
-#' \dontrun{
+#' \donttest{
 #' logger::log_info("Hello from new_namespace", namespace = "new_namespace")
 #' }
 #'
