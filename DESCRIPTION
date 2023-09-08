@@ -1,6 +1,6 @@
 Package: teal.logger
 Title: Logging Setup for the 'teal' Family of Packages
-Version: 0.1.3.9000
+Version: 0.1.3.9001
 Date: 2023-09-08
 Authors@R: c(
     person("Dawid", "Kaledkowski", , "dawid.kaledkowski@roche.com", role = c("aut", "cre")),
@@ -12,6 +12,9 @@ Description: Utilizing the 'logger' framework to record events within a
     namespaces, hierarchical logging, various log destinations,
     vectorization, and more.
 License: Apache License 2.0
+URL: https://insightsengineering.github.io/teal.logger/,
+    https://github.com/insightsengineering/teal.logger/
+BugReports: https://github.com/insightsengineering/teal.logger/issues
 Depends:
     R (>= 3.6)
 Imports:
@@ -28,9 +31,6 @@ VignetteBuilder:
     knitr
 RdMacros:
     lifecycle
-URL: https://insightsengineering.github.io/teal.logger/,
-    https://github.com/insightsengineering/teal.logger/
-BugReports: https://github.com/insightsengineering/teal.logger/issues
 Config/Needs/website: insightsengineering/nesttemplate
 Encoding: UTF-8
 Language: en-US
