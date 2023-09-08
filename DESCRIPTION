@@ -25,6 +25,9 @@ VignetteBuilder:
     knitr
 RdMacros:
     lifecycle
+URL: https://insightsengineering.github.io/teal.logger/,
+    https://github.com/insightsengineering/teal.logger/
+BugReports: https://github.com/insightsengineering/teal.logger/issues
 Config/Needs/website: insightsengineering/nesttemplate
 Encoding: UTF-8
 Language: en-US
