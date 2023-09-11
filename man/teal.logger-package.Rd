@@ -4,9 +4,18 @@
 \name{teal.logger-package}
 \alias{teal.logger}
 \alias{teal.logger-package}
-\title{teal.logger: Logging Setup for the `teal` Family of Packages}
+\title{teal.logger: Logging Setup for the 'teal' Family of Packages}
 \description{
 Logging Setup for the \code{teal} Family of Packages.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://insightsengineering.github.io/teal.logger/}
+  \item \url{https://github.com/insightsengineering/teal.logger/}
+  \item Report bugs at \url{https://github.com/insightsengineering/teal.logger/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Dawid Kaledkowski \email{dawid.kaledkowski@roche.com}
