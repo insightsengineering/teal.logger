@@ -29,7 +29,6 @@
 
 ## Installation
 
-
 ```r
 # stable versions
 install.packages('teal.logger')
