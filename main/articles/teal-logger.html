@@ -27,7 +27,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">teal.logger</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9001</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9002</small>
 
     <div style="width: 140px; margin-left: 0.5rem;"> <small class="nav-text text-muted me-auto">part of</small> <img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/nest.png?raw=true" alt="NEST" style="height: 30px;"><a href="https://pharmaverse.org/" class="external-link"><img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/pharmaverse.png?raw=true" alt="pharmaverse" style="height: 28px;"></a> </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,18 +45,6 @@
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/latest-tag">latest-tag</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/release-candidate">release-candidate</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.3-rc1">v0.1.3-rc1</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.3">v0.1.3</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.2">v0.1.2</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.1">v0.1.1</a> </div></li>
-<!-- end dropdown for versions -->
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-reports">Reports</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-reports">
@@ -71,7 +59,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="nav-link" href="https://github.com/insightsengineering/teal.logger">
+  <a class="external-link nav-link" href="https://github.com/insightsengineering/teal.logger">
     <span class="fa fa-github"></span>
      
   </a>
@@ -93,7 +81,7 @@
 Team</h4>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/insightsengineering/teal.logger/blob/HEAD/vignettes/teal-logger.Rmd"><code>vignettes/teal-logger.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/insightsengineering/teal.logger/blob/HEAD/vignettes/teal-logger.Rmd" class="external-link"><code>vignettes/teal-logger.Rmd</code></a></small>
       <div class="d-none name"><code>teal-logger.Rmd</code></div>
     </div>
 
@@ -146,46 +134,46 @@ this behavior in four distinct ways:</p>
 <li>Using the <code>logger</code> interface.</li>
 </ol>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span></span>
 <span><span class="fu">logger</span><span class="fu">::</span><span class="fu"><a href="https://daroczig.github.io/logger/reference/log_threshold.html" class="external-link">log_threshold</a></span><span class="op">(</span><span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span>, namespace <span class="op">=</span> <span class="st">"my_namespace"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging level:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu">logger</span><span class="fu">::</span><span class="fu"><a href="https://daroczig.github.io/logger/reference/log_threshold.html" class="external-link">log_threshold</a></span><span class="op">(</span><span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span>, namespace <span class="op">=</span> <span class="st">"teal"</span><span class="op">)</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Utilizing the function argument of
 <code><a href="../reference/register_logger.html">register_logger()</a></code>.</li>
 </ol>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span>, level <span class="op">=</span> <span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging level:</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span>namespace <span class="op">=</span> <span class="st">"teal"</span>, level <span class="op">=</span> <span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Setting an environment variable.</li>
 </ol>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LEVEL <span class="op">=</span> <span class="st">"TRACE"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging level:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LEVEL <span class="op">=</span> <span class="st">"TRACE"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Setting an <code>option</code>.</li>
 </ol>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>teal.log_level <span class="op">=</span> <span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging level:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>teal.log_level <span class="op">=</span> <span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/log_levels.html" class="external-link">TRACE</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
 <p>Do keep in mind that packages in the <code>teal</code> framework
 register their loggers upon library loading. Therefore, if you intend to
 alter the default logging level via an option or a system environment
@@ -205,7 +193,7 @@ E.g. this will change the defaults of <code>teal.logger</code>. Replace
 <code>teal.logger</code> with the name of the package you want to
 change.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LEVEL <span class="op">=</span> <span class="st">"TRACE"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">'teal.logger'</span><span class="op">)</span></span></code></pre></div>
 <p>For a more comprehensive understanding, consult the <a href="https://daroczig.github.io/logger/articles/customize_logger.html" class="external-link"><code>logger</code>
@@ -223,46 +211,46 @@ can modify this behavior in four distinct ways:</p>
 <li>Using the <code>logger</code> interface.</li>
 </ol>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span></span>
 <span><span class="fu">logger</span><span class="fu">::</span><span class="fu"><a href="https://daroczig.github.io/logger/reference/log_layout.html" class="external-link">log_layout</a></span><span class="op">(</span><span class="st">"{level} {msg}"</span>, namespace <span class="op">=</span> <span class="st">"my_namespace"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging layout:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu">logger</span><span class="fu">::</span><span class="fu"><a href="https://daroczig.github.io/logger/reference/log_layout.html" class="external-link">log_layout</a></span><span class="op">(</span><span class="st">"{level} {msg}"</span>, namespace <span class="op">=</span> <span class="st">"teal"</span><span class="op">)</span></span></code></pre></div>
 <ol start="2" style="list-style-type: decimal">
 <li>Utilizing the function argument of
 <code><a href="../reference/register_logger.html">register_logger()</a></code>.</li>
 </ol>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span>, layout <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging layout:</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span>namespace <span class="op">=</span> <span class="st">"teal"</span>, layout <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span></code></pre></div>
 <ol start="3" style="list-style-type: decimal">
 <li>Setting an environment variable.</li>
 </ol>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LAYOUT <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging layout:</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LAYOUT <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
 <ol start="4" style="list-style-type: decimal">
 <li>Setting an <code>option</code>.</li>
 </ol>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>teal.log_layout <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">"my_namespace"</span><span class="op">)</span></span></code></pre></div>
 <p>Customizing <code>teal</code>’s logging layout:</p>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span>teal.log_layout <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span></code></pre></div>
 <p>Like changing the log level, remember that <code>teal</code>
 registers its logger during library loading. Thus, if you aim to modify
 the default logging layout via an option or a system environment
@@ -270,11 +258,11 @@ variable, ensure you adjust the variable prior to loading the
 library.</p>
 <p>Example below:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LAYOUT <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span> <span class="co"># won't change the default</span></span></code></pre></div>
 <div class="sourceCode" id="cb21"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LAYOUT <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="co"># will change the default because teal is attached after changing the variable</span></span></code></pre></div>
 <p>Alternatively, you can change the options after loading a package and
 then call <code><a href="../reference/register_logger.html">teal.logger::register_logger()</a></code> with the
@@ -283,7 +271,7 @@ E.g. this will change the defaults of <code>teal.logger</code>. Replace
 <code>teal.logger</code> with the name of the package you want to
 change.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/Sys.setenv.html" class="external-link">Sys.setenv</a></span><span class="op">(</span>TEAL.LOG_LAYOUT <span class="op">=</span> <span class="st">"{level} {msg}"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">'teal.logger'</span><span class="op">)</span></span></code></pre></div>
 <p>For additional insights, consult the <a href="https://daroczig.github.io/logger/articles/customize_logger.html" class="external-link"><code>logger</code>
@@ -300,7 +288,7 @@ API</a>.</p>
 <p>For instance, to redirect <code>teal</code>’s logs to
 <code>stderr</code> using <code>logger</code>’s API:</p>
 <div class="sourceCode" id="cb23"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu">logger</span><span class="fu">::</span><span class="fu"><a href="https://daroczig.github.io/logger/reference/log_appender.html" class="external-link">log_appender</a></span><span class="op">(</span><span class="fu">logger</span><span class="fu">::</span><span class="va"><a href="https://daroczig.github.io/logger/reference/appender_console.html" class="external-link">appender_stderr</a></span>, namespace <span class="op">=</span> <span class="st">"teal"</span><span class="op">)</span></span></code></pre></div>
 </div>
 <div class="section level2">
@@ -324,7 +312,7 @@ modifications explained in the preceding sections.</p>
 with a level above <code>level = 400</code> won’t appear in
 <code>stdout</code>.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/" class="external-link">teal.logger</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span>namespace <span class="op">=</span> <span class="st">"my_module"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">logger</span><span class="fu">::</span><span class="fu"><a href="https://daroczig.github.io/logger/reference/log_level.html" class="external-link">log_error</a></span><span class="op">(</span><span class="st">"This is an ERROR level log from my module"</span>, namespace <span class="op">=</span> <span class="st">"my_module"</span><span class="op">)</span> <span class="co"># 200</span></span>
