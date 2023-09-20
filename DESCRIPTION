@@ -34,10 +34,10 @@ Config/Needs/verdepcheck:
     tidyverse/glue,
     r-lib/lifecycle,
     daroczig/logger,
-    yihui/knitr,
     rstudio/shiny,
-    r-lib/testthat,
-    r-lib/withr
+    r-lib/withr,
+    yihui/knitr,
+    r-lib/testthat
 Config/Needs/website: insightsengineering/nesttemplate
 Encoding: UTF-8
 Language: en-US
