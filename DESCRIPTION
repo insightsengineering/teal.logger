@@ -38,6 +38,7 @@ Config/Needs/verdepcheck:
     rstudio/shiny,
     r-lib/withr,
     yihui/knitr,
+    rstudio/rmarkdown,
     r-lib/testthat
 Config/Needs/website: insightsengineering/nesttemplate
 Encoding: UTF-8
