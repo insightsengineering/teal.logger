@@ -3,7 +3,7 @@ pkgdown: 2.0.7
 pkgdown_sha: ~
 articles:
   teal-logger: teal-logger.html
-last_built: 2023-10-16T13:35Z
+last_built: 2023-11-28T20:59Z
 urls:
   reference: https://insightsengineering.github.io/teal.logger/reference
   article: https://insightsengineering.github.io/teal.logger/articles
