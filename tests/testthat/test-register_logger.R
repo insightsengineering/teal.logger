@@ -66,7 +66,8 @@ testthat::test_that(
   paste(
     "register_logger",
     "does not throw if passed NULL to arguments, options are not set and the system variables are set to valid value"
-  ), {
+  ),
+  {
     withr::local_envvar(.new = list(TEAL.LOG_LAYOUT = "{msg}", TEAL.LOG_LEVEL = "INFO"))
     withr::local_options(.new = list(teal.log_layout = NULL, teal.log_level = NULL))
     testthat::expect_no_error(register_logger(namespace = "test", layout = NULL, level = NULL))
