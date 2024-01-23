@@ -50,22 +50,28 @@ testthat::test_that("register_logger does not throw if passed a correct logger l
   )
 })
 
-testthat::test_that("register_logger does not throw if passed NULL to either log_layout or log_level
-  and valid options are set", {
-  withr::with_options(
-    new = list(teal.log_layout = "{msg}", teal.log_level = logger::INFO),
-    code = testthat::expect_no_error(
-      register_logger(namespace = "test", level = NULL, layout = NULL)
+testthat::test_that(
+  "register_logger does not throw if passed NULL to either log_layout or log_level and valid options are set",
+  {
+    withr::with_options(
+      new = list(teal.log_layout = "{msg}", teal.log_level = logger::INFO),
+      code = testthat::expect_no_error(
+        register_logger(namespace = "test", level = NULL, layout = NULL)
+      )
     )
-  )
-})
+  }
+)
 
-testthat::test_that("register_logger does not throw if passed NULL to arguments, options are not set and
-  the system variables are set to valid value", {
-  withr::local_envvar(.new = list(TEAL.LOG_LAYOUT = "{msg}", TEAL.LOG_LEVEL = "INFO"))
-  withr::local_options(.new = list(teal.log_layout = NULL, teal.log_level = NULL))
-  testthat::expect_no_error(register_logger(namespace = "test", layout = NULL, level = NULL))
-})
+testthat::test_that(
+  paste(
+    "register_logger",
+    "does not throw if passed NULL to arguments, options are not set and the system variables are set to valid value"
+  ), {
+    withr::local_envvar(.new = list(TEAL.LOG_LAYOUT = "{msg}", TEAL.LOG_LEVEL = "INFO"))
+    withr::local_options(.new = list(teal.log_layout = NULL, teal.log_level = NULL))
+    testthat::expect_no_error(register_logger(namespace = "test", layout = NULL, level = NULL))
+  }
+)
 
 testthat::test_that("log_system_info does not throw an error", {
   testthat::expect_no_error(log_system_info())
