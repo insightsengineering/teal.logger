@@ -1,4 +1,4 @@
-# teal.logger 0.1.3.9009
+# teal.logger 0.1.3.9010
 
 * Specified minimal version of package dependencies.
 
