@@ -54,9 +54,8 @@ testthat::test_that("register_logger does not throw if passed NULL to either log
   and valid options are set", {
   withr::with_options(
     new = list(teal.log_layout = "{msg}", teal.log_level = logger::INFO),
-    code = testthat::expect_error(
-      register_logger(namespace = "test", level = NULL, layout = NULL),
-      NA
+    code = testthat::expect_no_error(
+      register_logger(namespace = "test", level = NULL, layout = NULL)
     )
   )
 })
