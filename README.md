@@ -29,21 +29,19 @@
 
 ## Installation
 
-From July 2023 `insightsengineering` packages are available on [r-universe](https://r-universe.dev/).
-
 ```r
 # stable versions
-install.packages('teal.logger', repos = c('https://insightsengineering.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages('teal.logger')
 
 # install.packages("pak")
 pak::pak("insightsengineering/teal.logger@*release")
 ```
 
-Alternatively, you might also use the development version.
+Alternatively, you might want to use the development version available on [r-universe](https://r-universe.dev/).
 
 ```r
 # beta versions
-install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', 'https://cloud.r-project.org'))
+install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', getOption('repos')))
 
 # install.packages("pak")
 pak::pak("insightsengineering/teal.logger")
@@ -85,8 +83,8 @@ If you encounter a bug or you have a feature request - please file an issue. For
 
 ### Stargazers
 
-[![Stargazers repo roster for @insightsengineering/teal.logger](https://reporoster.com/stars/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/stargazers)
+[![Stargazers repo roster for @insightsengineering/teal.logger](http://reporoster.com/stars/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/stargazers)
 
 ### Forkers
 
-[![Forkers repo roster for @insightsengineering/teal.logger](https://reporoster.com/forks/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/network/members)
+[![Forkers repo roster for @insightsengineering/teal.logger](http://reporoster.com/forks/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/network/members)
