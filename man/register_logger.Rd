@@ -7,7 +7,7 @@
 register_logger(namespace = NA_character_, layout = NULL, level = NULL)
 }
 \arguments{
-\item{namespace}{(\code{character(1)} or \code{NA})\cr
+\item{namespace}{(\code{character(1)} or \code{NA_character_})\cr
 the name of the logging namespace}
 
 \item{layout}{(\code{character(1)})\cr

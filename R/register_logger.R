@@ -27,7 +27,7 @@
 #'
 #' @seealso The package vignettes for more help: `browseVignettes("teal.logger")`.
 #'
-#' @param namespace (`character(1)` or `NA`)\cr
+#' @param namespace (`character(1)` or `NA_character_`)\cr
 #'  the name of the logging namespace
 #' @param layout (`character(1)`)\cr
 #'  the log layout. Alongside the standard logging variables provided by the `logging` package
