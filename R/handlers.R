@@ -56,26 +56,38 @@ register_handler_type <- function(
     message = logger::log_info
   )
 
+  # avoid re-registering the same handler
+  gch <- globalCallingHandlers()[names(globalCallingHandlers()) == type]
+  if (any(sapply(gch, attr, "type") == "teal.logger_handler" & sapply(gch, attr, "package") == package)) {
+    return(invisible(NULL))
+  }
+
   do.call(
     globalCallingHandlers,
     setNames(
       list(
-        function(m) {
-          i <- 0L
-          while (i <= sys.nframe()) {
-            if (identical(environment(sys.function(i)), getNamespace(package))) {
-              msg <- m$message
-              if (type %in% c("error", "warning") && !is.null(m$call)) {
-                msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
+        structure(
+          function(m) {
+            i <- 0L
+            while (i <= sys.nframe()) {
+              if (identical(environment(sys.function(i)), getNamespace(package))) {
+                msg <- m$message
+                if (type %in% c("error", "warning") && !is.null(m$call)) {
+                  msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
+                }
+                logger_fun(msg, namespace = namespace)
+                break
               }
-              logger_fun(msg, namespace = namespace)
-              break
+              i <- i + 1L
             }
-            i <- i + 1L
-          }
-        }
+          },
+          type = "teal.logger_handler",
+          package = package
+        )
       ),
       type
     )
   )
+
+  invisible(NULL)
 }
