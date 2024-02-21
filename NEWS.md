@@ -1,4 +1,4 @@
-# teal.logger 0.1.3.9010
+# teal.logger 0.1.3.9011
 
 * New function `register_handlers` to register package level logger namespace.
 * Specified minimal version of package dependencies.
