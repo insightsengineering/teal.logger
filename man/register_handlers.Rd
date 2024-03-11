@@ -22,6 +22,12 @@ This function registers global handlers for messages, warnings and errors.
 The handlers will investigate the call stack and if it contains a function
 from the package, the message, warning or error will be logged into the respective
 namespace.
+The handlers are registered only once per package and type. Consecutive calls will be ignored.
+}
+\note{
+Registering handlers is disallowed within \code{tryCatch} blocks which is used throughout
+base R and other packages. Because of this, the \code{register_handlers} function is wrapped in a
+\code{try} block to avoid errors.
 }
 \examples{
 \dontrun{

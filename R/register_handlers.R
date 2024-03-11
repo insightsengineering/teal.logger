@@ -9,6 +9,11 @@
 #' The handlers will investigate the call stack and if it contains a function
 #' from the package, the message, warning or error will be logged into the respective
 #' namespace.
+#' The handlers are registered only once per package and type. Consecutive calls will be ignored.
+#'
+#' @note Registering handlers is disallowed within `tryCatch` blocks which is used throughout
+#' base R and other packages. Because of this, the `register_handlers` function is wrapped in a
+#' `try` block to avoid errors.
 #'
 #' @seealso [globalCallingHandlers()]
 #'
@@ -22,9 +27,14 @@
 #' globalCallingHandlers()
 #' }
 register_handlers <- function(namespace, package = namespace) {
-  register_handler_message(namespace = namespace, package = package)
-  register_handler_warning(namespace = namespace, package = package)
-  register_handler_error(namespace = namespace, package = package)
+  try(
+    {
+      register_handler_message(namespace = namespace, package = package)
+      register_handler_warning(namespace = namespace, package = package)
+      register_handler_error(namespace = namespace, package = package)
+    },
+    silent = TRUE
+  )
 
   invisible(NULL)
 }
