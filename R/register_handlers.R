@@ -82,7 +82,7 @@ register_handler_type <- function(
 
   do.call(
     globalCallingHandlers,
-    setNames(
+    stats::setNames(
       list(
         structure(
           function(m) {
