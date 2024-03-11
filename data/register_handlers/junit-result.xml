@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="register_logger" timestamp="2024-03-11T13:14:41Z" hostname="e886d8bf45d3" tests="10" skipped="0" failures="0" errors="0" time="0.206">
-    <testcase time="0.012" classname="register_logger" name="register_logger_accepts_a_scalar_character"/>
+  <testsuite name="register_logger" timestamp="2024-03-11T13:20:50Z" hostname="6e87cefd6fcf" tests="10" skipped="0" failures="0" errors="0" time="0.208">
+    <testcase time="0.013" classname="register_logger" name="register_logger_accepts_a_scalar_character"/>
     <testcase time="0.047" classname="register_logger" name="register_logger_throws_an_error_when_passed_an_invalid_namespace_argument"/>
-    <testcase time="0.097" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
+    <testcase time="0.098" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
     <testcase time="0.00600000000000001" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
     <testcase time="0.00600000000000001" classname="register_logger" name="An_additional_logging_namespace_is_created_after_register_logger"/>
     <testcase time="0.004" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_layout"/>
