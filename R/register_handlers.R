@@ -29,27 +29,14 @@
 register_handlers <- function(namespace, package = namespace) {
   try(
     {
-      register_handler_message(namespace = namespace, package = package)
-      register_handler_warning(namespace = namespace, package = package)
-      register_handler_error(namespace = namespace, package = package)
+      register_handler_type(namespace = namespace, package = package, type = "message")
+      register_handler_type(namespace = namespace, package = package, type = "warning")
+      register_handler_type(namespace = namespace, package = package, type = "error")
     },
     silent = TRUE
   )
 
   invisible(NULL)
-}
-
-#' @keywords internal
-register_handler_message <- function(namespace, package) {
-  register_handler_type(namespace, package, "message")
-}
-#' @keywords internal
-register_handler_warning <- function(namespace, package) {
-  register_handler_type(namespace, package, "warning")
-}
-#' @keywords internal
-register_handler_error <- function(namespace, package) {
-  register_handler_type(namespace, package, "error")
 }
 
 #' @keywords internal
