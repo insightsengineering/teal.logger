@@ -70,31 +70,33 @@ register_handler_type <- function(
     return(invisible(NULL))
   }
 
+  # create a handler object
+  # loop through the call stack and if a function from a given package is found - log the message to the namespace
+  handler_fun <- function(m) {
+    i <- 0L
+    while (i <= sys.nframe()) {
+      if (isNamespaceLoaded(package) && identical(environment(sys.function(i)), getNamespace(package))) {
+        msg <- m$message
+        if (type %in% c("error", "warning") && !is.null(m$call)) {
+          msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
+        }
+        logger_fun(msg, namespace = namespace)
+        break
+      }
+      i <- i + 1L
+    }
+  }
+  # add attributes to enable checking if the handler is already registered
+  handler_obj <- structure(
+    handler_fun,
+    type = "teal.logger_handler",
+    package = package
+  )
+
+  # parse & eval the call - globalCallingHandlers() requires named arguments
   do.call(
     globalCallingHandlers,
-    stats::setNames(
-      list(
-        structure(
-          function(m) {
-            i <- 0L
-            while (i <= sys.nframe()) {
-              if (isNamespaceLoaded(package) && identical(environment(sys.function(i)), getNamespace(package))) {
-                msg <- m$message
-                if (type %in% c("error", "warning") && !is.null(m$call)) {
-                  msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
-                }
-                logger_fun(msg, namespace = namespace)
-                break
-              }
-              i <- i + 1L
-            }
-          },
-          type = "teal.logger_handler",
-          package = package
-        )
-      ),
-      type
-    )
+    stats::setNames(list(handler_obj), type)
   )
 
   invisible(NULL)
