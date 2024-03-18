@@ -27,7 +27,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">teal.logger</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9009</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.3.9011</small>
 
     <div style="width: 140px; margin-left: 0.5rem;"> <small class="nav-text text-muted me-auto">part of</small> <img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/nest.png?raw=true" alt="NEST" style="height: 30px;"><a href="https://pharmaverse.org/" class="external-link"><img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/pharmaverse.png?raw=true" alt="pharmaverse" style="height: 28px;"></a> </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,18 +45,6 @@
 <li class="nav-item">
   <a class="nav-link" href="../news/index.html">Changelog</a>
 </li>
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/latest-tag">latest-tag</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/release-candidate">release-candidate</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.3-rc1">v0.1.3-rc1</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.3">v0.1.3</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.2">v0.1.2</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.1">v0.1.1</a> </div></li>
-<!-- end dropdown for versions -->
 <li class="nav-item dropdown">
   <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-reports">Reports</a>
   <div class="dropdown-menu" aria-labelledby="dropdown-reports">
@@ -199,9 +187,9 @@ variable, ensure you modify the variable before loading the library.</p>
 <span><span class="co"># library(teal)</span></span>
 <span><span class="co"># will change the default because teal is attached after changing the variable</span></span></code></pre></div>
 <p>Alternatively, you can change the options after loading a package and
-then call <code><a href="../reference/register_logger.html">teal.logger::register_logger()</a></code> with the
-appropriate namespace name to change the default of a single package.
-E.g. this will change the defaults of <code>teal.logger</code>. Replace
+then call <code><a href="../reference/register_logger.html">register_logger()</a></code> with the appropriate namespace
+name to change the default of a single package. E.g. this will change
+the defaults of <code>teal.logger</code>. Replace
 <code>teal.logger</code> with the name of the package you want to
 change.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
@@ -210,7 +198,7 @@ change.</p>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">'teal.logger'</span><span class="op">)</span></span></code></pre></div>
 <p>For a more comprehensive understanding, consult the <a href="https://daroczig.github.io/logger/articles/customize_logger.html" class="external-link"><code>logger</code>
 documentation</a> and the documentation for
-<code><a href="../reference/register_logger.html">teal.logger::register_logger()</a></code>.</p>
+<code><a href="../reference/register_logger.html">register_logger()</a></code>.</p>
 </div>
 <div class="section level2">
 <h2 id="customizing-the-log-layout">Customizing the Log Layout<a class="anchor" aria-label="anchor" href="#customizing-the-log-layout"></a>
@@ -277,9 +265,9 @@ library.</p>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://insightsengineering.github.io/teal.logger/">teal.logger</a></span><span class="op">)</span></span>
 <span><span class="co"># will change the default because teal is attached after changing the variable</span></span></code></pre></div>
 <p>Alternatively, you can change the options after loading a package and
-then call <code><a href="../reference/register_logger.html">teal.logger::register_logger()</a></code> with the
-appropriate namespace name to change the default of a single package.
-E.g. this will change the defaults of <code>teal.logger</code>. Replace
+then call <code><a href="../reference/register_logger.html">register_logger()</a></code> with the appropriate namespace
+name to change the default of a single package. E.g. this will change
+the defaults of <code>teal.logger</code>. Replace
 <code>teal.logger</code> with the name of the package you want to
 change.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
@@ -288,7 +276,7 @@ change.</p>
 <span><span class="fu"><a href="../reference/register_logger.html">register_logger</a></span><span class="op">(</span><span class="st">'teal.logger'</span><span class="op">)</span></span></code></pre></div>
 <p>For additional insights, consult the <a href="https://daroczig.github.io/logger/articles/customize_logger.html" class="external-link"><code>logger</code>
 documentation</a> and the documentation for
-<code><a href="../reference/register_logger.html">teal.logger::register_logger()</a></code>.</p>
+<code><a href="../reference/register_logger.html">register_logger()</a></code>.</p>
 </div>
 <div class="section level2">
 <h2 id="customizing-the-log-destination">Customizing the Log Destination<a class="anchor" aria-label="anchor" href="#customizing-the-log-destination"></a>
@@ -307,13 +295,13 @@ API</a>.</p>
 <h2 id="logging-in-other-teal-x-packages">Logging in Other <code>teal.X</code> Packages<a class="anchor" aria-label="anchor" href="#logging-in-other-teal-x-packages"></a>
 </h2>
 <p>Additional <code>teal.X</code> packages, such as
-<code>teal.data</code>, employ
-<code><a href="../reference/register_logger.html">teal.logger::register_logger()</a></code> to enroll loggers in their
-namespace. Each package establishes a logger in the namespace equivalent
-to the package name, e.g., <code>teal.data</code> creates a logger in
-the <code>teal.data</code> namespace. A package initializes its logger
-during package loading and utilizes default logging settings, subject to
-modifications explained in the preceding sections.</p>
+<code>teal.data</code>, employ <code><a href="../reference/register_logger.html">register_logger()</a></code> to enroll
+loggers in their namespace. Each package establishes a logger in the
+namespace equivalent to the package name, e.g., <code>teal.data</code>
+creates a logger in the <code>teal.data</code> namespace. A package
+initializes its logger during package loading and utilizes default
+logging settings, subject to modifications explained in the preceding
+sections.</p>
 </div>
 <div class="section level2">
 <h2 id="example-of-usage">Example of Usage<a class="anchor" aria-label="anchor" href="#example-of-usage"></a>
