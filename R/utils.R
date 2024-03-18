@@ -27,3 +27,9 @@ log_system_info <- function() {
   pasted_names_and_versions <- paste(paste_pkgs_name_with_version(names(info$loadedOnly)), collapse = ", ")
   logger::log_trace("Loaded packages: { pasted_names_and_versions }")
 }
+
+get_val <- function(env_var_name, option_name, default = NULL) {
+  value <- Sys.getenv(env_var_name)
+  if (is.null(value) || value == "") value <- getOption(option_name, default = default)
+  return(value)
+}

@@ -5,15 +5,22 @@
 #'
 #' @return `NULL` invisibly. Called for its side effects.
 #'
-#' @details This function registers global handlers for messages, warnings and errors.
+#' @details
+#' This function registers global handlers for messages, warnings and errors.
 #' The handlers will investigate the call stack and if it contains a function
 #' from the package, the message, warning or error will be logged into the respective
 #' namespace.
+#'
 #' The handlers are registered only once per package and type. Consecutive calls will be ignored.
 #'
-#' @note Registering handlers is forbidden within `tryCatch()` or `withCallingHandlers()`, e.g.
-#' `try(globalCallingHandlers(NULL))` will throw an error.
-#' Because of this, handlers are registered conditionally - only if it is possible.
+#' Use `TEAL.LOG_MUFFLE` environmental variable or `teal.log_muffle` R option to optionally
+#' control recover strategies. If `TRUE` (non-default value) then the handler will jump to muffle
+#' restart for a given type and doesn't continue. This will essentially suppress a given condition
+#' type.
+#' Applicable for message (`"muffleMessage"`) and warning (`"muffleWarning"`) types only.
+#'
+#' @note Registering handlers is forbidden within `tryCatch()` or `withCallingHandlers()`.
+#' Because of this, handlers are registered only if it is possible.
 #'
 #' @seealso [globalCallingHandlers()]
 #'
@@ -76,6 +83,12 @@ register_handler_type <- function(
           msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
         }
         logger_fun(msg, namespace = namespace)
+        if (type == "message" && isTRUE(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", FALSE))) {
+          invokeRestart("muffleMessage")
+        }
+        if (type == "warning" && isTRUE(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", FALSE))) {
+          invokeRestart("muffleWarning")
+        }
         break
       }
       i <- i + 1L

@@ -22,12 +22,18 @@ This function registers global handlers for messages, warnings and errors.
 The handlers will investigate the call stack and if it contains a function
 from the package, the message, warning or error will be logged into the respective
 namespace.
+
 The handlers are registered only once per package and type. Consecutive calls will be ignored.
+
+Use \code{TEAL.LOG_MUFFLE} environmental variable or \code{teal.log_muffle} R option to optionally
+control recover strategies. If \code{TRUE} (non-default value) then the handler will jump to muffle
+restart for a given type and doesn't continue. This will essentially suppress a given condition
+type.
+Applicable for message (\code{"muffleMessage"}) and warning (\code{"muffleWarning"}) types only.
 }
 \note{
-Registering handlers is forbidden within \code{tryCatch()} or \code{withCallingHandlers()}, e.g.
-\code{try(globalCallingHandlers(NULL))} will throw an error.
-Because of this, handlers are registered conditionally - only if it is possible.
+Registering handlers is forbidden within \code{tryCatch()} or \code{withCallingHandlers()}.
+Because of this, handlers are registered only if it is possible.
 }
 \examples{
 \dontrun{
