@@ -63,7 +63,10 @@ register_handler_type <- function(
 
   # avoid re-registering the same handler
   gch <- globalCallingHandlers()[names(globalCallingHandlers()) == type]
-  if (any(sapply(gch, attr, "type") == "teal.logger_handler" & sapply(gch, attr, "package") == package)) {
+  if (
+    length(gch) > 0 &&
+      any(sapply(gch, attr, "type") == "teal.logger_handler" & sapply(gch, attr, "package") == package)
+  ) {
     return(invisible(NULL))
   }
 
