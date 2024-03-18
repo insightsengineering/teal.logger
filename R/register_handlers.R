@@ -26,7 +26,7 @@
 #' globalCallingHandlers()
 #' }
 register_handlers <- function(namespace, package = namespace) {
-  if (check_register_handler_possible()) {
+  if (register_handlers_possible()) {
     register_handler_type(namespace = namespace, package = package, type = "message")
     register_handler_type(namespace = namespace, package = package, type = "warning")
     register_handler_type(namespace = namespace, package = package, type = "error")
@@ -97,7 +97,22 @@ register_handler_type <- function(
   invisible(NULL)
 }
 
-check_register_handler_possible <- function() {
+#' Checks if it is possible to register handlers.
+#'
+#' @keywords internal
+#'
+#' @returns boolean
+#' @examples
+#' register_handlers_possible() # TRUE
+#' try(register_handlers_possible()) # FALSE
+#' withCallingHandlers(register_handlers_possible()) # FALSE
+#'
+#' \dontrun{
+#' # To avoid errors when registering:
+#' try(globalCallingHandlers(NULL))
+#' withCallingHandlers(globalCallingHandlers(NULL), foo = identity)
+#' }
+register_handlers_possible <- function() {
   for (i in seq_len(sys.nframe())) {
     if (identical(sys.function(i), tryCatch) || identical(sys.function(i), withCallingHandlers)) {
       return(FALSE)
