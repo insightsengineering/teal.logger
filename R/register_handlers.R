@@ -46,13 +46,13 @@ register_handler_type <- function(
     type = c("error", "warning", "message")) {
   match.arg(type)
   if (!(is.character(namespace) && length(namespace) == 1)) {
-    stop("namespace argument must be a scalar character.")
+    stop("namespace argument must be a single string.")
   }
   if (!(namespace %in% logger::log_namespaces())) {
     stop("namespace argument must be a pre-registered logger namespace.")
   }
   if (!(is.character(package) && length(package) == 1)) {
-    stop("package argument must be a scalar character.")
+    stop("package argument must be a single string.")
   }
 
   logger_fun <- switch(type,

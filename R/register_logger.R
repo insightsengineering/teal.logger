@@ -52,7 +52,7 @@ register_logger <- function(namespace = NA_character_,
                             layout = NULL,
                             level = NULL) {
   if (!((is.character(namespace) && length(namespace) == 1) || is.na(namespace))) {
-    stop("namespace argument to register_logger must be a scalar character or NA.")
+    stop("namespace argument to register_logger must be a single string or NA.")
   }
 
   if (is.null(level)) level <- Sys.getenv("TEAL.LOG_LEVEL")
