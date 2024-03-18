@@ -11,9 +11,9 @@
 #' namespace.
 #' The handlers are registered only once per package and type. Consecutive calls will be ignored.
 #'
-#' @note Registering handlers is disallowed within `tryCatch` blocks which is used throughout
-#' base R and other packages. Because of this, the `register_handlers` function is wrapped in a
-#' `try` block to avoid errors.
+#' @note Registering handlers is forbidden within `tryCatch()` or `withCallingHandlers()`, e.g.
+#' `try(globalCallingHandlers(NULL))` will throw an error.
+#' Because of this, handlers are registered conditionally - only if it is possible.
 #'
 #' @seealso [globalCallingHandlers()]
 #'
@@ -21,20 +21,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' register_logger(namespace = "teal.logger")
 #' register_handlers("teal.logger")
 #' # see the outcome
 #' globalCallingHandlers()
 #' }
 register_handlers <- function(namespace, package = namespace) {
-  try(
-    {
-      register_handler_type(namespace = namespace, package = package, type = "message")
-      register_handler_type(namespace = namespace, package = package, type = "warning")
-      register_handler_type(namespace = namespace, package = package, type = "error")
-    },
-    silent = TRUE
-  )
+  if (if_register_handler_possible()) {
+    register_handler_type(namespace = namespace, package = package, type = "message")
+    register_handler_type(namespace = namespace, package = package, type = "warning")
+    register_handler_type(namespace = namespace, package = package, type = "error")
+  }
 
   invisible(NULL)
 }
@@ -100,4 +96,14 @@ register_handler_type <- function(
   )
 
   invisible(NULL)
+}
+
+#' @keywords internal
+if_register_handler_possible <- function() {
+  for (i in seq_len(sys.nframe())) {
+    if (identical(sys.function(i), tryCatch) || identical(sys.function(i), withCallingHandlers)) {
+      return(FALSE)
+    }
+  }
+  return(TRUE)
 }

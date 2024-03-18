@@ -25,13 +25,12 @@ namespace.
 The handlers are registered only once per package and type. Consecutive calls will be ignored.
 }
 \note{
-Registering handlers is disallowed within \code{tryCatch} blocks which is used throughout
-base R and other packages. Because of this, the \code{register_handlers} function is wrapped in a
-\code{try} block to avoid errors.
+Registering handlers is forbidden within \code{tryCatch()} or \code{withCallingHandlers()}, e.g.
+\code{try(globalCallingHandlers(NULL))} will throw an error.
+Because of this, handlers are registered conditionally - only if it is possible.
 }
 \examples{
 \dontrun{
-register_logger(namespace = "teal.logger")
 register_handlers("teal.logger")
 # see the outcome
 globalCallingHandlers()
