@@ -35,7 +35,6 @@ register_handlers <- function(namespace, package = namespace) {
   invisible(NULL)
 }
 
-#' @keywords internal
 register_handler_type <- function(
     namespace,
     package,
@@ -98,7 +97,6 @@ register_handler_type <- function(
   invisible(NULL)
 }
 
-#' @keywords internal
 if_register_handler_possible <- function() {
   for (i in seq_len(sys.nframe())) {
     if (identical(sys.function(i), tryCatch) || identical(sys.function(i), withCallingHandlers)) {
