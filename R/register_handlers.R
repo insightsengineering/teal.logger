@@ -26,7 +26,7 @@
 #' globalCallingHandlers()
 #' }
 register_handlers <- function(namespace, package = namespace) {
-  if (if_register_handler_possible()) {
+  if (check_register_handler_possible()) {
     register_handler_type(namespace = namespace, package = package, type = "message")
     register_handler_type(namespace = namespace, package = package, type = "warning")
     register_handler_type(namespace = namespace, package = package, type = "error")
@@ -97,7 +97,7 @@ register_handler_type <- function(
   invisible(NULL)
 }
 
-if_register_handler_possible <- function() {
+check_register_handler_possible <- function() {
   for (i in seq_len(sys.nframe())) {
     if (identical(sys.function(i), tryCatch) || identical(sys.function(i), withCallingHandlers)) {
       return(FALSE)
