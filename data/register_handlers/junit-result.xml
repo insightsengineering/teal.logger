@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="register_logger" timestamp="2024-03-15T11:57:53Z" hostname="92e5c30f1b87" tests="10" skipped="0" failures="0" errors="0" time="0.214">
-    <testcase time="0.012" classname="register_logger" name="register_logger_accepts_a_scalar_character"/>
-    <testcase time="0.0489999999999999" classname="register_logger" name="register_logger_throws_an_error_when_passed_an_invalid_namespace_argument"/>
-    <testcase time="0.101" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
-    <testcase time="0.00599999999999989" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
-    <testcase time="0.00700000000000001" classname="register_logger" name="An_additional_logging_namespace_is_created_after_register_logger"/>
+  <testsuite name="register_logger" timestamp="2024-03-18T11:10:29Z" hostname="50b3f4635926" tests="10" skipped="0" failures="0" errors="0" time="0.213">
+    <testcase time="0.013" classname="register_logger" name="register_logger_accepts_a_character"/>
+    <testcase time="0.0479999999999999" classname="register_logger" name="register_logger_throws_an_error_when_passed_an_invalid_namespace_argument"/>
+    <testcase time="0.1" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
+    <testcase time="0.00600000000000001" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
+    <testcase time="0.0069999999999999" classname="register_logger" name="An_additional_logging_namespace_is_created_after_register_logger"/>
     <testcase time="0.004" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_layout"/>
     <testcase time="0.004" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_level"/>
     <testcase time="0.004" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_either_log_layout_or_log_level_and_valid_options_are_set"/>
