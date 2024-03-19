@@ -15,8 +15,8 @@ get_val(env_var_name, option_name, default = NULL)
 }
 \value{
 an object of any class
-keywords internal
 }
 \description{
 Get value from environmental variable or R option or default in that order if the previous one is missing.
 }
+\keyword{internal}

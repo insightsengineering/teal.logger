@@ -33,7 +33,7 @@ log_system_info <- function() {
 #' @param option_name (`character(1)`) name of the option
 #' @param default optional, default value if both `Sys.getenv(env_var_name)` and `getOption(option_name)` are empty
 #' @return an object of any class
-#' keywords internal
+#' @keywords internal
 get_val <- function(env_var_name, option_name, default = NULL) {
   value <- Sys.getenv(env_var_name)
   if (is.null(value) || value == "") value <- getOption(option_name, default = default)
