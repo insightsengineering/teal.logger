@@ -26,10 +26,9 @@ namespace.
 The handlers are registered only once per package and type. Consecutive calls will be ignored.
 
 Use \code{TEAL.LOG_MUFFLE} environmental variable or \code{teal.log_muffle} R option to optionally
-control recover strategies. If \code{TRUE} (non-default value) then the handler will jump to muffle
-restart for a given type and doesn't continue. This will essentially suppress a given condition
-type.
-Applicable for message (\code{"muffleMessage"}) and warning (\code{"muffleWarning"}) types only.
+control recover strategies. If \code{TRUE} (a default value) then the handler will jump to muffle
+restart for a given type of condition and doesn't continue (with output to the console).
+Applicable for message and warning types only and the errors won't be suppressed.
 }
 \note{
 Registering handlers is forbidden within \code{tryCatch()} or \code{withCallingHandlers()}.

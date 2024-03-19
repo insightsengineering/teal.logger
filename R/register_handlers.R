@@ -14,10 +14,9 @@
 #' The handlers are registered only once per package and type. Consecutive calls will be ignored.
 #'
 #' Use `TEAL.LOG_MUFFLE` environmental variable or `teal.log_muffle` R option to optionally
-#' control recover strategies. If `TRUE` (non-default value) then the handler will jump to muffle
-#' restart for a given type and doesn't continue. This will essentially suppress a given condition
-#' type.
-#' Applicable for message (`"muffleMessage"`) and warning (`"muffleWarning"`) types only.
+#' control recover strategies. If `TRUE` (a default value) then the handler will jump to muffle
+#' restart for a given type of condition and doesn't continue (with output to the console).
+#' Applicable for message and warning types only and the errors won't be suppressed.
 #'
 #' @note Registering handlers is forbidden within `tryCatch()` or `withCallingHandlers()`.
 #' Because of this, handlers are registered only if it is possible.
@@ -44,9 +43,8 @@ register_handlers <- function(namespace, package = namespace) {
 
 register_handler_type <- function(
     namespace,
-    package,
+    package = namespace,
     type = c("error", "warning", "message")) {
-  match.arg(type)
   if (!(is.character(namespace) && length(namespace) == 1)) {
     stop("namespace argument must be a single string.")
   }
@@ -56,34 +54,36 @@ register_handler_type <- function(
   if (!(is.character(package) && length(package) == 1)) {
     stop("package argument must be a single string.")
   }
+  match.arg(type)
 
+  registered_handlers_namespaces[[package]] <- namespace
+
+  # avoid re-registering handlers
+  gch <- globalCallingHandlers()[names(globalCallingHandlers()) == type]
+  if (length(gch) > 0 && any(sapply(gch, attr, "type") == "teal.logger_handler")) {
+    return(invisible(NULL))
+  }
+
+  # create a handler object
+  # loop through the call stack starting from the bottom (the last call)
+  # if a function is from pre-registered package then log using pre-specified namespace
   logger_fun <- switch(type,
     error = logger::log_error,
     warning = logger::log_warn,
     message = logger::log_info
   )
-
-  # avoid re-registering handlers for the same package
-  gch <- globalCallingHandlers()[names(globalCallingHandlers()) == type]
-  if (
-    length(gch) > 0 &&
-      any(sapply(gch, attr, "type") == "teal.logger_handler" & sapply(gch, attr, "package") == package)
-  ) {
-    return(invisible(NULL))
-  }
-
-  # create a handler object
-  # loop through the call stack and if a function from a given package is found - log the message to the namespace
   handler_fun <- function(m) {
-    i <- 0L
-    while (i <= sys.nframe()) {
-      if (isNamespaceLoaded(package) && identical(environment(sys.function(i)), getNamespace(package))) {
+    i <- sys.nframe() - 1L
+    while (i > 0L) {
+      pkg_sys_fun_i <- getPackageName(environment(sys.function(i)))
+      if (pkg_sys_fun_i %in% ls(envir = registered_handlers_namespaces)) {
         msg <- m$message
         if (type %in% c("error", "warning") && !is.null(m$call)) {
           msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
         }
 
-        logger_fun(msg, namespace = namespace)
+        log_namespace <- registered_handlers_namespaces[[pkg_sys_fun_i]]
+        logger_fun(msg, namespace = log_namespace)
 
         # muffle restart
         if (isTRUE(as.logical(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", TRUE)))) {
@@ -97,14 +97,13 @@ register_handler_type <- function(
 
         break
       }
-      i <- i + 1L
+      i <- i - 1L
     }
   }
   # add attributes to enable checking if the handler is already registered
   handler_obj <- structure(
     handler_fun,
-    type = "teal.logger_handler",
-    package = package
+    type = "teal.logger_handler"
   )
 
   # parse & eval the call - globalCallingHandlers() requires named arguments
