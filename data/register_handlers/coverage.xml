@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.539568345323741" branch-rate="0" lines-covered="75" lines-valid="139" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-03-18 17:32:11.144351">
+<coverage line-rate="0.531914893617021" branch-rate="0" lines-covered="75" lines-valid="141" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-03-19 09:52:58.726003">
   <sources>
     <source>/__w/teal.logger/teal.logger/teal.logger</source>
   </sources>
   <packages>
-    <package name="teal.logger" line-rate="0.539568345323741" branch-rate="0" complexity="0">
+    <package name="teal.logger" line-rate="0.531914893617021" branch-rate="0" complexity="0">
       <classes>
         <class name="register_handlers.R" filename="R/register_handlers.R" line-rate="0" branch-rate="0" complexity="0">
           <methods>
@@ -44,10 +44,7 @@
                 <line number="82" hits="0" branch="false"/>
                 <line number="83" hits="0" branch="false"/>
                 <line number="84" hits="0" branch="false"/>
-                <line number="85" hits="0" branch="false"/>
                 <line number="86" hits="0" branch="false"/>
-                <line number="87" hits="0" branch="false"/>
-                <line number="88" hits="0" branch="false"/>
                 <line number="89" hits="0" branch="false"/>
                 <line number="90" hits="0" branch="false"/>
                 <line number="91" hits="0" branch="false"/>
@@ -61,19 +58,24 @@
                 <line number="100" hits="0" branch="false"/>
                 <line number="101" hits="0" branch="false"/>
                 <line number="102" hits="0" branch="false"/>
+                <line number="104" hits="0" branch="false"/>
                 <line number="105" hits="0" branch="false"/>
                 <line number="106" hits="0" branch="false"/>
                 <line number="107" hits="0" branch="false"/>
                 <line number="108" hits="0" branch="false"/>
-                <line number="110" hits="0" branch="false"/>
+                <line number="111" hits="0" branch="false"/>
+                <line number="112" hits="0" branch="false"/>
+                <line number="113" hits="0" branch="false"/>
+                <line number="114" hits="0" branch="false"/>
+                <line number="116" hits="0" branch="false"/>
               </lines>
             </method>
             <method name="register_handlers_possible" signature="" line-rate="0" branch-rate="0" complexity="0">
               <lines>
-                <line number="114" hits="0" branch="false"/>
-                <line number="115" hits="0" branch="false"/>
-                <line number="116" hits="0" branch="false"/>
-                <line number="119" hits="0" branch="false"/>
+                <line number="120" hits="0" branch="false"/>
+                <line number="121" hits="0" branch="false"/>
+                <line number="122" hits="0" branch="false"/>
+                <line number="125" hits="0" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -107,10 +109,7 @@
             <line number="82" hits="0" branch="false"/>
             <line number="83" hits="0" branch="false"/>
             <line number="84" hits="0" branch="false"/>
-            <line number="85" hits="0" branch="false"/>
             <line number="86" hits="0" branch="false"/>
-            <line number="87" hits="0" branch="false"/>
-            <line number="88" hits="0" branch="false"/>
             <line number="89" hits="0" branch="false"/>
             <line number="90" hits="0" branch="false"/>
             <line number="91" hits="0" branch="false"/>
@@ -124,15 +123,20 @@
             <line number="100" hits="0" branch="false"/>
             <line number="101" hits="0" branch="false"/>
             <line number="102" hits="0" branch="false"/>
+            <line number="104" hits="0" branch="false"/>
             <line number="105" hits="0" branch="false"/>
             <line number="106" hits="0" branch="false"/>
             <line number="107" hits="0" branch="false"/>
             <line number="108" hits="0" branch="false"/>
-            <line number="110" hits="0" branch="false"/>
+            <line number="111" hits="0" branch="false"/>
+            <line number="112" hits="0" branch="false"/>
+            <line number="113" hits="0" branch="false"/>
             <line number="114" hits="0" branch="false"/>
-            <line number="115" hits="0" branch="false"/>
             <line number="116" hits="0" branch="false"/>
-            <line number="119" hits="0" branch="false"/>
+            <line number="120" hits="0" branch="false"/>
+            <line number="121" hits="0" branch="false"/>
+            <line number="122" hits="0" branch="false"/>
+            <line number="125" hits="0" branch="false"/>
           </lines>
         </class>
         <class name="register_logger.R" filename="R/register_logger.R" line-rate="0.982142857142857" branch-rate="0" complexity="0">
@@ -306,9 +310,9 @@
             </method>
             <method name="get_val" signature="" line-rate="1" branch-rate="0" complexity="0">
               <lines>
-                <line number="32" hits="12" branch="false"/>
-                <line number="33" hits="10" branch="false"/>
-                <line number="34" hits="12" branch="false"/>
+                <line number="38" hits="12" branch="false"/>
+                <line number="39" hits="10" branch="false"/>
+                <line number="40" hits="12" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -330,9 +334,9 @@
             <line number="25" hits="1" branch="false"/>
             <line number="27" hits="1" branch="false"/>
             <line number="28" hits="1" branch="false"/>
-            <line number="32" hits="12" branch="false"/>
-            <line number="33" hits="10" branch="false"/>
-            <line number="34" hits="12" branch="false"/>
+            <line number="38" hits="12" branch="false"/>
+            <line number="39" hits="10" branch="false"/>
+            <line number="40" hits="12" branch="false"/>
           </lines>
         </class>
         <class name="zzz.R" filename="R/zzz.R" line-rate="0" branch-rate="0" complexity="0">
