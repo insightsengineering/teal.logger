@@ -63,7 +63,7 @@ register_handler_type <- function(
     message = logger::log_info
   )
 
-  # avoid re-registering the same handler
+  # avoid re-registering handlers for the same package
   gch <- globalCallingHandlers()[names(globalCallingHandlers()) == type]
   if (
     length(gch) > 0 &&
@@ -82,13 +82,19 @@ register_handler_type <- function(
         if (type %in% c("error", "warning") && !is.null(m$call)) {
           msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
         }
+
         logger_fun(msg, namespace = namespace)
-        if (type == "message" && isTRUE(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", FALSE))) {
-          invokeRestart("muffleMessage")
+
+        # muffle restart
+        if (isTRUE(as.logical(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", TRUE)))) {
+          if (type == "message") {
+            invokeRestart("muffleMessage")
+          }
+          if (type == "warning") {
+            invokeRestart("muffleWarning")
+          }
         }
-        if (type == "warning" && isTRUE(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", FALSE))) {
-          invokeRestart("muffleWarning")
-        }
+
         break
       }
       i <- i + 1L
