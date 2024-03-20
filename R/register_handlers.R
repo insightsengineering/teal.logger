@@ -12,6 +12,7 @@
 #' namespace.
 #'
 #' The handlers are registered only once per package and type. Consecutive calls will no effect.
+#' Registering handlers for package `base` is not supported.
 #'
 #' Use `TEAL.LOG_MUFFLE` environmental variable or `teal.log_muffle` R option to optionally
 #' control recover strategies. If `TRUE` (a default value) then the handler will jump to muffle
@@ -45,13 +46,13 @@ register_handler_type <- function(
     namespace,
     package = namespace,
     type = c("error", "warning", "message")) {
-  if (!(is.character(namespace) && length(namespace) == 1)) {
+  if (!(is.character(namespace) && length(namespace) == 1 && !is.na(namespace))) {
     stop("namespace argument must be a single string.")
   }
   if (!(namespace %in% logger::log_namespaces())) {
     stop("namespace argument must be a pre-registered logger namespace.")
   }
-  if (!(is.character(package) && length(package) == 1)) {
+  if (!(is.character(package) && length(package) == 1 && !is.na(package))) {
     stop("package argument must be a single string.")
   }
   match.arg(type)
@@ -72,6 +73,7 @@ register_handler_type <- function(
     warning = logger::log_warn,
     message = logger::log_info
   )
+  # nocov start
   handler_fun <- function(m) {
     i <- sys.nframe() - 1L # loop starting from the bottom of the stack and go up
     while (i > 0L) { # exclude 0L as this value will detect the current `handler_fun()` function
@@ -82,10 +84,7 @@ register_handler_type <- function(
         ""
       }
       if (pkg_sys_fun_i %in% ls(envir = registered_handlers_namespaces)) {
-        msg <- m$message
-        if (type %in% c("error", "warning") && !is.null(m$call)) {
-          msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
-        }
+        msg <- parse_logger_message(m)
 
         log_namespace <- registered_handlers_namespaces[[pkg_sys_fun_i]]
         logger_fun(msg, namespace = log_namespace)
@@ -104,7 +103,9 @@ register_handler_type <- function(
       }
       i <- i - 1L
     }
+    m
   }
+  # nocov end
   # add attributes to enable checking if the handler is already registered
   handler_obj <- structure(
     handler_fun,
@@ -118,6 +119,17 @@ register_handler_type <- function(
   )
 
   invisible(NULL)
+}
+
+parse_logger_message <- function(m) {
+  stopifnot(is(m, "condition"))
+
+  msg <- m$message
+  type <- class(m)[2]
+  if (type %in% c("error", "warning") && !is.null(m$call)) {
+    msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
+  }
+  return(msg)
 }
 
 register_handlers_possible <- function() {

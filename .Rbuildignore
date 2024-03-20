@@ -13,6 +13,7 @@ SECURITY.md
 ^[^/]+\.html$
 ^[^/]+\.png$
 ^\.CI-FORCE-RELEASE-VERSION$
+^\.covrignore$
 ^\.Rprofile$
 ^\.Rproj\.user$
 ^\.github$

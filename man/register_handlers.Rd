@@ -24,6 +24,7 @@ from the package, the message, warning or error will be logged into the respecti
 namespace.
 
 The handlers are registered only once per package and type. Consecutive calls will no effect.
+Registering handlers for package \code{base} is not supported.
 
 Use \code{TEAL.LOG_MUFFLE} environmental variable or \code{teal.log_muffle} R option to optionally
 control recover strategies. If \code{TRUE} (a default value) then the handler will jump to muffle
