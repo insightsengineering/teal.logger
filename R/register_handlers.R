@@ -122,7 +122,7 @@ register_handler_type <- function(
 }
 
 parse_logger_message <- function(m) {
-  stopifnot(is(m, "condition"))
+  stopifnot(inherits(m, "condition"))
 
   msg <- m$message
   type <- class(m)[2]
