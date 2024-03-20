@@ -11,12 +11,12 @@
 #' from the package, the message, warning or error will be logged into the respective
 #' namespace.
 #'
-#' The handlers are registered only once per package and type. Consecutive calls will be ignored.
+#' The handlers are registered only once per package and type. Consecutive calls will no effect.
 #'
 #' Use `TEAL.LOG_MUFFLE` environmental variable or `teal.log_muffle` R option to optionally
 #' control recover strategies. If `TRUE` (a default value) then the handler will jump to muffle
 #' restart for a given type of condition and doesn't continue (with output to the console).
-#' Applicable for message and warning types only and the errors won't be suppressed.
+#' Applicable for message and warning types only. The errors won't be suppressed.
 #'
 #' @note Registering handlers is forbidden within `tryCatch()` or `withCallingHandlers()`.
 #' Because of this, handlers are registered only if it is possible.
@@ -73,8 +73,8 @@ register_handler_type <- function(
     message = logger::log_info
   )
   handler_fun <- function(m) {
-    i <- sys.nframe() - 1L
-    while (i > 0L) {
+    i <- sys.nframe() - 1L # loop starting from the bottom of the stack and go up
+    while (i > 0L) { # exclude 0L as this value will detect the current `handler_fun()` function
       env_sys_fun_i <- environment(sys.function(i))
       pkg_sys_fun_i <- if (!is.null(env_sys_fun_i)) { # primitive functions don't have environment
         methods::getPackageName(env_sys_fun_i)
@@ -111,7 +111,7 @@ register_handler_type <- function(
     type = "teal.logger_handler"
   )
 
-  # parse & eval the call - globalCallingHandlers() requires named arguments
+  # construct & eval the call - globalCallingHandlers() requires named arguments
   do.call(
     globalCallingHandlers,
     stats::setNames(list(handler_obj), type)

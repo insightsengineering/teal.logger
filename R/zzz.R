@@ -1,4 +1,4 @@
-# create a mutable object (i.e. environment) to store the information of registered handlers
+# create an object to store the information of registered handlers
 registered_handlers_namespaces <- new.env()
 
 .onLoad <- function(libname, pkgname) { # nolint

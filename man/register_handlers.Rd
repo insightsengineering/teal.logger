@@ -23,12 +23,12 @@ The handlers will investigate the call stack and if it contains a function
 from the package, the message, warning or error will be logged into the respective
 namespace.
 
-The handlers are registered only once per package and type. Consecutive calls will be ignored.
+The handlers are registered only once per package and type. Consecutive calls will no effect.
 
 Use \code{TEAL.LOG_MUFFLE} environmental variable or \code{teal.log_muffle} R option to optionally
 control recover strategies. If \code{TRUE} (a default value) then the handler will jump to muffle
 restart for a given type of condition and doesn't continue (with output to the console).
-Applicable for message and warning types only and the errors won't be suppressed.
+Applicable for message and warning types only. The errors won't be suppressed.
 }
 \note{
 Registering handlers is forbidden within \code{tryCatch()} or \code{withCallingHandlers()}.
