@@ -75,7 +75,12 @@ register_handler_type <- function(
   handler_fun <- function(m) {
     i <- sys.nframe() - 1L
     while (i > 0L) {
-      pkg_sys_fun_i <- methods::getPackageName(environment(sys.function(i)))
+      env_sys_fun_i <- environment(sys.function(i))
+      pkg_sys_fun_i <- if (!is.null(env_sys_fun_i)) { # primitive functions don't have environment
+        methods::getPackageName(env_sys_fun_i)
+      } else {
+        ""
+      }
       if (pkg_sys_fun_i %in% ls(envir = registered_handlers_namespaces)) {
         msg <- m$message
         if (type %in% c("error", "warning") && !is.null(m$call)) {
