@@ -4,10 +4,16 @@ testthat::test_that("parse_logger_message correctly works on condition object", 
   testthat::expect_identical(parse_logger_message(simpleError("foo")), "foo")
 })
 
+testthat::test_that("parse_logger_message includes call on warnings and errors", {
+  testthat::expect_match(parse_logger_message(simpleWarning("foo", "bar")), "In .bar.: foo")
+  testthat::expect_match(parse_logger_message(simpleError("foo", "bar")), "In .bar.: foo")
+})
+
 testthat::test_that("parse_logger_message throws if not supported class of argument", {
   testthat::expect_error(parse_logger_message("foo"))
 })
 
+mocked_handlers_list <- list()
 mocked_global_calling_handlers <- function(...) {
   # mocking base::globalCallingHandlers
   # we are interested whether setting a new value is requested, i.e. globalCallingHandlers() with a named argument
@@ -16,14 +22,16 @@ mocked_global_calling_handlers <- function(...) {
   x <- list(...)
   if (length(x) == 0) {
     # "return current handlers"
-    return()
+    return(mocked_handlers_list)
   } else {
     if (identical(x, list(NULL))) {
       # "clear handlers"
+      mocked_handlers_list <<- list()
       return()
     } else {
       for (i in names(x)) {
-        cat(sprintf("set handler for %s\n", i))
+        # add handler
+        mocked_handlers_list <<- append(mocked_handlers_list, setNames(list(x[[i]]), i))
         return()
       }
     }
@@ -65,10 +73,27 @@ testthat::test_that("register_handlers modifies global handlers", {
     testthat::with_mocked_bindings(
       code = {
         register_logger("test")
-        testthat::expect_output(
-          register_handlers(namespace = "test"),
-          "set handler for message\nset handler for warning\nset handler for error"
-        )
+        mocked_global_calling_handlers(NULL) # clear handlers
+        testthat::expect_silent(register_handlers(namespace = "test"))
+        testthat::expect_length(mocked_global_calling_handlers(), 3)
+        mocked_global_calling_handlers(NULL) # clear handlers
+      },
+      register_handlers_possible = function() TRUE
+    ),
+    globalCallingHandlers = mocked_global_calling_handlers,
+    .package = "base"
+  )
+})
+
+testthat::test_that("register_handlers has no effect if called multiple times", {
+  testthat::with_mocked_bindings(
+    testthat::with_mocked_bindings(
+      code = {
+        register_logger("test")
+        mocked_global_calling_handlers(NULL) # clear handlers
+        testthat::expect_silent(register_handlers(namespace = "test"))
+        testthat::expect_silent(register_handlers(namespace = "test"))
+        testthat::expect_length(mocked_global_calling_handlers(), 3)
       },
       register_handlers_possible = function() TRUE
     ),
