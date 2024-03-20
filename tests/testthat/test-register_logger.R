@@ -1,4 +1,4 @@
-testthat::test_that("register_logger accepts a scalar character", {
+testthat::test_that("register_logger accepts a character", {
   withr::with_options(
     new = list(teal.log_layout = NULL),
     code = testthat::expect_no_error(register_logger(namespace = "test"))
@@ -8,7 +8,7 @@ testthat::test_that("register_logger accepts a scalar character", {
 testthat::test_that("register_logger throws an error when passed an invalid namespace argument", {
   testthat::expect_error(
     register_logger(namespace = 7),
-    regexp = "namespace argument to register_logger must be a scalar character or NA."
+    regexp = "namespace argument to register_logger must be a single string or NA."
   )
 })
 
