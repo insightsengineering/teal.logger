@@ -2,7 +2,7 @@
 
 * New function `register_handlers` to register global handlers for logging messages, warnings and errors.
 * Specified minimal version of package dependencies.
-* Update installation instructions in README.
+* Update installation instructions in `README`.
 
 # teal.logger 0.1.3
 
