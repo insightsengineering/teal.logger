@@ -27,7 +27,7 @@ Imports:
 Suggests:
     knitr (>= 1.42),
     rmarkdown (>= 2.19),
-    testthat (>= 3.1.5)
+    testthat (>= 3.1.7)
 VignetteBuilder:
     knitr
 RdMacros:
