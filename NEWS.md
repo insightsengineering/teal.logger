@@ -1,3 +1,5 @@
+# teal.logger 0.2.0.9000
+
 # teal.logger 0.2.0
 
 * New function `register_handlers` to register global handlers for logging messages, warnings and errors.
