@@ -27,3 +27,15 @@ log_system_info <- function() {
   pasted_names_and_versions <- paste(paste_pkgs_name_with_version(names(info$loadedOnly)), collapse = ", ")
   logger::log_trace("Loaded packages: { pasted_names_and_versions }")
 }
+
+#' Get value from environmental variable or R option or default in that order if the previous one is missing.
+#' @param env_var_name (`character(1)`) name of the system variable
+#' @param option_name (`character(1)`) name of the option
+#' @param default optional, default value if both `Sys.getenv(env_var_name)` and `getOption(option_name)` are empty
+#' @return an object of any class
+#' @keywords internal
+get_val <- function(env_var_name, option_name, default = NULL) {
+  value <- Sys.getenv(env_var_name)
+  if (is.null(value) || value == "") value <- getOption(option_name, default = default)
+  return(value)
+}
