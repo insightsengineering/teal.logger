@@ -13,6 +13,7 @@ SECURITY.md
 ^[^/]+\.html$
 ^[^/]+\.png$
 ^\.CI-FORCE-RELEASE-VERSION$
+^\.covrignore$
 ^\.Rprofile$
 ^\.Rproj\.user$
 ^\.github$
@@ -41,3 +42,5 @@ SECURITY.md
 ^test_full_example$
 coverage.*
 ^pkgdown$
+^.revdeprefs\.yaml$
+^revdep$

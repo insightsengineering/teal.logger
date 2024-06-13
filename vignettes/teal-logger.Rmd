@@ -89,7 +89,7 @@ Example below:
 # will change the default because teal is attached after changing the variable
 ```
 
-Alternatively, you can change the options after loading a package and then call `teal.logger::register_logger()` with the appropriate namespace name to change the default of a single package. E.g. this will change the defaults of
+Alternatively, you can change the options after loading a package and then call `register_logger()` with the appropriate namespace name to change the default of a single package. E.g. this will change the defaults of
 `teal.logger`. Replace `teal.logger` with the name of the package you want to change.
 ```r
 library(teal.logger)
@@ -97,7 +97,7 @@ Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
 register_logger('teal.logger')
 ```
 
-For a more comprehensive understanding, consult the [`logger` documentation](https://daroczig.github.io/logger/articles/customize_logger.html) and the documentation for `teal.logger::register_logger()`.
+For a more comprehensive understanding, consult the [`logger` documentation](https://daroczig.github.io/logger/articles/customize_logger.html) and the documentation for `register_logger()`.
 
 ## Customizing the Log Layout
 When using `register_logger()`, the default log layout for the new logger is `[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}`.You can modify this behavior in four distinct ways:
@@ -162,14 +162,14 @@ library(teal.logger)
 # will change the default because teal is attached after changing the variable
 ```
 
-Alternatively, you can change the options after loading a package and then call `teal.logger::register_logger()` with the appropriate namespace name to change the default of a single package. E.g. this will change the defaults of `teal.logger`. Replace `teal.logger` with the name of the package you want to change.
+Alternatively, you can change the options after loading a package and then call `register_logger()` with the appropriate namespace name to change the default of a single package. E.g. this will change the defaults of `teal.logger`. Replace `teal.logger` with the name of the package you want to change.
 ```r
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
 register_logger('teal.logger')
 ```
 
-For additional insights, consult the [`logger` documentation](https://daroczig.github.io/logger/articles/customize_logger.html) and the documentation for `teal.logger::register_logger()`.
+For additional insights, consult the [`logger` documentation](https://daroczig.github.io/logger/articles/customize_logger.html) and the documentation for `register_logger()`.
 
 ## Customizing the Log Destination
 By default, `teal.logger` sends logs to `stdout`. If you wish to alter this behavior, you need to employ [`logger`'s API](https://daroczig.github.io/logger/articles/customize_logger.html#delivering-log-records-to-their-destination-1).
@@ -181,7 +181,7 @@ logger::log_appender(logger::appender_stderr, namespace = "teal")
 ```
 
 ## Logging in Other `teal.X` Packages
-Additional `teal.X` packages, such as `teal.data`, employ `teal.logger::register_logger()` to enroll loggers in their namespace. Each package establishes a logger in the namespace equivalent to the package name, e.g., `teal.data` creates a logger in the `teal.data` namespace. A package initializes its logger during package loading and utilizes default logging settings, subject to modifications explained in the preceding sections.
+Additional `teal.X` packages, such as `teal.data`, employ `register_logger()` to enroll loggers in their namespace. Each package establishes a logger in the namespace equivalent to the package name, e.g., `teal.data` creates a logger in the `teal.data` namespace. A package initializes its logger during package loading and utilizes default logging settings, subject to modifications explained in the preceding sections.
 
 ## Example of Usage
 Below is a minimal working example that demonstrates logging using `teal`'s logging setup. The default `TEAL.LOG.LEVEL` is `"INFO"`, implying that logs with a level above `level = 400` won't appear in `stdout`.

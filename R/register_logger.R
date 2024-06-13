@@ -27,7 +27,7 @@
 #'
 #' @seealso The package vignettes for more help: `browseVignettes("teal.logger")`.
 #'
-#' @param namespace (`character(1)` or `NA`)\cr
+#' @param namespace (`character(1)` or `NA_character_`)\cr
 #'  the name of the logging namespace
 #' @param layout (`character(1)`)\cr
 #'  the log layout. Alongside the standard logging variables provided by the `logging` package
@@ -52,11 +52,12 @@ register_logger <- function(namespace = NA_character_,
                             layout = NULL,
                             level = NULL) {
   if (!((is.character(namespace) && length(namespace) == 1) || is.na(namespace))) {
-    stop("namespace argument to register_logger must be a scalar character or NA.")
+    stop("namespace argument to register_logger must be a single string or NA.")
   }
 
-  if (is.null(level)) level <- Sys.getenv("TEAL.LOG_LEVEL")
-  if (is.null(level) || level == "") level <- getOption("teal.log_level", default = "INFO")
+  if (is.null(level)) {
+    level <- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")
+  }
 
   tryCatch(
     logger::log_threshold(level, namespace = namespace),
@@ -69,13 +70,14 @@ register_logger <- function(namespace = NA_character_,
     }
   )
 
-  if (is.null(layout)) layout <- Sys.getenv("TEAL.LOG_LAYOUT")
-  if (is.null(layout) || layout == "") {
-    layout <- getOption(
+  if (is.null(layout)) {
+    layout <- get_val(
+      "TEAL.LOG_LAYOUT",
       "teal.log_layout",
-      default = "[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}"
+      "[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}"
     )
   }
+
   tryCatch(
     expr = {
       logger::log_layout(layout_teal_glue_generator(layout), namespace = namespace)

@@ -26,4 +26,5 @@ reference:
     contents:
       - log_system_info
       - register_logger
+      - register_handlers
       - suppress_logs
