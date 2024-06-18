@@ -6,33 +6,25 @@
 \usage{
 log_shiny_input_changes(
   input,
-  level = logger::INFO,
   namespace = NA_character_,
   excluded_inputs = character(),
-  excluded_patterns = character(),
-  skip_init = FALSE
+  excluded_patterns = "_width$"
 )
 }
 \arguments{
 \item{input}{passed from Shiny's \code{server}}
-
-\item{level}{log level}
 
 \item{namespace}{the name of the namespace}
 
 \item{excluded_inputs}{character vector of input names to exclude from logging}
 
 \item{excluded_patterns}{character of length one including a grep pattern of names to be excluded from logging}
-
-\item{skip_init}{should initialization message be displayed}
 }
 \description{
 This is to be called in the \code{server} section of the Shiny app.
 }
 \details{
-Function taken from \pkg{logger} package and improved in this PR
-\href{https://github.com/daroczig/logger/pull/155/}{daroczig/logger/pull/155}. Once this PR gets merged, the function will
-be removed.
+Function having very similar behavior as \code{\link[logger:log_shiny_input_changes]{logger::log_shiny_input_changes()}} but adjusted for \code{teal} needs.
 }
 \examples{
 \dontrun{
@@ -59,4 +51,3 @@ server <- function(input, output) {
 shinyApp(ui = ui, server = server)
 }
 }
-\keyword{internal}

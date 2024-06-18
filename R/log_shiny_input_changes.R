@@ -2,20 +2,14 @@
 #'
 #' This is to be called in the \code{server} section of the Shiny app.
 #'
-#' Function taken from \pkg{logger} package and improved in this PR
-#' [daroczig/logger/pull/155](https://github.com/daroczig/logger/pull/155/). Once this PR gets merged, the function will
-#' be removed.
-#'
-#' @keywords internal
+#' Function having very similar behavior as [logger::log_shiny_input_changes()] but adjusted for `teal` needs.
 #'
 #' @param input passed from Shiny's \code{server}
-#' @param level log level
 #' @param excluded_inputs character vector of input names to exclude from logging
 #' @param excluded_patterns character of length one including a grep pattern of names to be excluded from logging
-#' @param skip_init should initialization message be displayed
 #' @param namespace the name of the namespace
-#' @importFrom utils assignInMyNamespace assignInNamespace
-#' @examples \dontrun{
+#' @examples
+#' \dontrun{
 #' library(shiny)
 #'
 #' ui <- bootstrapPage(
@@ -40,11 +34,9 @@
 #' }
 log_shiny_input_changes <- function(
     input,
-    level = logger::INFO,
     namespace = NA_character_,
     excluded_inputs = character(),
-    excluded_patterns = character(),
-    skip_init = FALSE
+    excluded_patterns = "_width$"
   ) {
 
   session <- shiny::getDefaultReactiveDomain()
@@ -53,22 +45,7 @@ log_shiny_input_changes <- function(
   }
   ns <- if (!is.null(session)) session$ns(character(0))
 
-  input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
-  utils::assignInMyNamespace("shiny_input_values", input_values)
-
-  if (!skip_init) {
-    init_message <-
-      paste(
-        ns, "Default Shiny inputs initialized:",
-        as.character(jsonlite::toJSON(input_values, auto_unbox = TRUE))
-      )
-
-    logger::log_level(
-      level,
-      logger::skip_formatter(trimws(init_message)),
-      namespace = namespace
-    )
-  }
+  shiny_input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
 
   shiny::observe({
     old_input_values <- shiny_input_values
@@ -82,14 +59,10 @@ log_shiny_input_changes <- function(
       old <- old_input_values[name]
       new <- new_input_values[name]
       if (!identical(old, new)) {
-        message <- ifelse(is.null(ns),
-          "Shiny input change detected in {name}: {old} -> {new}",
-          "Shiny input change detected in {ns} on {name}: {old} -> {new}"
-        )
-        logger::log_level(level, message, namespace = namespace)
+        message <- trimws(paste(ns, "Shiny input change detected in {name}: {old} -> {new}"))
+        logger::log_level(logger::TRACE, message, namespace = namespace)
       }
     }
-    utils::assignInNamespace("shiny_input_values", new_input_values, ns = "logger")
+    shiny_input_values <- new_input_values
   })
 }
-shiny_input_values <- NULL
