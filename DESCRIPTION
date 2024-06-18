@@ -19,10 +19,12 @@ Depends:
     R (>= 3.6)
 Imports:
     glue (>= 1.0.0),
+    jsonlite,
     lifecycle (>= 0.2.0),
     logger (>= 0.2.0),
     methods,
     shiny (>= 1.6.0),
+    utils,
     withr (>= 2.1.0)
 Suggests:
     knitr (>= 1.42),
@@ -32,7 +34,7 @@ VignetteBuilder:
     knitr
 RdMacros:
     lifecycle
-Config/Needs/verdepcheck: tidyverse/glue, r-lib/lifecycle,
+Config/Needs/verdepcheck: tidyverse/glue, jeroen/jsonlite, r-lib/lifecycle,
     daroczig/logger, rstudio/shiny, r-lib/withr, yihui/knitr,
     rstudio/rmarkdown, r-lib/testthat
 Config/Needs/website: insightsengineering/nesttemplate
