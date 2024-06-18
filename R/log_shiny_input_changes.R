@@ -59,7 +59,7 @@ log_shiny_input_changes <- function(
       new <- new_input_values[name]
       if (!identical(old, new)) {
         message <- trimws(paste(ns, "Shiny input change detected in {name}: {old} -> {new}"))
-        logger::log_level(logger::TRACE, message, namespace = namespace)
+        logger::log_trace(message, namespace = namespace)
       }
     }
     shiny_input_values <- new_input_values
