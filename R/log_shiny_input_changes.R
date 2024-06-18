@@ -38,7 +38,6 @@ log_shiny_input_changes <- function(
     excluded_inputs = character(),
     excluded_patterns = "_width$"
   ) {
-
   session <- shiny::getDefaultReactiveDomain()
   if (!(shiny::isRunning() | inherits(session, "MockShinySession"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
