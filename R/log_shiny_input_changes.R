@@ -32,6 +32,7 @@
 #'
 #' shinyApp(ui = ui, server = server)
 #' }
+#' @export
 log_shiny_input_changes <- function(
     input,
     namespace = NA_character_,
