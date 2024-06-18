@@ -4,7 +4,7 @@
 #'
 #' Function having very similar behavior as [logger::log_shiny_input_changes()] but adjusted for `teal` needs.
 #'
-#' @param input passed from Shiny's \code{server}
+#' @param input passed from Shiny \code{server}
 #' @param excluded_inputs character vector of input names to exclude from logging
 #' @param excluded_patterns character of length one including a grep pattern of names to be excluded from logging
 #' @param namespace the name of the namespace
@@ -39,7 +39,7 @@ log_shiny_input_changes <- function(
     excluded_inputs = character(),
     excluded_patterns = "_width$") {
   session <- shiny::getDefaultReactiveDomain()
-  if (!(shiny::isRunning() | inherits(session, "MockShinySession"))) {
+  if (!(shiny::isRunning() || inherits(session, "MockShinySession"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
   }
   ns <- if (!is.null(session)) session$ns(character(0))

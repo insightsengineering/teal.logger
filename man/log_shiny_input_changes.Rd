@@ -12,7 +12,7 @@ log_shiny_input_changes(
 )
 }
 \arguments{
-\item{input}{passed from Shiny's \code{server}}
+\item{input}{passed from Shiny \code{server}}
 
 \item{namespace}{the name of the namespace}
 
