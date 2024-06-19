@@ -41,7 +41,7 @@ ui <- bootstrapPage(
 )
 
 server <- function(input, output) {
-  log_shiny_input_changes(input, excluded_inputs = "password", exclude_patterns = "mean")
+  log_shiny_input_changes(input, excluded_inputs = "password", excluded_pattern = "mean")
 
   output$plot <- renderPlot({
     hist(rnorm(1e3, input$mean, input$sd), main = input$title)
