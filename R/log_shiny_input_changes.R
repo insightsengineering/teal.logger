@@ -44,7 +44,10 @@ log_shiny_input_changes <- function(
   }
   ns <- ifelse(!is.null(session), session$ns(character(0)), "")
 
-  shiny_input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
+  # utils::assignInMyNamespace and utils::assignInNamespace are needed
+  # so that observer is executed only once, not twice.
+  input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
+  utils::assignInMyNamespace('shiny_input_values', input_values)
 
   shiny::observe({
     old_input_values <- shiny_input_values
@@ -62,6 +65,7 @@ log_shiny_input_changes <- function(
         logger::log_trace(message, namespace = namespace)
       }
     }
-    shiny_input_values <- new_input_values
+    utils::assignInNamespace('shiny_input_values', new_input_values, ns = 'teal.logger')
   })
 }
+shiny_input_values <- NULL
