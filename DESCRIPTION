@@ -23,7 +23,6 @@ Imports:
     logger (>= 0.2.0),
     methods,
     shiny (>= 1.6.0),
-    utils,
     withr (>= 2.1.0)
 Suggests:
     knitr (>= 1.42),
