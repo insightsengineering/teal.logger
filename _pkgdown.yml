@@ -28,3 +28,4 @@ reference:
       - register_logger
       - register_handlers
       - suppress_logs
+      - log_shiny_input_changes

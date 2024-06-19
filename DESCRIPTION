@@ -1,7 +1,7 @@
 Package: teal.logger
 Title: Logging Setup for the 'teal' Family of Packages
-Version: 0.2.0.9003
-Date: 2024-05-24
+Version: 0.2.0.9004
+Date: 2024-06-19
 Authors@R: c(
     person("Dawid", "Kaledkowski", , "dawid.kaledkowski@roche.com", role = c("aut", "cre")),
     person("Konrad", "Pagacz", role = "aut"),
@@ -23,6 +23,7 @@ Imports:
     logger (>= 0.2.0),
     methods,
     shiny (>= 1.6.0),
+    utils,
     withr (>= 2.1.0)
 Suggests:
     knitr (>= 1.42),
