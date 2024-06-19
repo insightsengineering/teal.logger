@@ -43,7 +43,7 @@ log_shiny_input_changes <- function(
   if (!(shiny::isRunning() || inherits(session, "MockShinySession"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
   }
-  ns <- if (!is.null(session)) session$ns(character(0))
+  ns <- ifelse(!is.null(session), session$ns(character(0)), "")
 
   shiny_input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
 
@@ -59,7 +59,7 @@ log_shiny_input_changes <- function(
       old <- old_input_values[name]
       new <- new_input_values[name]
       if (!identical(old, new)) {
-        message <- trimws(paste(ns, "Shiny input change detected in {name}: {old} -> {new}"))
+        message <- trimws("{ns} Shiny input change detected in {name}: {old} -> {new}")
         logger::log_trace(message, namespace = namespace)
       }
     }
