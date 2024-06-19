@@ -8,7 +8,7 @@ log_shiny_input_changes(
   input,
   namespace = NA_character_,
   excluded_inputs = character(),
-  excluded_patterns = "_width$"
+  excluded_pattern = "_width$"
 )
 }
 \arguments{
@@ -18,7 +18,7 @@ log_shiny_input_changes(
 
 \item{excluded_inputs}{character vector of input names to exclude from logging}
 
-\item{excluded_patterns}{character of length one including a grep pattern of names to be excluded from logging}
+\item{excluded_pattern}{character of length one including a grep pattern of names to be excluded from logging}
 }
 \description{
 This is to be called in the \code{server} section of the Shiny app.

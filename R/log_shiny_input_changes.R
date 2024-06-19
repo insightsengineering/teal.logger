@@ -6,7 +6,7 @@
 #'
 #' @param input passed from Shiny \code{server}
 #' @param excluded_inputs character vector of input names to exclude from logging
-#' @param excluded_patterns character of length one including a grep pattern of names to be excluded from logging
+#' @param excluded_pattern character of length one including a grep pattern of names to be excluded from logging
 #' @param namespace the name of the namespace
 #' @examples
 #' \dontrun{
@@ -37,7 +37,7 @@ log_shiny_input_changes <- function(
     input,
     namespace = NA_character_,
     excluded_inputs = character(),
-    excluded_patterns = "_width$") {
+    excluded_pattern = "_width$") {
   session <- shiny::getDefaultReactiveDomain()
   if (!(shiny::isRunning() || inherits(session, "MockShinySession"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
@@ -54,8 +54,8 @@ log_shiny_input_changes <- function(
     new_input_values <- shiny::reactiveValuesToList(input)
     names <- unique(c(names(old_input_values), names(new_input_values)))
     names <- setdiff(names, excluded_inputs)
-    if (length(excluded_patterns)) {
-      names <- grep(excluded_patterns, names, invert = TRUE, value = TRUE)
+    if (length(excluded_pattern)) {
+      names <- grep(excluded_pattern, names, invert = TRUE, value = TRUE)
     }
     for (name in names) {
       old <- old_input_values[name]
