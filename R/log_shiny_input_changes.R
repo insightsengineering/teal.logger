@@ -46,8 +46,6 @@ log_shiny_input_changes <- function(
 
   reactive_input_list <- shiny::reactive(shiny::reactiveValuesToList(input))
   shiny_input_values <- shiny::reactiveVal(shiny::isolate(reactive_input_list()))
-  input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
-  utils::assignInMyNamespace("shiny_input_values", input_values)
 
   shiny::observeEvent(reactive_input_list(), {
     old_input_values <- shiny_input_values()
@@ -58,8 +56,8 @@ log_shiny_input_changes <- function(
       names <- grep(excluded_pattern, names, invert = TRUE, value = TRUE)
     }
     for (name in names) {
-      old <- old_input_values[name]
-      new <- new_input_values[name]
+      old <- unname(old_input_values[name])
+      new <- unname(new_input_values[name])
       if (!identical(old, new)) {
         message <- trimws("{ns} Shiny input change detected in {name}: {old} -> {new}")
         logger::log_trace(message, namespace = namespace)
