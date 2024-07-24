@@ -37,24 +37,28 @@ log_shiny_input_changes <- function(
     input,
     namespace = NA_character_,
     excluded_inputs = character(),
-    excluded_pattern = "_width$") {
-  session <- shiny::getDefaultReactiveDomain()
+    excluded_pattern = "_width$",
+    session = shiny::getDefaultReactiveDomain()) {
   if (!(shiny::isRunning() || inherits(session, "MockShinySession") || inherits(session, "session_proxy"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
   }
-  ns <- ifelse(!is.null(session), session$ns(character(0)), "")
 
-  reactive_input_list <- shiny::reactive(shiny::reactiveValuesToList(input))
+  if (logger::TRACE > logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {
+    # to avoid setting observers when not needed
+    return(invisible(NULL))
+  }
+
+  ns <- ifelse(!is.null(session), session$ns(character(0)), "")
+  reactive_input_list <- shiny::reactive({
+    input_list <- shiny::reactiveValuesToList(input)
+    input_list[!grepl(excluded_pattern, names(input_list))]
+  })
   shiny_input_values <- shiny::reactiveVal(shiny::isolate(reactive_input_list()))
 
   shiny::observeEvent(reactive_input_list(), {
     old_input_values <- shiny_input_values()
-    new_input_values <- shiny::reactiveValuesToList(input)
+    new_input_values <- reactive_input_list()
     names <- unique(c(names(old_input_values), names(new_input_values)))
-    names <- setdiff(names, excluded_inputs)
-    if (length(excluded_pattern)) {
-      names <- grep(excluded_pattern, names, invert = TRUE, value = TRUE)
-    }
     for (name in names) {
       old <- unname(old_input_values[name])
       new <- unname(new_input_values[name])
