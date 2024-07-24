@@ -8,6 +8,7 @@
 #' @param excluded_inputs character vector of input names to exclude from logging
 #' @param excluded_pattern character of length one including a grep pattern of names to be excluded from logging
 #' @param namespace the name of the namespace
+#' @param session the Shiny session
 #' @examples
 #' \dontrun{
 #' library(shiny)
