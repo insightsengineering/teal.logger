@@ -8,6 +8,7 @@
 #' @param excluded_inputs character vector of input names to exclude from logging
 #' @param excluded_pattern character of length one including a grep pattern of names to be excluded from logging
 #' @param namespace the name of the namespace
+#' @param session the Shiny session
 #' @examples
 #' \dontrun{
 #' library(shiny)
@@ -37,35 +38,36 @@ log_shiny_input_changes <- function(
     input,
     namespace = NA_character_,
     excluded_inputs = character(),
-    excluded_pattern = "_width$") {
-  session <- shiny::getDefaultReactiveDomain()
+    excluded_pattern = "_width$",
+    session = shiny::getDefaultReactiveDomain()) {
   if (!(shiny::isRunning() || inherits(session, "MockShinySession") || inherits(session, "session_proxy"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
   }
+
+  if (logger::TRACE > logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {
+    # to avoid setting observers when not needed
+    return(invisible(NULL))
+  }
+
   ns <- ifelse(!is.null(session), session$ns(character(0)), "")
+  reactive_input_list <- shiny::reactive({
+    input_list <- shiny::reactiveValuesToList(input)
+    input_list[!grepl(excluded_pattern, names(input_list))]
+  })
+  shiny_input_values <- shiny::reactiveVal(shiny::isolate(reactive_input_list()))
 
-  # utils::assignInMyNamespace and utils::assignInNamespace are needed
-  # so that observer is executed only once, not twice.
-  input_values <- shiny::isolate(shiny::reactiveValuesToList(input))
-  utils::assignInMyNamespace("shiny_input_values", input_values)
-
-  shiny::observe({
-    old_input_values <- shiny_input_values
-    new_input_values <- shiny::reactiveValuesToList(input)
+  shiny::observeEvent(reactive_input_list(), {
+    old_input_values <- shiny_input_values()
+    new_input_values <- reactive_input_list()
     names <- unique(c(names(old_input_values), names(new_input_values)))
-    names <- setdiff(names, excluded_inputs)
-    if (length(excluded_pattern)) {
-      names <- grep(excluded_pattern, names, invert = TRUE, value = TRUE)
-    }
     for (name in names) {
-      old <- old_input_values[name]
-      new <- new_input_values[name]
+      old <- unname(old_input_values[name])
+      new <- unname(new_input_values[name])
       if (!identical(old, new)) {
         message <- trimws("{ns} Shiny input change detected in {name}: {old} -> {new}")
         logger::log_trace(message, namespace = namespace)
       }
     }
-    utils::assignInNamespace("shiny_input_values", new_input_values, ns = "teal.logger")
+    shiny_input_values(new_input_values)
   })
 }
-shiny_input_values <- NULL
