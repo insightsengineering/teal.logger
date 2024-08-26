@@ -7,7 +7,7 @@
 #'
 #' @return `NULL` invisible
 #' @export
-#' @examples
+#' @examplesIf require("logger") && require("testthat")
 #' testthat::test_that("An example test", {
 #'   suppress_logs()
 #'   testthat::expect_true(TRUE)
@@ -17,6 +17,14 @@ suppress_logs <- function() {
   old_log_appenders <- lapply(logger::log_namespaces(), function(ns) logger::log_appender(namespace = ns))
   old_log_namespaces <- logger::log_namespaces()
   logger::log_appender(logger::appender_file(nullfile()), namespace = logger::log_namespaces())
-  withr::defer_parent(mapply(logger::log_appender, old_log_appenders, old_log_namespaces))
+  withr::defer_parent(
+    mapply(
+      function(appender, namespace) {
+        logger::log_appender(eval(appender), namespace)
+      },
+      old_log_appenders,
+      old_log_namespaces
+    )
+  )
   invisible(NULL)
 }
