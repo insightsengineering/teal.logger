@@ -30,7 +30,8 @@ Suggests:
     rmarkdown (>= 2.23),
     testthat (>= 3.1.7)
 VignetteBuilder:
-    knitr
+    knitr,
+    rmarkdown
 RdMacros:
     lifecycle
 Config/Needs/verdepcheck: tidyverse/glue, r-lib/lifecycle,
