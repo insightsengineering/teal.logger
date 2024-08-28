@@ -30,19 +30,12 @@
 ## Installation
 
 ```r
-# stable versions
 install.packages('teal.logger')
-
-# install.packages("pak")
-pak::pak("insightsengineering/teal.logger@*release")
 ```
 
-Alternatively, you might want to use the development version available on [r-universe](https://r-universe.dev/).
+Alternatively, you might want to use the development version.
 
 ```r
-# beta versions
-install.packages('teal.logger', repos = c('https://pharmaverse.r-universe.dev', getOption('repos')))
-
 # install.packages("pak")
 pak::pak("insightsengineering/teal.logger")
 ```
