@@ -4,10 +4,10 @@
 #'
 #' Function having very similar behavior as [logger::log_shiny_input_changes()] but adjusted for `teal` needs.
 #'
-#' @param input passed from Shiny \code{server}
-#' @param excluded_inputs character vector of input names to exclude from logging
-#' @param excluded_pattern character of length one including a grep pattern of names to be excluded from logging
-#' @param namespace the name of the namespace
+#' @param input passed from Shiny `server`
+#' @param excluded_inputs (`character`) character vector of input names to exclude from logging
+#' @param excluded_pattern (`character(1)`) `regexp` pattern of names to be excluded from logging
+#' @param namespace (`character(1)`) the name of the namespace
 #' @param session the Shiny session
 #' @examples
 #' \dontrun{
@@ -40,6 +40,12 @@ log_shiny_input_changes <- function(
     excluded_inputs = character(),
     excluded_pattern = "_width$",
     session = shiny::getDefaultReactiveDomain()) {
+  checkmate::assert_class(input, "reactivevalues")
+  checkmate::assert_string(namespace)
+  checkmate::assert_character(excluded_inputs)
+  checkmate::assert_string(excluded_pattern)
+  checkmate::assert_class(session, "session_proxy")
+
   if (!(shiny::isRunning() || inherits(session, "MockShinySession") || inherits(session, "session_proxy"))) {
     stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
   }
@@ -49,7 +55,7 @@ log_shiny_input_changes <- function(
     return(invisible(NULL))
   }
 
-  ns <- ifelse(!is.null(session), session$ns(character(0)), "")
+  ns <- session$ns(character(0))
   reactive_input_list <- shiny::reactive({
     input_list <- shiny::reactiveValuesToList(input)
     input_list[!grepl(excluded_pattern, names(input_list))]

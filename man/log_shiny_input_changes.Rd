@@ -15,11 +15,11 @@ log_shiny_input_changes(
 \arguments{
 \item{input}{passed from Shiny \code{server}}
 
-\item{namespace}{the name of the namespace}
+\item{namespace}{(\code{character(1)}) the name of the namespace}
 
-\item{excluded_inputs}{character vector of input names to exclude from logging}
+\item{excluded_inputs}{(\code{character}) character vector of input names to exclude from logging}
 
-\item{excluded_pattern}{character of length one including a grep pattern of names to be excluded from logging}
+\item{excluded_pattern}{(\code{character(1)}) \code{regexp} pattern of names to be excluded from logging}
 
 \item{session}{the Shiny session}
 }
