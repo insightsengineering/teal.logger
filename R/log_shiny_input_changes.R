@@ -40,15 +40,11 @@ log_shiny_input_changes <- function(
     excluded_inputs = character(),
     excluded_pattern = "_width$",
     session = shiny::getDefaultReactiveDomain()) {
-  checkmate::assert_class(input, "reactivevalues")
-  checkmate::assert_string(namespace)
-  checkmate::assert_character(excluded_inputs)
-  checkmate::assert_string(excluded_pattern)
-  checkmate::assert_class(session, "session_proxy")
-
-  if (!(shiny::isRunning() || inherits(session, "MockShinySession") || inherits(session, "session_proxy"))) {
-    stop("No Shiny app running, it makes no sense to call this function outside of a Shiny app")
-  }
+  stopifnot(inherits(input, "reactivevalues"))
+  stopifnot(is.character(namespace) && length(namespace) == 1)
+  stopifnot(is.character(excluded_inputs))
+  stopifnot(is.character(excluded_pattern) && length(excluded_pattern) <= 1)
+  stopifnot(inherits(session, "session_proxy"))
 
   if (logger::TRACE > logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {
     # to avoid setting observers when not needed
