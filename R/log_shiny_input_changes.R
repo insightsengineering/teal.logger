@@ -65,7 +65,7 @@ log_shiny_input_changes <- function(
   shiny::observeEvent(reactive_input_list(), {
     old_input_values <- shiny_input_values()
     new_input_values <- reactive_input_list()
-    names <- intersect(c(names(old_input_values), names(new_input_values)))
+    names <- intersect(names(old_input_values), names(new_input_values))
     for (name in names) {
       old <- unname(old_input_values[name])
       new <- unname(new_input_values[name])
