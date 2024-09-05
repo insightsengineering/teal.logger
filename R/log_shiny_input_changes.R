@@ -43,7 +43,7 @@ log_shiny_input_changes <- function(
   stopifnot(inherits(input, "reactivevalues"))
   stopifnot(is.character(namespace) && length(namespace) == 1)
   stopifnot(is.character(excluded_inputs))
-  stopifnot(is.character(excluded_pattern) && length(excluded_pattern) <= 1)
+  stopifnot(is.character(excluded_pattern) && length(excluded_pattern) == 1)
   stopifnot(inherits(session, "session_proxy"))
 
   if (logger::TRACE > logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {
