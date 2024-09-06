@@ -12,7 +12,7 @@ teal_logger_formatter <- function() {
     function(..., .logcall = sys.call(), .topcall = sys.call(-1), .topenv = parent.frame()) {
       logger::formatter_glue(
         ...,
-        .null = "NULL", .logcall = .logcall, .topcall = .topcall, .topenv = .topenv,
+        .logcall = .logcall, .topcall = .topcall, .topenv = .topenv,
         .transformer = teal_logger_transformer
       )
     }
@@ -23,12 +23,6 @@ teal_logger_formatter <- function() {
 #' @inheritParams glue::identity_transformer
 teal_logger_transformer <- function(text, envir) {
   value <- glue::identity_transformer(text, envir)
-  if (is.null(value)) {
-    "NULL"
-  } else if (is.vector(value)) {
-    utils::capture.output(expr <- dput(value)) # dput prints
-    deparse1(expr)
-  } else {
-    glue::glue_collapse(value, sep = ", ")
-  }
+  utils::capture.output(expr <- dput(value)) # dput prints
+  deparse1(expr)
 }
