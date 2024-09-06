@@ -63,8 +63,8 @@ log_shiny_input_changes <- function(
     new_input_values <- reactive_input_list()
     names <- intersect(names(old_input_values), names(new_input_values))
     for (name in names) {
-      old <- unname(old_input_values[name])
-      new <- unname(new_input_values[name])
+      old <- old_input_values[[name]]
+      new <- new_input_values[[name]]
       if (!identical(old, new)) {
         message <- trimws("{ns} Shiny input change detected in {name}: {old} -> {new}")
         logger::log_trace(message, namespace = namespace)
