@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">teal.logger</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9007</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9008</small>
 
     <div style="width: 140px; margin-left: 0.5rem;"> <small class="nav-text text-muted me-auto">part of</small> <img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/nest.png?raw=true" alt="NEST" style="height: 30px;"><a href="https://pharmaverse.org/" class="external-link"><img src="https://github.com/insightsengineering/hex-stickers/blob/main/PNG/pharmaverse.png?raw=true" alt="pharmaverse" style="height: 28px;"></a> </div>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,20 +19,6 @@
 <li class="active nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
 <li class="nav-item dropdown">
-<!-- start dropdown for versions --> <li class="nav-item dropdown">
-        <a href="#" class="nav-link dropdown-toggle"
-          data-bs-toggle="dropdown" role="button"
-          aria-expanded="false" aria-haspopup="true"
-          id="dropdown-versions">Versions</a> <div class="dropdown-menu" aria-labelledby="dropdown-versions"> <a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/main">main</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/latest-tag">latest-tag</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/release-candidate">release-candidate</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.2.0-rc1">v0.2.0-rc1</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.3-rc1">v0.1.3-rc1</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.2.0">v0.2.0</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.3">v0.1.3</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.2">v0.1.2</a>
-<a class="dropdown-item" data-toggle="tooltip" title="" href="https://insightsengineering.github.io/teal.logger/v0.1.1">v0.1.1</a> </div></li>
-<!-- end dropdown for versions -->
   <button class="nav-link dropdown-toggle" type="button" id="dropdown-reports" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Reports</button>
   <ul class="dropdown-menu" aria-labelledby="dropdown-reports"><li><a class="dropdown-item" href="../coverage-report/">Coverage report</a></li>
     <li><a class="dropdown-item" href="../unit-test-report/">Unit test report</a></li>
@@ -64,7 +50,8 @@
 <span>  <span class="va">input</span>,</span>
 <span>  namespace <span class="op">=</span> <span class="cn">NA_character_</span>,</span>
 <span>  excluded_inputs <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/character.html" class="external-link">character</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>  excluded_pattern <span class="op">=</span> <span class="st">"_width$"</span></span>
+<span>  excluded_pattern <span class="op">=</span> <span class="st">"_width$"</span>,</span>
+<span>  session <span class="op">=</span> <span class="fu">shiny</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/shiny/man/domains.html" class="external-link">getDefaultReactiveDomain</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -77,15 +64,19 @@
 
 
 <dt id="arg-namespace">namespace<a class="anchor" aria-label="anchor" href="#arg-namespace"></a></dt>
-<dd><p>the name of the namespace</p></dd>
+<dd><p>(<code>character(1)</code>) the name of the namespace</p></dd>
 
 
 <dt id="arg-excluded-inputs">excluded_inputs<a class="anchor" aria-label="anchor" href="#arg-excluded-inputs"></a></dt>
-<dd><p>character vector of input names to exclude from logging</p></dd>
+<dd><p>(<code>character</code>) character vector of input names to exclude from logging</p></dd>
 
 
 <dt id="arg-excluded-pattern">excluded_pattern<a class="anchor" aria-label="anchor" href="#arg-excluded-pattern"></a></dt>
-<dd><p>character of length one including a grep pattern of names to be excluded from logging</p></dd>
+<dd><p>(<code>character(1)</code>) <code>regexp</code> pattern of names to be excluded from logging</p></dd>
+
+
+<dt id="arg-session">session<a class="anchor" aria-label="anchor" href="#arg-session"></a></dt>
+<dd><p>the Shiny session</p></dd>
 
 </dl></div>
     <div class="section level2">
