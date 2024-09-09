@@ -15,7 +15,7 @@ teal_logger_transformer(text, envir)
 \item{envir}{environment to evaluate the code in}
 }
 \value{
-(\code{character(1)}) formatted log entry
+Nothing. Called for its side effects.
 }
 \description{
 Custom \code{log_formatter} supporting atomic vectors. By default \code{glue::glue}

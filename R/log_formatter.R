@@ -5,7 +5,7 @@
 #' generates `"[elem1, elem2, ...]"` for atomic vectors. Function also handles
 #' `NULL` value which normally causes `logger` to return empty character.
 #' @name teal_logger_formatter
-#' @return (`character(1)`) formatted log entry
+#' @return Nothing. Called for its side effects.
 #' @keywords internal
 teal_logger_formatter <- function() {
   logger::log_formatter(
@@ -23,6 +23,6 @@ teal_logger_formatter <- function() {
 #' @inheritParams glue::identity_transformer
 teal_logger_transformer <- function(text, envir) {
   value <- glue::identity_transformer(text, envir)
-  utils::capture.output(expr <- dput(value)) # dput prints
+  expr <- dput(value, file = nullfile())
   deparse1(expr)
 }
