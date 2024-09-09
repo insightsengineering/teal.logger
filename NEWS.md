@@ -1,4 +1,4 @@
-# teal.logger 0.2.0.9008
+# teal.logger 0.2.0.9009
 
 * New function `log_shiny_input_changes` based on `logger` implementation, but curated to `teal` needs. 
 It allows to track all shiny inputs changes in teal modules on `TRACE` level with appended namespace name.
