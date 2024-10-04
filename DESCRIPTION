@@ -1,7 +1,7 @@
 Package: teal.logger
 Title: Logging Setup for the 'teal' Family of Packages
-Version: 0.2.0.9010
-Date: 2024-09-16
+Version: 0.2.0.9011
+Date: 2024-10-04
 Authors@R: c(
     person("Dawid", "Kaledkowski", , "dawid.kaledkowski@roche.com", role = c("aut", "cre")),
     person("Konrad", "Pagacz", role = "aut"),
