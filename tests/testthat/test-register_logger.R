@@ -14,7 +14,13 @@ testthat::test_that("register_logger throws an error when passed an invalid name
 
 testthat::test_that("register_logger throws an error when setting the logger layout fails", {
   testthat::expect_error(
-    withr::with_options(new = list(teal.log_layout = stop), code = register_logger("test")),
+    withr::with_envvar(
+      new = list(TEAL.LOG_LAYOUT = ""),
+      code = withr::with_options(
+        new = list(teal.log_layout = stop),
+        code = register_logger("test")
+      )
+    ),
     regexp = "Error setting the layout of the logger."
   )
 })
