@@ -1,8 +1,8 @@
-# teal.logger 0.2.0.9011
+# teal.logger 0.3.0
 
-* New function `log_shiny_input_changes` based on `logger` implementation, but curated to `teal` needs. 
+* New function `log_shiny_input_changes` based on `logger` implementation, but curated to `teal` needs.
 It allows to track all shiny inputs changes in teal modules on `TRACE` level with appended namespace name.
-* Fixed `logger::formatter_glue` to handle `NULL` and `vector` objects. 
+* Fixed `logger::formatter_glue` to handle `NULL` and `vector` objects.
 
 # teal.logger 0.2.0
 
