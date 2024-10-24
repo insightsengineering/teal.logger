@@ -1,3 +1,5 @@
+# teal.logger 0.3.0.9000
+
 # teal.logger 0.3.0
 
 * New function `log_shiny_input_changes` based on `logger` implementation, but curated to `teal` needs.
