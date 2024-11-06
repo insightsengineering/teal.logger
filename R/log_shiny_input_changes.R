@@ -44,9 +44,12 @@ log_shiny_input_changes <- function(
   stopifnot(is.character(namespace) && length(namespace) == 1)
   stopifnot(is.character(excluded_inputs))
   stopifnot(is.character(excluded_pattern) && length(excluded_pattern) == 1)
-  stopifnot(inherits(session, "session_proxy"))
+  stopifnot(inherits(session, "session_proxy") || inherits(session, "ShinySession"))
 
-  if (logger::TRACE > logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {
+  # Log even if written in lower case or numeric values
+  log_level <- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")
+  log_level <- if (!is.numeric(log_level)) toupper(log_level)
+  if (logger::TRACE > logger::as.loglevel(log_level)) {
     # to avoid setting observers when not needed
     return(invisible(NULL))
   }
