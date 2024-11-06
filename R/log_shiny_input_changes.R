@@ -48,7 +48,7 @@ log_shiny_input_changes <- function(
 
   # Log even if written in lower case or numeric values
   log_level <- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")
-  log_level <- if (!is.numeric(log_level)) toupper(log_level)
+  if (!is.numeric(log_level)) log_level <- toupper(log_level)
   if (logger::TRACE > logger::as.loglevel(log_level)) {
     # to avoid setting observers when not needed
     return(invisible(NULL))
