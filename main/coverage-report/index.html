@@ -95,7 +95,7 @@ table.table-condensed {
   font-size: 11px;
 }</style>
   <div class="col-md-8 col-md-offset-2">
-    <h2>teal.logger coverage - 70.06%</h2>
+    <h2>teal.logger coverage - 69.23%</h2>
     <div class="tabbable">
       <ul class="nav nav-tabs" data-tabsetid="covr">
         <li class="active">
@@ -107,11 +107,1772 @@ table.table-condensed {
       </ul>
       <div class="tab-content" data-tabsetid="covr">
         <div class="tab-pane active" title="Files" data-value="Files" id="tab-covr-1">
-          <div class="datatables html-widget html-fill-item" id="htmlwidget-47d30480004b443746b7" style="width:100%;height:500px;"></div>
-          <script type="application/json" data-for="htmlwidget-47d30480004b443746b7">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["<a href=\"#\">R/log_shiny_input_changes.R<\/a>","<a href=\"#\">R/supress_logs.R<\/a>","<a href=\"#\">R/log_formatter.R<\/a>","<a href=\"#\">R/register_logger.R<\/a>","<a href=\"#\">R/register_handlers.R<\/a>","<a href=\"#\">R/utils.R<\/a>"],[75,30,28,130,142,41],[23,10,8,42,36,18],[0,0,3,41,36,18],[23,10,5,1,0,0],["0","0","4","8","7","5"],["0.00%","0.00%","37.50%","97.62%","100.00%","100.00%"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>File<\/th>\n      <th>Lines<\/th>\n      <th>Relevant<\/th>\n      <th>Covered<\/th>\n      <th>Missed<\/th>\n      <th>Hits / Line<\/th>\n      <th>Coverage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"dom":"t","paging":false,"columnDefs":[{"targets":6,"createdCell":"function(td, cellData, rowData, row, col) {\n  var percent = cellData.replace(\"%\", \"\");\n  if (percent > 90) {\n    var grad = \"linear-gradient(90deg, #edfde7 \" + cellData + \", white \" + cellData + \")\";\n  } else if (percent > 75) {\n    var grad = \"linear-gradient(90deg, #f9ffe5 \" + cellData + \", white \" + cellData + \")\";\n  } else {\n    var grad = \"linear-gradient(90deg, #fcece9 \" + cellData + \", white \" + cellData + \")\";\n  }\n  $(td).css(\"background\", grad);\n}\n"},{"className":"dt-right","targets":[1,2,3,4]},{"name":"File","targets":0},{"name":"Lines","targets":1},{"name":"Relevant","targets":2},{"name":"Covered","targets":3},{"name":"Missed","targets":4},{"name":"Hits / Line","targets":5},{"name":"Coverage","targets":6}],"order":[],"autoWidth":false,"orderClasses":false},"callback":"function(table) {\ntable.on('click.dt', 'a', function() {\n  files = $('div#files div');\n  files.not('div.hidden').addClass('hidden');\n  id = $(this).text();\n  files.filter('div[id=\\'' + id + '\\']').removeClass('hidden');\n  $('ul.nav a[data-value=Source]').text(id).tab('show');\n});\n}"},"evals":["options.columnDefs.0.createdCell","callback"],"jsHooks":[]}</script>
+          <div class="datatables html-widget html-fill-item" id="htmlwidget-df1587e264893ebdc034" style="width:100%;height:500px;"></div>
+          <script type="application/json" data-for="htmlwidget-df1587e264893ebdc034">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["<a href=\"#\">R/log_shiny_input_changes.R<\/a>","<a href=\"#\">R/supress_logs.R<\/a>","<a href=\"#\">R/log_formatter.R<\/a>","<a href=\"#\">R/register_logger.R<\/a>","<a href=\"#\">R/register_handlers.R<\/a>","<a href=\"#\">R/utils.R<\/a>"],[78,30,28,130,142,41],[25,10,8,42,36,18],[0,0,3,41,36,18],[25,10,5,1,0,0],["0","0","4","8","7","5"],["0.00%","0.00%","37.50%","97.62%","100.00%","100.00%"]],"container":"<table class=\"row-border\">\n  <thead>\n    <tr>\n      <th>File<\/th>\n      <th>Lines<\/th>\n      <th>Relevant<\/th>\n      <th>Covered<\/th>\n      <th>Missed<\/th>\n      <th>Hits / Line<\/th>\n      <th>Coverage<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"searching":false,"dom":"t","paging":false,"columnDefs":[{"targets":6,"createdCell":"function(td, cellData, rowData, row, col) {\n  var percent = cellData.replace(\"%\", \"\");\n  if (percent > 90) {\n    var grad = \"linear-gradient(90deg, #edfde7 \" + cellData + \", white \" + cellData + \")\";\n  } else if (percent > 75) {\n    var grad = \"linear-gradient(90deg, #f9ffe5 \" + cellData + \", white \" + cellData + \")\";\n  } else {\n    var grad = \"linear-gradient(90deg, #fcece9 \" + cellData + \", white \" + cellData + \")\";\n  }\n  $(td).css(\"background\", grad);\n}\n"},{"className":"dt-right","targets":[1,2,3,4]},{"name":"File","targets":0},{"name":"Lines","targets":1},{"name":"Relevant","targets":2},{"name":"Covered","targets":3},{"name":"Missed","targets":4},{"name":"Hits / Line","targets":5},{"name":"Coverage","targets":6}],"order":[],"autoWidth":false,"orderClasses":false},"callback":"function(table) {\ntable.on('click.dt', 'a', function() {\n  files = $('div#files div');\n  files.not('div.hidden').addClass('hidden');\n  id = $(this).text();\n  files.filter('div[id=\\'' + id + '\\']').removeClass('hidden');\n  $('ul.nav a[data-value=Source]').text(id).tab('show');\n});\n}"},"evals":["options.columnDefs.0.createdCell","callback"],"jsHooks":[]}</script>
         </div>
         <div class="tab-pane" title="Source" data-value="Source" id="tab-covr-2">
           <div id="files">
+            <div id="R/register_logger.R" class="hidden">
+              <table class="table-condensed">
+                <tbody>
+                  <tr class="never">
+                    <td class="num">1</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Registers a logger instance in a given logging namespace.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">2</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">3</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @description `r lifecycle::badge("experimental")`</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">4</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">5</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @note It's a thin wrapper around the `logger` package.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">6</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">7</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @details Creates a new logging namespace specified by the `namespace` argument.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">8</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' When the `layout` and `level` arguments are set to `NULL` (default), the function</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">9</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' gets the values for them from system variables or R options.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">10</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' When deciding what to use (either argument, an R option or system variable), the function</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">11</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' picks the first non `NULL` value, checking in order:</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">12</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' 1. Function argument.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">13</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' 2. System variable.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">14</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' 3. R option.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">15</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">16</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' `layout` and `level` can be set as system environment variables, respectively:</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">17</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' * `teal.log_layout` as `TEAL.LOG_LAYOUT`,</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">18</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' * `teal.log_level` as `TEAL.LOG_LEVEL`.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">19</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">20</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' If neither the argument nor the environment variable is set the function uses the following R options:</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">21</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' * `options(teal.log_layout)`, which is passed to [logger::layout_glue_generator()],</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">22</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' * `options(teal.log_level)`, which is passed to [logger::log_threshold()]</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">23</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">24</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">25</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' The logs are output to `stdout` by default. Check `logger` for more information</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">26</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' about layouts and how to use `logger`.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">27</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">28</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @seealso The package vignettes for more help: `browseVignettes("teal.logger")`.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">29</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">30</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param namespace (`character(1)` or `NA_character_`)\cr</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">31</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'  the name of the logging namespace</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">32</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param layout (`character(1)`)\cr</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">33</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'  the log layout. Alongside the standard logging variables provided by the `logging` package</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">34</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'  (e.g. `pid`) the `token` variable can be used which will write the last 8 characters of the</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">35</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'  shiny session token to the log.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">36</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param level (`character(1)` or `call`) the log level. Can be passed as</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">37</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   character or one of the `logger`'s objects.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">38</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   See [logger::log_threshold()] for more information.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">39</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">40</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return `invisible(NULL)`</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">41</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">42</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">43</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">44</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' options(teal.log_layout = "{msg}")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">45</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' options(teal.log_level = "ERROR")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">46</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' register_logger(namespace = "new_namespace")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">47</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' \donttest{</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">48</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' logger::log_info("Hello from new_namespace", namespace = "new_namespace")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">49</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">50</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">51</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">register_logger &lt;- function(namespace = NA_character_,</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">52</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                            layout = NULL,</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">53</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">                            level = NULL) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">54</td>
+                    <td class="coverage">12<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if (!((is.character(namespace) &amp;&amp; length(namespace) == 1) || is.na(namespace))) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">55</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    stop("namespace argument to register_logger must be a single string or NA.")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">56</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">57</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">58</td>
+                    <td class="coverage">11<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if (is.null(level)) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">59</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    level &lt;- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">60</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">61</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">62</td>
+                    <td class="coverage">11<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  tryCatch(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">63</td>
+                    <td class="coverage">11<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    logger::log_threshold(level, namespace = namespace),</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">64</td>
+                    <td class="coverage">11<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    error = function(condition) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">65</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      stop(paste(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">66</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        "The log level passed to logger::log_threshold was invalid.",</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">67</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        "Make sure you pass or set the correct log level.",</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">68</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        "See `logger::log_threshold` for more information"</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">69</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      ))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">70</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">71</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">72</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">73</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if (is.null(layout)) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">74</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    layout &lt;- get_val(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">75</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      "TEAL.LOG_LAYOUT",</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">76</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      "teal.log_layout",</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">77</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      "[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}"</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">78</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">79</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">80</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">81</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  tryCatch(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">82</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    expr = {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">83</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      logger::log_layout(layout_teal_glue_generator(layout), namespace = namespace)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">84</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      logger::log_appender(logger::appender_file(nullfile()), namespace = namespace)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">85</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      logger::log_success("Set up the logger", namespace = namespace)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">86</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      logger::log_appender(logger::appender_stdout, namespace = namespace)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">87</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    },</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">88</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    error = function(condition) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">89</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      stop(paste(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">90</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        "Error setting the layout of the logger.",</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">91</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        "Make sure you pass or set the correct log layout.",</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">92</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        "See `logger::layout` for more information."</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">93</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      ))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">94</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">95</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">96</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">97</td>
+                    <td class="coverage">9<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  invisible(NULL)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">98</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">99</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">100</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">101</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Generate log layout function using common variables available via glue syntax including shiny session token</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">102</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">103</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @inheritParams register_logger</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">104</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return function taking `level` and `msg` arguments - keeping the original call creating the generator</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">105</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   in the generator attribute that is returned when calling log_layout for the currently used layout</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">106</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @details this function behaves in the same way as [logger::layout_glue_generator()]</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">107</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   but allows the shiny session token (last 8 chars) to be included in the logging layout</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">108</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @keywords internal</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">109</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">layout_teal_glue_generator &lt;- function(layout) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">110</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  force(layout)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">111</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  structure(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">112</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    function(level, msg, namespace = NA_character_, .logcall = sys.call(), .topcall = sys.call(-1),</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">113</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">             .topenv = parent.frame()) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">114</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      if (!inherits(level, "loglevel")) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">115</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        stop("Invalid log level, see ?logger::log_levels")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">116</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">117</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      with(logger::get_logger_meta_variables(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">118</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        log_level = level, namespace = namespace, .logcall = .logcall, .topcall = .topcall,</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">119</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        .topenv = .topenv</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">120</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      ), {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">121</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        token &lt;- substr(shiny::getDefaultReactiveDomain()$token, 25, 32)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">122</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        if (length(token) == 0) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">123</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">          token &lt;- ""</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">124</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        }</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">125</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        glue::glue(layout)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">126</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      })</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">127</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    },</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">128</td>
+                    <td class="coverage">10<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    generator = deparse(match.call())</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">129</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">130</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="R/log_shiny_input_changes.R" class="hidden">
+              <table class="table-condensed">
+                <tbody>
+                  <tr class="never">
+                    <td class="num">1</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Auto logging input changes in Shiny app</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">2</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">3</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' This is to be called in the \code{server} section of the Shiny app.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">4</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">5</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Function having very similar behavior as [logger::log_shiny_input_changes()] but adjusted for `teal` needs.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">6</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">7</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param input passed from Shiny `server`</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">8</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param excluded_inputs (`character`) character vector of input names to exclude from logging</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">9</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param excluded_pattern (`character(1)`) `regexp` pattern of names to be excluded from logging</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">10</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param namespace (`character(1)`) the name of the namespace</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">11</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param session the Shiny session</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">12</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @examples</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">13</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' \dontrun{</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">14</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' library(shiny)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">15</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">16</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' ui &lt;- bootstrapPage(</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">17</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   numericInput("mean1", "mean1", 0),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">18</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   numericInput("mean2", "mean2", 0),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">19</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   numericInput("sd", "sd", 1),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">20</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   textInput("title", "title", "title"),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">21</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   textInput("foo", "This is not used at all, still gets logged", "foo"),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">22</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   passwordInput("password", "Password not to be logged", "secret"),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">23</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   plotOutput("plot")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">24</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">25</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">26</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' server &lt;- function(input, output) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">27</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   log_shiny_input_changes(input, excluded_inputs = "password", excluded_pattern = "mean")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">28</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">29</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   output$plot &lt;- renderPlot({</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">30</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'     hist(rnorm(1e3, input$mean1, input$sd), main = input$title)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">31</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'   })</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">32</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">33</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">34</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' shinyApp(ui = ui, server = server)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">35</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">36</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">37</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">log_shiny_input_changes &lt;- function(</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">38</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    input,</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">39</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    namespace = NA_character_,</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">40</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    excluded_inputs = character(),</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">41</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    excluded_pattern = "_width$",</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">42</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    session = shiny::getDefaultReactiveDomain()) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">43</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  stopifnot(inherits(input, "reactivevalues"))</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">44</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  stopifnot(is.character(namespace) &amp;&amp; length(namespace) == 1)</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">45</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  stopifnot(is.character(excluded_inputs))</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">46</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  stopifnot(is.character(excluded_pattern) &amp;&amp; length(excluded_pattern) == 1)</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">47</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  stopifnot(inherits(session, "session_proxy") || inherits(session, "ShinySession"))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">48</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">49</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  # Log even if written in lower case or numeric values</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">50</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  log_level &lt;- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">51</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if (!is.numeric(log_level)) log_level &lt;- toupper(log_level)</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">52</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if (logger::TRACE &gt; logger::as.loglevel(log_level)) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">53</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    # to avoid setting observers when not needed</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">54</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    return(invisible(NULL))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">55</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">56</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">57</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  ns &lt;- session$ns(character(0))</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">58</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  reactive_input_list &lt;- shiny::reactive({</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">59</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    input_list &lt;- shiny::reactiveValuesToList(input)</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">60</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    input_list[!grepl(excluded_pattern, names(input_list))]</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">61</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  })</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">62</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  shiny_input_values &lt;- shiny::reactiveVal(shiny::isolate(reactive_input_list()))</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">63</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">64</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  shiny::observeEvent(reactive_input_list(), {</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">65</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    old_input_values &lt;- shiny_input_values()</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">66</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    new_input_values &lt;- reactive_input_list()</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">67</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    names &lt;- intersect(names(old_input_values), names(new_input_values))</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">68</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    for (name in names) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">69</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      old &lt;- old_input_values[[name]]</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">70</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      new &lt;- new_input_values[[name]]</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">71</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      if (!identical(old, new)) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">72</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        message &lt;- trimws("{ns} Shiny input change detected in {name}: {old} -&gt; {new}")</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">73</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">        logger::log_trace(message, namespace = namespace)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">74</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">75</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    }</pre>
+                    </td>
+                  </tr>
+                  <tr class="missed">
+                    <td class="num">76</td>
+                    <td class="coverage">!</td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    shiny_input_values(new_input_values)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">77</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  })</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">78</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div id="R/utils.R" class="hidden">
+              <table class="table-condensed">
+                <tbody>
+                  <tr class="never">
+                    <td class="num">1</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Logs the basic information about the session.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">2</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">3</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return `invisible(NULL)`</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">4</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @export</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">5</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#'</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">6</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">log_system_info &lt;- function() {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">7</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  paste_pkgs_name_with_version &lt;- function(names) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">8</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    vapply(</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">9</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      names,</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">10</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      FUN = function(name) paste(name, utils::packageVersion(name)),</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">11</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      FUN.VALUE = character(1),</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">12</td>
+                    <td class="coverage">2<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">      USE.NAMES = FALSE</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">13</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">    )</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">14</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  }</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">15</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">16</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  info &lt;- utils::sessionInfo()</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">17</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">18</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Platform: { info$platform }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">19</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Running under: { info$running }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">20</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("{ info$R.version$version.string }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">21</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Base packages: { paste(info$basePkgs, collapse = ' ') }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">22</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">23</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  # Paste package names and versions</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">24</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$otherPkgs)), collapse = ", ")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">25</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Other attached packages: { pasted_names_and_versions }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">26</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">27</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$loadedOnly)), collapse = ", ")</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">28</td>
+                    <td class="coverage">1<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  logger::log_trace("Loaded packages: { pasted_names_and_versions }")</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">29</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">30</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r"></pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">31</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' Get value from environmental variable or R option or default in that order if the previous one is missing.</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">32</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param env_var_name (`character(1)`) name of the system variable</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">33</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param option_name (`character(1)`) name of the option</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">34</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @param default optional, default value if both `Sys.getenv(env_var_name)` and `getOption(option_name)` are empty</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">35</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @return an object of any class</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">36</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">#' @keywords internal</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">37</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">get_val &lt;- function(env_var_name, option_name, default = NULL) {</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">38</td>
+                    <td class="coverage">25<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  value &lt;- Sys.getenv(env_var_name)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">39</td>
+                    <td class="coverage">21<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  if (is.null(value) || value == "") value &lt;- getOption(option_name, default = default)</pre>
+                    </td>
+                  </tr>
+                  <tr class="covered">
+                    <td class="num">40</td>
+                    <td class="coverage">24<em>x</em></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">  return(value)</pre>
+                    </td>
+                  </tr>
+                  <tr class="never">
+                    <td class="num">41</td>
+                    <td class="coverage"></td>
+                    <td class="col-sm-12">
+                      <pre class="language-r">}</pre>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
             <div id="R/register_handlers.R" class="hidden">
               <table class="table-condensed">
                 <tbody>
@@ -1112,14 +2873,14 @@ table.table-condensed {
                 </tbody>
               </table>
             </div>
-            <div id="R/log_shiny_input_changes.R" class="hidden">
+            <div id="R/log_formatter.R" class="hidden">
               <table class="table-condensed">
                 <tbody>
                   <tr class="never">
                     <td class="num">1</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' Auto logging input changes in Shiny app</pre>
+                      <pre class="language-r">#' Teal `log_formatter`</pre>
                     </td>
                   </tr>
                   <tr class="never">
@@ -1133,1717 +2894,179 @@ table.table-condensed {
                     <td class="num">3</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' This is to be called in the \code{server} section of the Shiny app.</pre>
+                      <pre class="language-r">#' Custom `log_formatter` supporting atomic vectors. By default `glue::glue`</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">4</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">#' returns n-element vector when vector is provided as an input. This function</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">5</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' Function having very similar behavior as [logger::log_shiny_input_changes()] but adjusted for `teal` needs.</pre>
+                      <pre class="language-r">#' generates `"[elem1, elem2, ...]"` for atomic vectors. Function also handles</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">6</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">#' `NULL` value which normally causes `logger` to return empty character.</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">7</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' @param input passed from Shiny `server`</pre>
+                      <pre class="language-r">#' @name teal_logger_formatter</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">8</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' @param excluded_inputs (`character`) character vector of input names to exclude from logging</pre>
+                      <pre class="language-r">#' @return Nothing. Called for its side effects.</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">9</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param excluded_pattern (`character(1)`) `regexp` pattern of names to be excluded from logging</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">10</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param namespace (`character(1)`) the name of the namespace</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">11</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param session the Shiny session</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">12</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @examples</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">13</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' \dontrun{</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">14</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' library(shiny)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">15</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">16</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' ui &lt;- bootstrapPage(</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">17</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   numericInput("mean1", "mean1", 0),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">18</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   numericInput("mean2", "mean2", 0),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">19</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   numericInput("sd", "sd", 1),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">20</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   textInput("title", "title", "title"),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">21</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   textInput("foo", "This is not used at all, still gets logged", "foo"),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">22</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   passwordInput("password", "Password not to be logged", "secret"),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">23</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   plotOutput("plot")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">24</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">25</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">26</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' server &lt;- function(input, output) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">27</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   log_shiny_input_changes(input, excluded_inputs = "password", excluded_pattern = "mean")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">28</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">29</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   output$plot &lt;- renderPlot({</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">30</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'     hist(rnorm(1e3, input$mean, input$sd), main = input$title)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">31</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   })</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">32</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">33</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">34</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' shinyApp(ui = ui, server = server)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">35</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">36</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @export</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">37</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">log_shiny_input_changes &lt;- function(</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">38</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    input,</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">39</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    namespace = NA_character_,</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">40</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    excluded_inputs = character(),</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">41</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    excluded_pattern = "_width$",</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">42</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    session = shiny::getDefaultReactiveDomain()) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">43</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  stopifnot(inherits(input, "reactivevalues"))</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">44</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  stopifnot(is.character(namespace) &amp;&amp; length(namespace) == 1)</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">45</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  stopifnot(is.character(excluded_inputs))</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">46</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  stopifnot(is.character(excluded_pattern) &amp;&amp; length(excluded_pattern) == 1)</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">47</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  stopifnot(inherits(session, "session_proxy"))</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">48</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">49</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  if (logger::TRACE &gt; logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">50</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    # to avoid setting observers when not needed</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">51</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    return(invisible(NULL))</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">52</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">53</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">54</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  ns &lt;- session$ns(character(0))</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">55</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  reactive_input_list &lt;- shiny::reactive({</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">56</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    input_list &lt;- shiny::reactiveValuesToList(input)</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">57</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    input_list[!grepl(excluded_pattern, names(input_list))]</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">58</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  })</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">59</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  shiny_input_values &lt;- shiny::reactiveVal(shiny::isolate(reactive_input_list()))</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">60</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">61</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  shiny::observeEvent(reactive_input_list(), {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">62</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    old_input_values &lt;- shiny_input_values()</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">63</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    new_input_values &lt;- reactive_input_list()</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">64</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    names &lt;- intersect(names(old_input_values), names(new_input_values))</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">65</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    for (name in names) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">66</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      old &lt;- old_input_values[[name]]</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">67</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      new &lt;- new_input_values[[name]]</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">68</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      if (!identical(old, new)) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">69</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        message &lt;- trimws("{ns} Shiny input change detected in {name}: {old} -&gt; {new}")</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">70</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        logger::log_trace(message, namespace = namespace)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">71</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">72</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    }</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">73</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    shiny_input_values(new_input_values)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">74</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  })</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">75</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div id="R/utils.R" class="hidden">
-              <table class="table-condensed">
-                <tbody>
-                  <tr class="never">
-                    <td class="num">1</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Logs the basic information about the session.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">2</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">3</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return `invisible(NULL)`</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">4</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @export</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">5</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">6</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">log_system_info &lt;- function() {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">7</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  paste_pkgs_name_with_version &lt;- function(names) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">8</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    vapply(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">9</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      names,</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">10</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      FUN = function(name) paste(name, utils::packageVersion(name)),</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">11</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      FUN.VALUE = character(1),</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">12</td>
-                    <td class="coverage">2<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      USE.NAMES = FALSE</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">13</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">14</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">15</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">16</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  info &lt;- utils::sessionInfo()</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">17</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">18</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Platform: { info$platform }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">19</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Running under: { info$running }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">20</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("{ info$R.version$version.string }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">21</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Base packages: { paste(info$basePkgs, collapse = ' ') }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">22</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">23</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  # Paste package names and versions</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">24</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$otherPkgs)), collapse = ", ")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">25</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Other attached packages: { pasted_names_and_versions }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">26</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">27</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  pasted_names_and_versions &lt;- paste(paste_pkgs_name_with_version(names(info$loadedOnly)), collapse = ", ")</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">28</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_trace("Loaded packages: { pasted_names_and_versions }")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">29</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">30</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">31</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Get value from environmental variable or R option or default in that order if the previous one is missing.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">32</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param env_var_name (`character(1)`) name of the system variable</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">33</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param option_name (`character(1)`) name of the option</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">34</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param default optional, default value if both `Sys.getenv(env_var_name)` and `getOption(option_name)` are empty</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">35</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return an object of any class</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">36</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
                       <pre class="language-r">#' @keywords internal</pre>
                     </td>
                   </tr>
                   <tr class="never">
-                    <td class="num">37</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">get_val &lt;- function(env_var_name, option_name, default = NULL) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">38</td>
-                    <td class="coverage">25<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  value &lt;- Sys.getenv(env_var_name)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">39</td>
-                    <td class="coverage">21<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  if (is.null(value) || value == "") value &lt;- getOption(option_name, default = default)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">40</td>
-                    <td class="coverage">24<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  return(value)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">41</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div id="R/register_logger.R" class="hidden">
-              <table class="table-condensed">
-                <tbody>
-                  <tr class="never">
-                    <td class="num">1</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Registers a logger instance in a given logging namespace.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">2</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">3</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @description `r lifecycle::badge("experimental")`</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">4</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">5</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @note It's a thin wrapper around the `logger` package.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">6</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">7</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @details Creates a new logging namespace specified by the `namespace` argument.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">8</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' When the `layout` and `level` arguments are set to `NULL` (default), the function</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">9</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' gets the values for them from system variables or R options.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
                     <td class="num">10</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' When deciding what to use (either argument, an R option or system variable), the function</pre>
+                      <pre class="language-r">teal_logger_formatter &lt;- function() {</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="missed">
                     <td class="num">11</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">!</td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' picks the first non `NULL` value, checking in order:</pre>
+                      <pre class="language-r">  logger::log_formatter(</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="missed">
                     <td class="num">12</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">!</td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' 1. Function argument.</pre>
+                      <pre class="language-r">    function(..., .logcall = sys.call(), .topcall = sys.call(-1), .topenv = parent.frame()) {</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="missed">
                     <td class="num">13</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">!</td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' 2. System variable.</pre>
+                      <pre class="language-r">      logger::formatter_glue(</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">14</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' 3. R option.</pre>
+                      <pre class="language-r">        ...,</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="missed">
                     <td class="num">15</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">!</td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">        .logcall = .logcall, .topcall = .topcall, .topenv = .topenv,</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="missed">
                     <td class="num">16</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">!</td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' `layout` and `level` can be set as system environment variables, respectively:</pre>
+                      <pre class="language-r">        .transformer = teal_logger_transformer</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">17</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' * `teal.log_layout` as `TEAL.LOG_LAYOUT`,</pre>
+                      <pre class="language-r">      )</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">18</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' * `teal.log_level` as `TEAL.LOG_LEVEL`.</pre>
+                      <pre class="language-r">    }</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">19</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">  )</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">20</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' If neither the argument nor the environment variable is set the function uses the following R options:</pre>
+                      <pre class="language-r">}</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">21</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' * `options(teal.log_layout)`, which is passed to [logger::layout_glue_generator()],</pre>
+                      <pre class="language-r"></pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">22</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' * `options(teal.log_level)`, which is passed to [logger::log_threshold()]</pre>
+                      <pre class="language-r">#' @rdname teal_logger_formatter</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">23</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">#' @inheritParams glue::identity_transformer</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">24</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">teal_logger_transformer &lt;- function(text, envir) {</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="covered">
                     <td class="num">25</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">10<em>x</em></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' The logs are output to `stdout` by default. Check `logger` for more information</pre>
+                      <pre class="language-r">  value &lt;- glue::identity_transformer(text, envir)</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="covered">
                     <td class="num">26</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">10<em>x</em></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#' about layouts and how to use `logger`.</pre>
+                      <pre class="language-r">  expr &lt;- dput(value, file = nullfile())</pre>
                     </td>
                   </tr>
-                  <tr class="never">
+                  <tr class="covered">
                     <td class="num">27</td>
-                    <td class="coverage"></td>
+                    <td class="coverage">10<em>x</em></td>
                     <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
+                      <pre class="language-r">  deparse1(expr)</pre>
                     </td>
                   </tr>
                   <tr class="never">
                     <td class="num">28</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @seealso The package vignettes for more help: `browseVignettes("teal.logger")`.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">29</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">30</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param namespace (`character(1)` or `NA_character_`)\cr</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">31</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'  the name of the logging namespace</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">32</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param layout (`character(1)`)\cr</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">33</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'  the log layout. Alongside the standard logging variables provided by the `logging` package</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">34</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'  (e.g. `pid`) the `token` variable can be used which will write the last 8 characters of the</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">35</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'  shiny session token to the log.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">36</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @param level (`character(1)` or `call`) the log level. Can be passed as</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">37</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   character or one of the `logger`'s objects.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">38</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   See [logger::log_threshold()] for more information.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">39</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">40</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return `invisible(NULL)`</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">41</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @export</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">42</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">43</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @examples</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">44</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' options(teal.log_layout = "{msg}")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">45</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' options(teal.log_level = "ERROR")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">46</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' register_logger(namespace = "new_namespace")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">47</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' \donttest{</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">48</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' logger::log_info("Hello from new_namespace", namespace = "new_namespace")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">49</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">50</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">51</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">register_logger &lt;- function(namespace = NA_character_,</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">52</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">                            layout = NULL,</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">53</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">                            level = NULL) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">54</td>
-                    <td class="coverage">12<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  if (!((is.character(namespace) &amp;&amp; length(namespace) == 1) || is.na(namespace))) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">55</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    stop("namespace argument to register_logger must be a single string or NA.")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">56</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">57</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">58</td>
-                    <td class="coverage">11<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  if (is.null(level)) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">59</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    level &lt;- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">60</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">61</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">62</td>
-                    <td class="coverage">11<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  tryCatch(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">63</td>
-                    <td class="coverage">11<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    logger::log_threshold(level, namespace = namespace),</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">64</td>
-                    <td class="coverage">11<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    error = function(condition) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">65</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      stop(paste(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">66</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        "The log level passed to logger::log_threshold was invalid.",</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">67</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        "Make sure you pass or set the correct log level.",</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">68</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        "See `logger::log_threshold` for more information"</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">69</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      ))</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">70</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">71</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">72</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">73</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  if (is.null(layout)) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">74</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    layout &lt;- get_val(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">75</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      "TEAL.LOG_LAYOUT",</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">76</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      "teal.log_layout",</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">77</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      "[{level}] {format(time, \"%Y-%m-%d %H:%M:%OS4\")} pid:{pid} token:[{token}] {ans} {msg}"</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">78</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">79</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">80</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">81</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  tryCatch(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">82</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    expr = {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">83</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      logger::log_layout(layout_teal_glue_generator(layout), namespace = namespace)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">84</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      logger::log_appender(logger::appender_file(nullfile()), namespace = namespace)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">85</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      logger::log_success("Set up the logger", namespace = namespace)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">86</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      logger::log_appender(logger::appender_stdout, namespace = namespace)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">87</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    },</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">88</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    error = function(condition) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">89</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      stop(paste(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">90</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        "Error setting the layout of the logger.",</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">91</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        "Make sure you pass or set the correct log layout.",</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">92</td>
-                    <td class="coverage">1<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        "See `logger::layout` for more information."</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">93</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      ))</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">94</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">95</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">96</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">97</td>
-                    <td class="coverage">9<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  invisible(NULL)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">98</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">99</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">100</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">101</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Generate log layout function using common variables available via glue syntax including shiny session token</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">102</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">103</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @inheritParams register_logger</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">104</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return function taking `level` and `msg` arguments - keeping the original call creating the generator</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">105</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   in the generator attribute that is returned when calling log_layout for the currently used layout</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">106</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @details this function behaves in the same way as [logger::layout_glue_generator()]</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">107</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'   but allows the shiny session token (last 8 chars) to be included in the logging layout</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">108</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @keywords internal</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">109</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">layout_teal_glue_generator &lt;- function(layout) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">110</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  force(layout)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">111</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  structure(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">112</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    function(level, msg, namespace = NA_character_, .logcall = sys.call(), .topcall = sys.call(-1),</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">113</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">             .topenv = parent.frame()) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">114</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      if (!inherits(level, "loglevel")) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">115</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        stop("Invalid log level, see ?logger::log_levels")</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">116</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      }</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">117</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      with(logger::get_logger_meta_variables(</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">118</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        log_level = level, namespace = namespace, .logcall = .logcall, .topcall = .topcall,</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">119</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        .topenv = .topenv</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">120</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      ), {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">121</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        token &lt;- substr(shiny::getDefaultReactiveDomain()$token, 25, 32)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">122</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        if (length(token) == 0) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">123</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">          token &lt;- ""</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">124</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        }</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">125</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        glue::glue(layout)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">126</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      })</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">127</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    },</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">128</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    generator = deparse(match.call())</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">129</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">130</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
                       <pre class="language-r">}</pre>
@@ -3060,208 +3283,6 @@ table.table-condensed {
                   </tr>
                   <tr class="never">
                     <td class="num">30</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div id="R/log_formatter.R" class="hidden">
-              <table class="table-condensed">
-                <tbody>
-                  <tr class="never">
-                    <td class="num">1</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Teal `log_formatter`</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">2</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#'</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">3</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' Custom `log_formatter` supporting atomic vectors. By default `glue::glue`</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">4</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' returns n-element vector when vector is provided as an input. This function</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">5</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' generates `"[elem1, elem2, ...]"` for atomic vectors. Function also handles</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">6</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' `NULL` value which normally causes `logger` to return empty character.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">7</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @name teal_logger_formatter</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">8</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @return Nothing. Called for its side effects.</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">9</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @keywords internal</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">10</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">teal_logger_formatter &lt;- function() {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">11</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  logger::log_formatter(</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">12</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    function(..., .logcall = sys.call(), .topcall = sys.call(-1), .topenv = parent.frame()) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">13</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      logger::formatter_glue(</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">14</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        ...,</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">15</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        .logcall = .logcall, .topcall = .topcall, .topenv = .topenv,</pre>
-                    </td>
-                  </tr>
-                  <tr class="missed">
-                    <td class="num">16</td>
-                    <td class="coverage">!</td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">        .transformer = teal_logger_transformer</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">17</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">      )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">18</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">    }</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">19</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  )</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">20</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">}</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">21</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r"></pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">22</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @rdname teal_logger_formatter</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">23</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">#' @inheritParams glue::identity_transformer</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">24</td>
-                    <td class="coverage"></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">teal_logger_transformer &lt;- function(text, envir) {</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">25</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  value &lt;- glue::identity_transformer(text, envir)</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">26</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  expr &lt;- dput(value, file = nullfile())</pre>
-                    </td>
-                  </tr>
-                  <tr class="covered">
-                    <td class="num">27</td>
-                    <td class="coverage">10<em>x</em></td>
-                    <td class="col-sm-12">
-                      <pre class="language-r">  deparse1(expr)</pre>
-                    </td>
-                  </tr>
-                  <tr class="never">
-                    <td class="num">28</td>
                     <td class="coverage"></td>
                     <td class="col-sm-12">
                       <pre class="language-r">}</pre>
