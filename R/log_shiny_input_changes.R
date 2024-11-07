@@ -27,7 +27,7 @@
 #'   log_shiny_input_changes(input, excluded_inputs = "password", excluded_pattern = "mean")
 #'
 #'   output$plot <- renderPlot({
-#'     hist(rnorm(1e3, input$mean, input$sd), main = input$title)
+#'     hist(rnorm(1e3, input$mean1, input$sd), main = input$title)
 #'   })
 #' }
 #'
@@ -44,9 +44,12 @@ log_shiny_input_changes <- function(
   stopifnot(is.character(namespace) && length(namespace) == 1)
   stopifnot(is.character(excluded_inputs))
   stopifnot(is.character(excluded_pattern) && length(excluded_pattern) == 1)
-  stopifnot(inherits(session, "session_proxy"))
+  stopifnot(inherits(session, "session_proxy") || inherits(session, "ShinySession"))
 
-  if (logger::TRACE > logger::as.loglevel(get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO"))) {
+  # Log even if written in lower case or numeric values
+  log_level <- get_val("TEAL.LOG_LEVEL", "teal.log_level", "INFO")
+  if (!is.numeric(log_level)) log_level <- toupper(log_level)
+  if (logger::TRACE > logger::as.loglevel(log_level)) {
     # to avoid setting observers when not needed
     return(invisible(NULL))
   }
