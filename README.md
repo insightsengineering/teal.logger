@@ -53,8 +53,8 @@ logger::log_info("Hello from namespace1", namespace = "namespace1")
 logger::log_warn("Hello from namespace1", namespace = "namespace1")
 logger::log_success("Hello from namespace1", namespace = "namespace1")
 # [INFO] 2023-08-31 12:02:41.0678 pid:7128 token:[] namespace1 Hello from namespace1
-# [WARN] 2023-08-31 12:02:42.4872 pid:7128 token:[] namespace1 Hello from namespace
-# [SUCCESS] 2023-08-31 12:02:58.7155 pid:7128 token:[] namespace1 Hello from namespace
+# [WARN] 2023-08-31 12:02:42.4872 pid:7128 token:[] namespace1 Hello from namespace1
+# [SUCCESS] 2023-08-31 12:02:58.7155 pid:7128 token:[] namespace1 Hello from namespace1
 
 register_logger(namespace = "namespace2", level = "WARN")
 logger::log_info("Hello from namespace2", namespace = "namespace2")

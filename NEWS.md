@@ -1,4 +1,4 @@
-# teal.logger 0.3.0.9000
+# teal.logger 0.3.0.9001
 
 # teal.logger 0.3.0
 
