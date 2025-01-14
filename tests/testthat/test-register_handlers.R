@@ -1,12 +1,18 @@
 testthat::test_that("parse_logger_message correctly works on condition object", {
-  testthat::expect_identical(parse_logger_message(simpleMessage("foo")), "foo")
-  testthat::expect_identical(parse_logger_message(simpleWarning("foo")), "foo")
-  testthat::expect_identical(parse_logger_message(simpleError("foo")), "foo")
+  testthat::expect_identical(parse_logger_message(simpleMessage(message = "foo")), "foo")
+  testthat::expect_identical(parse_logger_message(simpleWarning(message = "foo")), "foo")
+  testthat::expect_identical(parse_logger_message(simpleError(message = "foo")), "foo")
+})
+
+testthat::test_that("parse_logger_message concatenates n-element message", {
+  testthat::expect_identical(parse_logger_message(simpleMessage(message = c("foo1", "foo2"))), "foo1\nfoo2")
+  testthat::expect_identical(parse_logger_message(simpleWarning(message = c("foo1", "foo2"))), "foo1\nfoo2")
+  testthat::expect_identical(parse_logger_message(simpleError(message = c("foo1", "foo2"))), "foo1\nfoo2")
 })
 
 testthat::test_that("parse_logger_message includes call on warnings and errors", {
-  testthat::expect_match(parse_logger_message(simpleWarning("foo", "bar")), "In .bar.: foo")
-  testthat::expect_match(parse_logger_message(simpleError("foo", "bar")), "In .bar.: foo")
+  testthat::expect_match(parse_logger_message(simpleWarning(message = "foo", call = "bar")), "In .bar.: foo")
+  testthat::expect_match(parse_logger_message(simpleError(message = "foo", call = "bar")), "In .bar.: foo")
 })
 
 testthat::test_that("parse_logger_message throws if not supported class of argument", {

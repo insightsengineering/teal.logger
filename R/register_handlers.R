@@ -129,7 +129,7 @@ parse_logger_message <- function(m) {
   if (type %in% c("error", "warning") && !is.null(m$call)) {
     msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
   }
-  return(msg)
+  return(paste(msg, collapse = "\n"))
 }
 
 register_handlers_possible <- function() {
