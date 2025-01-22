@@ -1,3 +1,5 @@
+# teal.logger 0.3.1.9000
+
 # teal.logger 0.3.1
 
 * Enhance `log_shiny_input_changes` to support log levels provided in lowercase or numeric values.
