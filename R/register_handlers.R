@@ -87,7 +87,7 @@ register_handler_type <- function(
         msg <- parse_logger_message(m)
 
         log_namespace <- registered_handlers_namespaces[[pkg_sys_fun_i]]
-        logger_fun(msg, namespace = log_namespace)
+        logger_fun(logger::skip_formatter(msg), namespace = log_namespace)
 
         # muffle restart
         if (isTRUE(as.logical(get_val("TEAL.LOG_MUFFLE", "teal.log_muffle", TRUE)))) {
