@@ -1,3 +1,5 @@
+# teal.logger 0.3.2.9000
+
 # teal.logger 0.3.2
 
 * Fixed a `glue` formatting issues when capturing errors, warnings or messages (#101).
