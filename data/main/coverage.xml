@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.692307692307692" branch-rate="0" lines-covered="117" lines-valid="169" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2024-12-09 22:39:59.895045">
+<coverage line-rate="0.692307692307692" branch-rate="0" lines-covered="117" lines-valid="169" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2025-02-14 05:48:28.795376">
   <sources>
     <source>/__w/teal.logger/teal.logger/teal.logger</source>
   </sources>
@@ -155,12 +155,12 @@
             </method>
             <method name="parse_logger_message" signature="" line-rate="1" branch-rate="0" complexity="0">
               <lines>
-                <line number="125" hits="8" branch="false"/>
-                <line number="127" hits="7" branch="false"/>
-                <line number="128" hits="7" branch="false"/>
-                <line number="129" hits="7" branch="false"/>
+                <line number="125" hits="11" branch="false"/>
+                <line number="127" hits="10" branch="false"/>
+                <line number="128" hits="10" branch="false"/>
+                <line number="129" hits="10" branch="false"/>
                 <line number="130" hits="4" branch="false"/>
-                <line number="132" hits="7" branch="false"/>
+                <line number="132" hits="10" branch="false"/>
               </lines>
             </method>
             <method name="register_handlers_possible" signature="" line-rate="1" branch-rate="0" complexity="0">
@@ -202,12 +202,12 @@
             <line number="118" hits="6" branch="false"/>
             <line number="119" hits="6" branch="false"/>
             <line number="121" hits="6" branch="false"/>
-            <line number="125" hits="8" branch="false"/>
-            <line number="127" hits="7" branch="false"/>
-            <line number="128" hits="7" branch="false"/>
-            <line number="129" hits="7" branch="false"/>
+            <line number="125" hits="11" branch="false"/>
+            <line number="127" hits="10" branch="false"/>
+            <line number="128" hits="10" branch="false"/>
+            <line number="129" hits="10" branch="false"/>
             <line number="130" hits="4" branch="false"/>
-            <line number="132" hits="7" branch="false"/>
+            <line number="132" hits="10" branch="false"/>
             <line number="136" hits="2" branch="false"/>
             <line number="137" hits="12" branch="false"/>
             <line number="138" hits="2" branch="false"/>
