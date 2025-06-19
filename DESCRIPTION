@@ -27,8 +27,8 @@ Imports:
     withr (>= 2.1.0)
 Suggests:
     knitr (>= 1.42),
-    rmarkdown (>= 2.23),
-    testthat (>= 3.2.1.1)
+    rmarkdown (>= 2.27),
+    testthat (>= 3.2.3)
 VignetteBuilder:
     knitr,
     rmarkdown
