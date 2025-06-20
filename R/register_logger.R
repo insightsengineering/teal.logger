@@ -110,13 +110,13 @@ layout_teal_glue_generator <- function(layout) {
   force(layout)
   structure(
     function(level, msg, namespace = NA_character_, .logcall = sys.call(), .topcall = sys.call(-1),
-             .topenv = parent.frame()) {
+             .topenv = parent.frame(), ...) {
       if (!inherits(level, "loglevel")) {
         stop("Invalid log level, see ?logger::log_levels")
       }
       with(logger::get_logger_meta_variables(
         log_level = level, namespace = namespace, .logcall = .logcall, .topcall = .topcall,
-        .topenv = .topenv
+        .topenv = .topenv, ...
       ), {
         token <- substr(shiny::getDefaultReactiveDomain()$token, 25, 32)
         if (length(token) == 0) {
