@@ -1,4 +1,6 @@
-# teal.logger 0.3.2.9001
+# teal.logger 0.4.0
+
+* Update `logger` version to latest release.
 
 # teal.logger 0.3.2
 
