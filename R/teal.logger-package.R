@@ -3,6 +3,3 @@
 #' @keywords internal
 "_PACKAGE"
 
-# To silence R CMD checks.
-#' @importFrom lifecycle badge
-NULL
