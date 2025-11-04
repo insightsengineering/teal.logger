@@ -45,3 +45,4 @@ coverage.*
 ^.revdeprefs\.yaml$
 ^revdep$
 .cursorrules
+.covrignore
