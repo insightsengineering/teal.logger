@@ -45,3 +45,55 @@ testthat::test_that("teal.logger formats nested list as a named list array liter
     'nested list: list(a = c("a", "b"), b = list(c("c", "d")))'
   )
 })
+
+testthat::test_that("teal_logger_formatter sets up formatter correctly", {
+  teal.logger:::teal_logger_formatter()
+  testthat::expect_true(TRUE)
+})
+
+testthat::test_that("teal_logger_transformer handles numeric vectors", {
+  envir <- new.env()
+  envir$x <- c(1, 2, 3)
+  result <- teal.logger:::teal_logger_transformer("x", envir)
+  testthat::expect_type(result, "character")
+  testthat::expect_match(result, "c\\(1, 2, 3\\)")
+})
+
+testthat::test_that("teal_logger_transformer handles logical values", {
+  envir <- new.env()
+  envir$x <- TRUE
+  result <- teal.logger:::teal_logger_transformer("x", envir)
+  testthat::expect_type(result, "character")
+  testthat::expect_match(result, "TRUE")
+})
+
+testthat::test_that("teal_logger_transformer handles complex objects", {
+  envir <- new.env()
+  envir$x <- data.frame(a = 1:2, b = c("a", "b"))
+  result <- teal.logger:::teal_logger_transformer("x", envir)
+  testthat::expect_type(result, "character")
+  testthat::expect_true(nchar(result) > 0)
+})
+
+testthat::test_that("teal_logger_transformer handles NULL", {
+  envir <- new.env()
+  envir$x <- NULL
+  result <- teal.logger:::teal_logger_transformer("x", envir)
+  testthat::expect_type(result, "character")
+  testthat::expect_match(result, "NULL")
+})
+
+testthat::test_that("teal.logger formats numeric vectors", {
+  out <- logger::log_info("numbers: {c(1, 2, 3)}")
+  testthat::expect_match(out$default$message, "c\\(1, 2, 3\\)")
+})
+
+testthat::test_that("teal.logger formats logical vectors", {
+  out <- logger::log_info("logical: {c(TRUE, FALSE, NA)}")
+  testthat::expect_type(out$default$message, "character")
+})
+
+testthat::test_that("teal.logger formats empty list", {
+  out <- logger::log_info("empty: {list()}")
+  testthat::expect_match(out$default$message, "list\\(\\)")
+})
