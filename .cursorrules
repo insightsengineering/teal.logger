@@ -1,0 +1,30 @@
+# Testing instructions
+
+## General Principles
+
+- **Only public functions are tested** - Internal/private functions should be tested via public methods.
+
+- **Utilities should be tested via public methods** - Don't test internal utilities directly.
+
+## Test Structure
+
+- **Short tests with precise information** - Please have a look at `test-module_teal.R` in the `teal` package to follow the convention found there.
+
+- **Each test should be encapsulated in single `test_that()/it()`** - Ideally one expectation per `test_that/it` unless test-description says otherwise.
+
+- **Use `testthat::describe()` and `testthat::it()` for grouping** - Group related tests together using `describe()` blocks, with individual tests as `it()` blocks.
+
+  Example:
+  ```r
+  testthat::describe("function_name behavior", {
+    testthat::it("does X correctly", {
+      testthat::expect_equal(function_name(), expected_value)
+    })
+    
+    testthat::it("handles Y correctly", {
+      testthat::expect_error(function_name(invalid_input))
+    })
+  })
+  ```
+
+- **Alternative: Use `testthat::test_that()`** - Can also use `test_that()` directly if preferred, following the same one-expectation-per-test principle.
