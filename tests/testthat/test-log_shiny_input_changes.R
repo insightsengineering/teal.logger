@@ -131,7 +131,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("detects and logs input changes with filtering and configuration", {
+  testthat::it("detects and logs input changes with filtering", {
     input <- structure(list(x = 1, y = 2, y_width = 3), class = "reactivevalues")
     mock_session <- structure(
       list(
@@ -200,10 +200,76 @@ testthat::describe("log_shiny_input_changes", {
                 )
                 testthat::expect_true(length(logged_messages) >= 2)
                 testthat::expect_true(all(grepl("Shiny input change", logged_messages)))
-                
-                logged_messages <<- character()
-                logged_namespaces <<- character()
-                call_count <<- 0
+              }
+            )
+          }
+        )
+      }
+    )
+  })
+
+  testthat::it("uses custom namespace when provided", {
+    input <- structure(list(x = 1, y = 2, y_width = 3), class = "reactivevalues")
+    mock_session <- structure(
+      list(
+        ns = function(prefix) {
+          if (length(prefix) == 0 || identical(prefix, character(0))) {
+            ""
+          } else {
+            function(id) paste(prefix, id, sep = "-")
+          }
+        }
+      ),
+      class = "ShinySession"
+    )
+    logged_messages <- character()
+    logged_namespaces <- character()
+    call_count <- 0
+    
+    testthat::with_mocked_bindings(
+      reactive = function(expr) {
+        expr_quoted <- substitute(expr)
+        function() {
+          call_count <<- call_count + 1
+          if (call_count == 1) {
+            list(x = 1, y = 2)
+          } else {
+            list(x = 10, y = 20)
+          }
+        }
+      },
+      reactiveValuesToList = function(x) {
+        if (inherits(x, "reactivevalues")) unclass(x) else x
+      },
+      reactiveVal = function(value) {
+        val <- value
+        function(new_val = NULL) {
+          if (!is.null(new_val)) val <<- new_val
+          val
+        }
+      },
+      isolate = function(expr) {
+        eval(substitute(expr), envir = parent.frame())
+      },
+      observeEvent = function(eventExpr, handlerExpr, ...) {
+        eval(substitute(handlerExpr), envir = parent.frame())
+        call_count <<- call_count + 1
+        eval(substitute(handlerExpr), envir = parent.frame())
+        invisible(NULL)
+      },
+      .package = "shiny",
+      code = {
+        testthat::with_mocked_bindings(
+          log_trace = function(msg, namespace = NA_character_, ...) {
+            logged_messages <<- c(logged_messages, msg)
+            logged_namespaces <<- c(logged_namespaces, namespace)
+            invisible(NULL)
+          },
+          .package = "logger",
+          code = {
+            withr::with_options(
+              list(teal.log_level = "TRACE"),
+              {
                 log_shiny_input_changes(
                   input = input,
                   namespace = "test_namespace",
@@ -214,9 +280,74 @@ testthat::describe("log_shiny_input_changes", {
                 if (length(logged_namespaces) > 0) {
                   testthat::expect_true(all(logged_namespaces == "test_namespace", na.rm = TRUE))
                 }
-                
-                logged_messages <<- character()
-                call_count <<- 0
+              }
+            )
+          }
+        )
+      }
+    )
+  })
+
+  testthat::it("respects excluded_inputs parameter", {
+    input <- structure(list(x = 1, y = 2, y_width = 3), class = "reactivevalues")
+    mock_session <- structure(
+      list(
+        ns = function(prefix) {
+          if (length(prefix) == 0 || identical(prefix, character(0))) {
+            ""
+          } else {
+            function(id) paste(prefix, id, sep = "-")
+          }
+        }
+      ),
+      class = "ShinySession"
+    )
+    logged_messages <- character()
+    call_count <- 0
+    
+    testthat::with_mocked_bindings(
+      reactive = function(expr) {
+        expr_quoted <- substitute(expr)
+        function() {
+          call_count <<- call_count + 1
+          if (call_count == 1) {
+            list(x = 1, y = 2)
+          } else {
+            list(x = 10, y = 20)
+          }
+        }
+      },
+      reactiveValuesToList = function(x) {
+        if (inherits(x, "reactivevalues")) unclass(x) else x
+      },
+      reactiveVal = function(value) {
+        val <- value
+        function(new_val = NULL) {
+          if (!is.null(new_val)) val <<- new_val
+          val
+        }
+      },
+      isolate = function(expr) {
+        eval(substitute(expr), envir = parent.frame())
+      },
+      observeEvent = function(eventExpr, handlerExpr, ...) {
+        eval(substitute(handlerExpr), envir = parent.frame())
+        call_count <<- call_count + 1
+        eval(substitute(handlerExpr), envir = parent.frame())
+        invisible(NULL)
+      },
+      .package = "shiny",
+      code = {
+        testthat::with_mocked_bindings(
+          log_trace = function(msg, namespace = NA_character_, ...) {
+            logged_messages <<- c(logged_messages, msg)
+            invisible(NULL)
+          },
+          .package = "logger",
+          code = {
+            withr::with_options(
+              list(teal.log_level = "TRACE"),
+              {
                 log_shiny_input_changes(
                   input = input,
                   excluded_inputs = c("x"),
@@ -231,7 +362,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("handles no changes, multiple changes, and message formatting", {
+  testthat::it("does not log when there are no changes", {
     input <- structure(list(x = 1, y = 2), class = "reactivevalues")
     mock_session <- structure(
       list(
@@ -285,33 +416,6 @@ testthat::describe("log_shiny_input_changes", {
               {
                 log_shiny_input_changes(input = input, session = mock_session)
                 testthat::expect_equal(log_calls, 0)
-                
-                call_count <- 0
-                log_calls <<- 0
-                testthat::with_mocked_bindings(
-                  reactive = function(expr) {
-                    expr_quoted <- substitute(expr)
-                    function() {
-                      call_count <<- call_count + 1
-                      if (call_count == 1) {
-                        list(x = 1, y = 2)
-                      } else {
-                        list(x = 10, y = 20)
-                      }
-                    }
-                  },
-                  observeEvent = function(eventExpr, handlerExpr, ...) {
-                    eval(substitute(handlerExpr), envir = parent.frame())
-                    call_count <<- call_count + 1
-                    eval(substitute(handlerExpr), envir = parent.frame())
-                    invisible(NULL)
-                  },
-                  .package = "shiny",
-                  code = {
-                    log_shiny_input_changes(input = input, session = mock_session)
-                    testthat::expect_true(log_calls >= 2)
-                  }
-                )
               }
             )
           }
