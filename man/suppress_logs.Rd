@@ -16,7 +16,7 @@ call within the \code{testthat::test_that} expression. To suppress logs for an e
 test file, call this function at the start of the file.
 }
 \examples{
-\dontshow{if (require("logger") && require("testthat")) (if (getRversion() >= "3.4") withAutoprint else force)(\{ # examplesIf}
+\dontshow{if (require("logger") && require("testthat")) withAutoprint(\{ # examplesIf}
 testthat::test_that("An example test", {
   suppress_logs()
   testthat::expect_true(TRUE)

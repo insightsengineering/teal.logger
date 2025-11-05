@@ -12,14 +12,14 @@ testthat::describe("log_shiny_input_changes", {
       ),
       class = "ShinySession"
     )
-    
+
     testthat::expect_error(
       log_shiny_input_changes(input = "not_reactivevalues"),
       regexp = "inherits.*reactivevalues"
     )
-    
+
     input <- structure(list(), class = "reactivevalues")
-    
+
     testthat::expect_error(
       log_shiny_input_changes(input = input, namespace = c("a", "b")),
       regexp = "is.character.*length"
@@ -60,7 +60,7 @@ testthat::describe("log_shiny_input_changes", {
       ),
       class = "ShinySession"
     )
-    
+
     withr::with_options(
       list(teal.log_level = "ERROR"),
       {
@@ -68,7 +68,7 @@ testthat::describe("log_shiny_input_changes", {
         testthat::expect_null(result)
       }
     )
-    
+
     withr::with_options(
       list(teal.log_level = logger::ERROR),
       {
@@ -76,7 +76,7 @@ testthat::describe("log_shiny_input_changes", {
         testthat::expect_null(result)
       }
     )
-    
+
     withr::with_envvar(
       list(TEAL.LOG_LEVEL = "ERROR"),
       {
@@ -84,7 +84,7 @@ testthat::describe("log_shiny_input_changes", {
         testthat::expect_null(result)
       }
     )
-    
+
     withr::with_options(
       list(teal.log_level = "INFO"),
       {
@@ -92,7 +92,7 @@ testthat::describe("log_shiny_input_changes", {
         testthat::expect_null(result)
       }
     )
-    
+
     empty_input <- structure(list(), class = "reactivevalues")
     withr::with_options(
       list(teal.log_level = "ERROR"),
@@ -101,7 +101,7 @@ testthat::describe("log_shiny_input_changes", {
         testthat::expect_null(result)
       }
     )
-    
+
     session_proxy <- structure(
       list(ns = function(prefix) {
         if (length(prefix) == 0 || identical(prefix, character(0))) "" else function(id) paste(prefix, id, sep = "-")
@@ -115,7 +115,7 @@ testthat::describe("log_shiny_input_changes", {
         testthat::expect_null(result)
       }
     )
-    
+
     withr::with_options(
       list(teal.log_level = "ERROR"),
       {
@@ -148,7 +148,7 @@ testthat::describe("log_shiny_input_changes", {
     logged_messages <- character()
     logged_namespaces <- character()
     call_count <- 0
-    
+
     testthat::with_mocked_bindings(
       reactive = function(expr) {
         expr_quoted <- substitute(expr)
@@ -225,7 +225,7 @@ testthat::describe("log_shiny_input_changes", {
     logged_messages <- character()
     logged_namespaces <- character()
     call_count <- 0
-    
+
     testthat::with_mocked_bindings(
       reactive = function(expr) {
         expr_quoted <- substitute(expr)
@@ -304,7 +304,7 @@ testthat::describe("log_shiny_input_changes", {
     )
     logged_messages <- character()
     call_count <- 0
-    
+
     testthat::with_mocked_bindings(
       reactive = function(expr) {
         expr_quoted <- substitute(expr)
@@ -377,7 +377,7 @@ testthat::describe("log_shiny_input_changes", {
       class = "ShinySession"
     )
     log_calls <- 0
-    
+
     testthat::with_mocked_bindings(
       reactive = function(expr) {
         expr_quoted <- substitute(expr)
