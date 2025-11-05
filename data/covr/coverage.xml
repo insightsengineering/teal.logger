@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.98780487804878" branch-rate="0" lines-covered="162" lines-valid="164" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2025-11-05 11:42:07.25693">
+<coverage line-rate="0.9375" branch-rate="0" lines-covered="165" lines-valid="176" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2025-11-05 12:34:12.696007">
   <sources>
     <source>/__w/teal.logger/teal.logger/teal.logger</source>
   </sources>
   <packages>
-    <package name="teal.logger" line-rate="0.98780487804878" branch-rate="0" complexity="0">
+    <package name="teal.logger" line-rate="0.9375" branch-rate="0" complexity="0">
       <classes>
+        <class name="log_formatter.R" filename="R/log_formatter.R" line-rate="0.25" branch-rate="0" complexity="0">
+          <methods>
+            <method name="teal_logger_formatter" signature="" line-rate="0" branch-rate="0" complexity="0">
+              <lines>
+                <line number="11" hits="0" branch="false"/>
+                <line number="12" hits="0" branch="false"/>
+                <line number="13" hits="0" branch="false"/>
+                <line number="14" hits="0" branch="false"/>
+                <line number="15" hits="0" branch="false"/>
+                <line number="16" hits="0" branch="false"/>
+                <line number="17" hits="0" branch="false"/>
+                <line number="18" hits="0" branch="false"/>
+                <line number="19" hits="0" branch="false"/>
+              </lines>
+            </method>
+            <method name="teal_logger_transformer" signature="" line-rate="1" branch-rate="0" complexity="0">
+              <lines>
+                <line number="25" hits="10" branch="false"/>
+                <line number="26" hits="10" branch="false"/>
+                <line number="27" hits="10" branch="false"/>
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="0" branch="false"/>
+            <line number="12" hits="0" branch="false"/>
+            <line number="13" hits="0" branch="false"/>
+            <line number="14" hits="0" branch="false"/>
+            <line number="15" hits="0" branch="false"/>
+            <line number="16" hits="0" branch="false"/>
+            <line number="17" hits="0" branch="false"/>
+            <line number="18" hits="0" branch="false"/>
+            <line number="19" hits="0" branch="false"/>
+            <line number="25" hits="10" branch="false"/>
+            <line number="26" hits="10" branch="false"/>
+            <line number="27" hits="10" branch="false"/>
+          </lines>
+        </class>
         <class name="log_shiny_input_changes.R" filename="R/log_shiny_input_changes.R" line-rate="1" branch-rate="0" complexity="0">
           <methods>
             <method name="log_shiny_input_changes" signature="" line-rate="1" branch-rate="0" complexity="0">
