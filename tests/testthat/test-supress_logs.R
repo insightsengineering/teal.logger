@@ -1,5 +1,5 @@
 testthat::describe("suppress_logs", {
-  testthat::it("suppresses logs for a single namespace", {
+  it("suppresses logs for a single namespace", {
     test_namespace <- "test_suppress_logs"
     logger::log_appender(logger::appender_file(nullfile()), namespace = test_namespace)
     logger::log_threshold(logger::INFO, namespace = test_namespace)
@@ -13,7 +13,7 @@ testthat::describe("suppress_logs", {
     testthat::expect_length(during_suppress, 0)
   })
 
-  testthat::it("suppresses logs for multiple namespaces", {
+  it("suppresses logs for multiple namespaces", {
     test_namespace1 <- "test_suppress_logs_1"
     test_namespace2 <- "test_suppress_logs_2"
 
@@ -34,7 +34,7 @@ testthat::describe("suppress_logs", {
     testthat::expect_length(suppress2, 0)
   })
 
-  testthat::it("suppresses logs for default namespace", {
+  it("suppresses logs for default namespace", {
     logger::log_appender(logger::appender_file(nullfile()))
     logger::log_threshold(logger::INFO)
 
@@ -47,7 +47,7 @@ testthat::describe("suppress_logs", {
     testthat::expect_length(suppress, 0)
   })
 
-  testthat::it("handles empty namespaces gracefully", {
+  it("handles empty namespaces gracefully", {
     testthat::expect_no_error(suppress_logs())
   })
 })

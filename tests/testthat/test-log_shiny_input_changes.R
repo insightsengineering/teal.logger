@@ -1,5 +1,5 @@
 testthat::describe("log_shiny_input_changes", {
-  testthat::it("validates all parameters correctly", {
+  it("validates all parameters correctly", {
     mock_session <- structure(
       list(
         ns = function(prefix) {
@@ -46,7 +46,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("returns early when log level is too low", {
+  it("returns early when log level is too low", {
     input <- structure(list(x = 1, y = "test"), class = "reactivevalues")
     mock_session <- structure(
       list(
@@ -131,7 +131,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("detects and logs input changes with filtering", {
+  it("detects and logs input changes with filtering", {
     input <- structure(list(x = 1, y = 2, y_width = 3), class = "reactivevalues")
     mock_session <- structure(
       list(
@@ -208,7 +208,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("uses custom namespace when provided", {
+  it("uses custom namespace when provided", {
     input <- structure(list(x = 1, y = 2, y_width = 3), class = "reactivevalues")
     mock_session <- structure(
       list(
@@ -288,7 +288,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("respects excluded_inputs parameter", {
+  it("respects excluded_inputs parameter", {
     input <- structure(list(x = 1, y = 2, y_width = 3), class = "reactivevalues")
     mock_session <- structure(
       list(
@@ -362,7 +362,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  testthat::it("does not log when there are no changes", {
+  it("does not log when there are no changes", {
     input <- structure(list(x = 1, y = 2), class = "reactivevalues")
     mock_session <- structure(
       list(

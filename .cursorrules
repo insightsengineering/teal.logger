@@ -12,16 +12,16 @@
 
 - **Each test should be encapsulated in single `test_that()/it()`** - Ideally one expectation per `test_that/it` unless test-description says otherwise.
 
-- **Use `testthat::describe()` and `testthat::it()` for grouping** - Group related tests together using `describe()` blocks, with individual tests as `it()` blocks.
+- **Use `testthat::describe()` and `it()` for grouping** - Group related tests together using `describe()` blocks, with individual tests as `it()` blocks.
 
   Example:
   ```r
   testthat::describe("function_name behavior", {
-    testthat::it("does X correctly", {
+    it("does X correctly", {
       testthat::expect_equal(function_name(), expected_value)
     })
     
-    testthat::it("handles Y correctly", {
+    it("handles Y correctly", {
       testthat::expect_error(function_name(invalid_input))
     })
   })
