@@ -35,19 +35,20 @@
 #' }
 #' @export
 log_shiny_input_changes <- function(
-    input,
-    namespace = NA_character_,
-    excluded_inputs = character(),
-    excluded_pattern = "_width$",
-    session = shiny::getDefaultReactiveDomain()) {
+  input,
+  namespace = NA_character_,
+  excluded_inputs = character(),
+  excluded_pattern = "_width$",
+  session = shiny::getDefaultReactiveDomain()
+) {
   stopifnot(inherits(input, "reactivevalues"))
   stopifnot(is.character(namespace) && length(namespace) == 1)
   stopifnot(is.character(excluded_inputs))
   stopifnot(is.character(excluded_pattern) && length(excluded_pattern) == 1)
   stopifnot(
     inherits(session, "session_proxy") ||
-    inherits(session, "ShinySession") ||
-    inherits(session, "MockShinySession")
+      inherits(session, "ShinySession") ||
+      inherits(session, "MockShinySession")
   )
 
   # Log even if written in lower case or numeric values
