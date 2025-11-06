@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE coverage SYSTEM "https://raw.githubusercontent.com/cobertura/cobertura/master/cobertura/src/site/htdocs/xml/coverage-04.dtd">
-<coverage line-rate="0.938888888888889" branch-rate="0" lines-covered="169" lines-valid="180" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2025-11-06 09:49:08.317515">
+<coverage line-rate="0.9375" branch-rate="0" lines-covered="165" lines-valid="176" branches-covered="0" branches-valid="0" complexity="0" version="3.6.4" timestamp="2025-11-06 11:32:15.909711">
   <sources>
     <source>/__w/teal.logger/teal.logger/teal.logger</source>
   </sources>
   <packages>
-    <package name="teal.logger" line-rate="0.938888888888889" branch-rate="0" complexity="0">
+    <package name="teal.logger" line-rate="0.9375" branch-rate="0" complexity="0">
       <classes>
         <class name="log_formatter.R" filename="R/log_formatter.R" line-rate="0.25" branch-rate="0" complexity="0">
           <methods>
@@ -54,20 +54,20 @@
                 <line number="46" hits="6" branch="false"/>
                 <line number="47" hits="5" branch="false"/>
                 <line number="48" hits="3" branch="false"/>
-                <line number="49" hits="3" branch="false"/>
-                <line number="50" hits="3" branch="false"/>
-                <line number="51" hits="3" branch="false"/>
-                <line number="52" hits="3" branch="false"/>
-                <line number="55" hits="2" branch="false"/>
-                <line number="56" hits="2" branch="false"/>
-                <line number="57" hits="2" branch="false"/>
+                <line number="51" hits="2" branch="false"/>
+                <line number="52" hits="2" branch="false"/>
+                <line number="53" hits="2" branch="false"/>
+                <line number="55" hits="1" branch="false"/>
+                <line number="58" hits="1" branch="false"/>
                 <line number="59" hits="1" branch="false"/>
+                <line number="60" hits="1" branch="false"/>
+                <line number="61" hits="1" branch="false"/>
                 <line number="62" hits="1" branch="false"/>
                 <line number="63" hits="1" branch="false"/>
-                <line number="64" hits="1" branch="false"/>
                 <line number="65" hits="1" branch="false"/>
                 <line number="66" hits="1" branch="false"/>
                 <line number="67" hits="1" branch="false"/>
+                <line number="68" hits="1" branch="false"/>
                 <line number="69" hits="1" branch="false"/>
                 <line number="70" hits="1" branch="false"/>
                 <line number="71" hits="1" branch="false"/>
@@ -78,10 +78,6 @@
                 <line number="76" hits="1" branch="false"/>
                 <line number="77" hits="1" branch="false"/>
                 <line number="78" hits="1" branch="false"/>
-                <line number="79" hits="1" branch="false"/>
-                <line number="80" hits="1" branch="false"/>
-                <line number="81" hits="1" branch="false"/>
-                <line number="82" hits="1" branch="false"/>
               </lines>
             </method>
           </methods>
@@ -91,20 +87,20 @@
             <line number="46" hits="6" branch="false"/>
             <line number="47" hits="5" branch="false"/>
             <line number="48" hits="3" branch="false"/>
-            <line number="49" hits="3" branch="false"/>
-            <line number="50" hits="3" branch="false"/>
-            <line number="51" hits="3" branch="false"/>
-            <line number="52" hits="3" branch="false"/>
-            <line number="55" hits="2" branch="false"/>
-            <line number="56" hits="2" branch="false"/>
-            <line number="57" hits="2" branch="false"/>
+            <line number="51" hits="2" branch="false"/>
+            <line number="52" hits="2" branch="false"/>
+            <line number="53" hits="2" branch="false"/>
+            <line number="55" hits="1" branch="false"/>
+            <line number="58" hits="1" branch="false"/>
             <line number="59" hits="1" branch="false"/>
+            <line number="60" hits="1" branch="false"/>
+            <line number="61" hits="1" branch="false"/>
             <line number="62" hits="1" branch="false"/>
             <line number="63" hits="1" branch="false"/>
-            <line number="64" hits="1" branch="false"/>
             <line number="65" hits="1" branch="false"/>
             <line number="66" hits="1" branch="false"/>
             <line number="67" hits="1" branch="false"/>
+            <line number="68" hits="1" branch="false"/>
             <line number="69" hits="1" branch="false"/>
             <line number="70" hits="1" branch="false"/>
             <line number="71" hits="1" branch="false"/>
@@ -115,10 +111,6 @@
             <line number="76" hits="1" branch="false"/>
             <line number="77" hits="1" branch="false"/>
             <line number="78" hits="1" branch="false"/>
-            <line number="79" hits="1" branch="false"/>
-            <line number="80" hits="1" branch="false"/>
-            <line number="81" hits="1" branch="false"/>
-            <line number="82" hits="1" branch="false"/>
           </lines>
         </class>
         <class name="register_handlers.R" filename="R/register_handlers.R" line-rate="1" branch-rate="0" complexity="0">
