@@ -39,7 +39,7 @@ testthat::describe("log_shiny_input_changes", {
     )
   })
 
-  it("returns early when log level is too low", {
+  it("returns early when log level is lower than TRACE", {
     shiny::withReactiveDomain(
       domain = shiny::MockShinySession$new(),
       {
