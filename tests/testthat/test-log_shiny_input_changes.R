@@ -39,63 +39,73 @@ testthat::describe("log_shiny_input_changes", {
   })
 
   it("displays log in the shiny-module when its input changes and teal.log_level <= TRACE", {
-    shiny::withReactiveDomain(
-      domain = shiny::MockShinySession$new(),
-      {
-        input <- shiny::reactiveValues(x = 1, y = 2)
-        logged_messages <- character()
-
-        testthat::with_mocked_bindings(
-          log_trace = function(msg, namespace = NA_character_, ...) {
-            logged_messages <<- c(logged_messages, msg)
-            invisible(NULL)
-          },
-          .package = "logger",
-          code = {
-            withr::with_options(list(teal.log_level = "TRACE"), {
-              log_shiny_input_changes(input = input)
-              # Simulate input change
-              input$x <- 10
-              input$y <- 20
-              # Trigger reactive flush using internal function
-              shiny:::flushReact()
-            })
-          }
-        )
-
-        testthat::expect_true(length(logged_messages) > 0)
-        testthat::expect_true(any(grepl("Shiny input change", logged_messages)))
+    logged_messages <- character()
+    log_appender_capture <- function(...) {
+      args_list <- list(...)
+      if (length(args_list) > 0) {
+        msg <- args_list[[1]]
+        logged_messages <<- c(logged_messages, as.character(msg))
       }
-    )
+      invisible(NULL)
+    }
+
+    mod <- function(id) {
+      shiny::moduleServer(id, function(input, output, session) {
+        log_shiny_input_changes(input = input, namespace = "test")
+      })
+    }
+
+    withr::with_options(list(teal.log_level = "TRACE"), {
+      register_logger(namespace = "test")
+      logger::log_appender(log_appender_capture, namespace = "test")
+
+      shiny::testServer(
+        mod,
+        args = list(id = "test"),
+        expr = {
+          session$setInputs(test_input = 1)
+          session$setInputs(test_input = 2)
+        }
+      )
+
+      testthat::expect_true(length(logged_messages) > 0)
+      testthat::expect_true(any(grepl("[TRACE]", logged_messages)))
+      testthat::expect_true(any(grepl("Shiny input change detected in.*test_input", logged_messages)))
+      testthat::expect_true(any(grepl("1 -> 2", logged_messages)))
+    })
   })
 
   it("doesn't display log in shiny-module when its input changes and teal.log_level > TRACE", {
-    shiny::withReactiveDomain(
-      domain = shiny::MockShinySession$new(),
-      {
-        input <- shiny::reactiveValues(x = 1, y = 2)
-        logged_messages <- character()
-
-        testthat::with_mocked_bindings(
-          log_trace = function(msg, namespace = NA_character_, ...) {
-            logged_messages <<- c(logged_messages, msg)
-            invisible(NULL)
-          },
-          .package = "logger",
-          code = {
-            withr::with_options(list(teal.log_level = "INFO"), {
-              log_shiny_input_changes(input = input)
-              # Simulate input change
-              input$x <- 10
-              input$y <- 20
-              # Trigger reactive flush using internal function
-              shiny:::flushReact()
-            })
-          }
-        )
-
-        testthat::expect_length(logged_messages, 0)
+    logged_messages <- character()
+    log_appender_capture <- function(...) {
+      args_list <- list(...)
+      if (length(args_list) > 0) {
+        msg <- args_list[[1]]
+        logged_messages <<- c(logged_messages, as.character(msg))
       }
-    )
+      invisible(NULL)
+    }
+
+    mod <- function(id) {
+      shiny::moduleServer(id, function(input, output, session) {
+        log_shiny_input_changes(input = input, namespace = "test")
+      })
+    }
+
+    withr::with_options(list(teal.log_level = "INFO"), {
+      register_logger(namespace = "test")
+      logger::log_appender(log_appender_capture, namespace = "test")
+
+      shiny::testServer(
+        mod,
+        args = list(id = "test"),
+        expr = {
+          session$setInputs(test_input = 1)
+          session$setInputs(test_input = 2)
+        }
+      )
+
+      testthat::expect_length(logged_messages, 0)
+    })
   })
 })
