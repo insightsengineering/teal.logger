@@ -20,7 +20,16 @@ suppress_logs <- function() {
   withr::defer_parent(
     mapply(
       function(appender, namespace) {
-        logger::log_appender(eval(appender), namespace)
+        # Evaluate appender in logger namespace environment to ensure logger functions are available
+        logger_env <- asNamespace("logger")
+        appender_eval <- tryCatch(
+          eval(appender, envir = logger_env),
+          error = function(e) {
+            # Fallback: try evaluating in current environment if logger_env doesn't work
+            eval(appender)
+          }
+        )
+        logger::log_appender(appender_eval, namespace)
       },
       old_log_appenders,
       old_log_namespaces
