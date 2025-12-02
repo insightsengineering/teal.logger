@@ -1,3 +1,5 @@
+# teal.logger 0.4.1.9000
+
 # teal.logger 0.4.1
 
 * Improved unit test and increased code coverage (#116).
