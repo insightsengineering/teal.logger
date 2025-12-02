@@ -1,4 +1,7 @@
-# teal.logger 0.4.0.9002
+# teal.logger 0.4.1
+
+* Improved unit test and increased code coverage (#116).
+* Removed `lifecycle` dependency.
 
 # teal.logger 0.4.0
 
