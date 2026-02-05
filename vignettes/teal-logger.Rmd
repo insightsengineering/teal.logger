@@ -193,6 +193,6 @@ logger::log_error("This is an ERROR level log from my module", namespace = "my_m
 logger::log_warn("This is a WARN level log from my module", namespace = "my_module") # 300
 logger::log_success("This is a SUCCESS level log from my module", namespace = "my_module") # 350
 logger::log_info("This is an INFO level log from my module", namespace = "my_module") # 400
-logger::log_info("This is a DEBUG level log from my module", namespace = "my_module") # 500
+logger::log_debug("This is a DEBUG level log from my module", namespace = "my_module") # 500
 logger::log_trace("This is a TRACE level log from my module", namespace = "my_module") # 600
 ```
