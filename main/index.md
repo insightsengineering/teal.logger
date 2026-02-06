@@ -46,12 +46,14 @@ logs using the `logger` package.
 ## Installation
 
 ``` r
+
 install.packages('teal.logger')
 ```
 
 Alternatively, you might want to use the development version.
 
 ``` r
+
 # install.packages("pak")
 pak::pak("insightsengineering/teal.logger")
 ```
@@ -65,6 +67,7 @@ article, which provides multiple examples of code implementation.
 Below is the showcase of the example usage
 
 ``` r
+
 library(teal.logger)
 register_logger(namespace = "namespace1", level = "INFO")
 logger::log_info("Hello from namespace1", namespace = "namespace1")

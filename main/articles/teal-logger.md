@@ -43,6 +43,7 @@ You can modify this behavior in four distinct ways:
 1.  Using the `logger` interface.
 
 ``` r
+
 library(teal.logger)
 register_logger("my_namespace")
 logger::log_threshold(logger::TRACE, namespace = "my_namespace")
@@ -51,6 +52,7 @@ logger::log_threshold(logger::TRACE, namespace = "my_namespace")
 Customizing `teal`’s logging level:
 
 ``` r
+
 library(teal.logger)
 logger::log_threshold(logger::TRACE, namespace = "teal")
 ```
@@ -59,6 +61,7 @@ logger::log_threshold(logger::TRACE, namespace = "teal")
     [`register_logger()`](https://insightsengineering.github.io/teal.logger/reference/register_logger.md).
 
 ``` r
+
 library(teal.logger)
 register_logger("my_namespace", level = logger::TRACE)
 ```
@@ -66,6 +69,7 @@ register_logger("my_namespace", level = logger::TRACE)
 Customizing `teal`’s logging level:
 
 ``` r
+
 library(teal.logger)
 register_logger(namespace = "teal", level = logger::TRACE)
 ```
@@ -73,6 +77,7 @@ register_logger(namespace = "teal", level = logger::TRACE)
 3.  Setting an environment variable.
 
 ``` r
+
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
 register_logger("my_namespace")
@@ -81,6 +86,7 @@ register_logger("my_namespace")
 Customizing `teal`’s logging level:
 
 ``` r
+
 Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
 library(teal.logger)
 ```
@@ -88,6 +94,7 @@ library(teal.logger)
 4.  Setting an `option`.
 
 ``` r
+
 library(teal.logger)
 options(teal.log_level = logger::TRACE)
 register_logger("my_namespace")
@@ -96,6 +103,7 @@ register_logger("my_namespace")
 Customizing `teal`’s logging level:
 
 ``` r
+
 options(teal.log_level = logger::TRACE)
 library(teal.logger)
 ```
@@ -108,11 +116,13 @@ ensure you modify the variable before loading the library.
 Example below:
 
 ``` r
+
 # library(teal)
 # Sys.setenv(TEAL.LOG_LEVEL = "TRACE") # won't change the default
 ```
 
 ``` r
+
 # Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
 # library(teal)
 # will change the default because teal is attached after changing the variable
@@ -126,6 +136,7 @@ package. E.g. this will change the defaults of `teal.logger`. Replace
 `teal.logger` with the name of the package you want to change.
 
 ``` r
+
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LEVEL = "TRACE")
 register_logger('teal.logger')
@@ -147,6 +158,7 @@ can modify this behavior in four distinct ways:
 1.  Using the `logger` interface.
 
 ``` r
+
 library(teal.logger)
 register_logger("my_namespace")
 logger::log_layout("{level} {msg}", namespace = "my_namespace")
@@ -155,6 +167,7 @@ logger::log_layout("{level} {msg}", namespace = "my_namespace")
 Customizing `teal`’s logging layout:
 
 ``` r
+
 library(teal.logger)
 logger::log_layout("{level} {msg}", namespace = "teal")
 ```
@@ -163,6 +176,7 @@ logger::log_layout("{level} {msg}", namespace = "teal")
     [`register_logger()`](https://insightsengineering.github.io/teal.logger/reference/register_logger.md).
 
 ``` r
+
 library(teal.logger)
 register_logger("my_namespace", layout = "{level} {msg}")
 ```
@@ -170,6 +184,7 @@ register_logger("my_namespace", layout = "{level} {msg}")
 Customizing `teal`’s logging layout:
 
 ``` r
+
 library(teal.logger)
 register_logger(namespace = "teal", layout = "{level} {msg}")
 ```
@@ -177,6 +192,7 @@ register_logger(namespace = "teal", layout = "{level} {msg}")
 3.  Setting an environment variable.
 
 ``` r
+
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
 register_logger("my_namespace")
@@ -185,6 +201,7 @@ register_logger("my_namespace")
 Customizing `teal`’s logging layout:
 
 ``` r
+
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
 library(teal.logger)
 ```
@@ -192,6 +209,7 @@ library(teal.logger)
 4.  Setting an `option`.
 
 ``` r
+
 library(teal.logger)
 options(teal.log_layout = "{level} {msg}")
 register_logger("my_namespace")
@@ -200,6 +218,7 @@ register_logger("my_namespace")
 Customizing `teal`’s logging layout:
 
 ``` r
+
 options(teal.log_layout = "{level} {msg}")
 library(teal.logger)
 ```
@@ -212,11 +231,13 @@ the variable prior to loading the library.
 Example below:
 
 ``` r
+
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}") # won't change the default
 ```
 
 ``` r
+
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
 library(teal.logger)
 # will change the default because teal is attached after changing the variable
@@ -230,6 +251,7 @@ package. E.g. this will change the defaults of `teal.logger`. Replace
 `teal.logger` with the name of the package you want to change.
 
 ``` r
+
 library(teal.logger)
 Sys.setenv(TEAL.LOG_LAYOUT = "{level} {msg}")
 register_logger('teal.logger')
@@ -250,6 +272,7 @@ For instance, to redirect `teal`’s logs to `stderr` using `logger`’s
 API:
 
 ``` r
+
 library(teal.logger)
 logger::log_appender(logger::appender_stderr, namespace = "teal")
 ```
@@ -272,6 +295,7 @@ implying that logs with a level above `level = 400` won’t appear in
 `stdout`.
 
 ``` r
+
 library(teal.logger)
 register_logger(namespace = "my_module")
 
@@ -279,6 +303,6 @@ logger::log_error("This is an ERROR level log from my module", namespace = "my_m
 logger::log_warn("This is a WARN level log from my module", namespace = "my_module") # 300
 logger::log_success("This is a SUCCESS level log from my module", namespace = "my_module") # 350
 logger::log_info("This is an INFO level log from my module", namespace = "my_module") # 400
-logger::log_info("This is a DEBUG level log from my module", namespace = "my_module") # 500
+logger::log_debug("This is a DEBUG level log from my module", namespace = "my_module") # 500
 logger::log_trace("This is a TRACE level log from my module", namespace = "my_module") # 600
 ```
