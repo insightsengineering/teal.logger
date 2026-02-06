@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="log_formatter" timestamp="2026-02-06T10:28:17Z" hostname="31adaee9704a" tests="9" skipped="0" failures="0" errors="0" time="0.107">
+  <testsuite name="log_formatter" timestamp="2026-02-06T10:28:27Z" hostname="28c44703ee21" tests="9" skipped="0" failures="0" errors="0" time="0.107">
     <testcase time="0.01" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_NULL_asis"/>
-    <testcase time="0.0379999999999999" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_character_0_asis"/>
+    <testcase time="0.0369999999999999" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_character_0_asis"/>
     <testcase time="0.024" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_NA_asis"/>
     <testcase time="0.00600000000000001" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_numeric_scalar_asis"/>
     <testcase time="0.00600000000000001" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_character_scalar_asis"/>
-    <testcase time="0.005" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_vector_as_an_array_literal"/>
+    <testcase time="0.00600000000000001" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_vector_as_an_array_literal"/>
     <testcase time="0.00600000000000001" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_two_vectors_in_a_single_log"/>
     <testcase time="0.00600000000000001" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_list_as_a_list_literal"/>
     <testcase time="0.00600000000000001" classname="log_formatter" name="teal.logger_formatting_via_public_API_formats_nested_list_as_a_named_list_array_literal"/>
   </testsuite>
-  <testsuite name="log_shiny_input_changes" timestamp="2026-02-06T10:28:17Z" hostname="31adaee9704a" tests="12" skipped="0" failures="0" errors="0" time="0.218">
+  <testsuite name="log_shiny_input_changes" timestamp="2026-02-06T10:28:27Z" hostname="28c44703ee21" tests="12" skipped="0" failures="0" errors="0" time="0.221">
     <testcase time="0.027" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
     <testcase time="0.026" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
     <testcase time="0.00600000000000001" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
-    <testcase time="0.005" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
-    <testcase time="0.00499999999999989" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
-    <testcase time="0.01" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
-    <testcase time="0.005" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
-    <testcase time="0.112" classname="log_shiny_input_changes" name="log_shiny_input_changes_displays_log_in_the_shiny_module_when_its_input_changes_and_teal.log_level_TRACE"/>
+    <testcase time="0.00599999999999989" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
+    <testcase time="0.00600000000000001" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
+    <testcase time="0.00900000000000001" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
+    <testcase time="0.00600000000000001" classname="log_shiny_input_changes" name="log_shiny_input_changes_validates_all_parameters_correctly"/>
+    <testcase time="0.113" classname="log_shiny_input_changes" name="log_shiny_input_changes_displays_log_in_the_shiny_module_when_its_input_changes_and_teal.log_level_TRACE"/>
     <testcase time="0.003" classname="log_shiny_input_changes" name="log_shiny_input_changes_displays_log_in_the_shiny_module_when_its_input_changes_and_teal.log_level_TRACE"/>
     <testcase time="0.003" classname="log_shiny_input_changes" name="log_shiny_input_changes_displays_log_in_the_shiny_module_when_its_input_changes_and_teal.log_level_TRACE"/>
     <testcase time="0.003" classname="log_shiny_input_changes" name="log_shiny_input_changes_displays_log_in_the_shiny_module_when_its_input_changes_and_teal.log_level_TRACE"/>
     <testcase time="0.013" classname="log_shiny_input_changes" name="log_shiny_input_changes_doesn_t_display_log_in_shiny_module_when_its_input_changes_and_teal.log_level_TRACE"/>
   </testsuite>
-  <testsuite name="register_handlers" timestamp="2026-02-06T10:28:17Z" hostname="31adaee9704a" tests="23" skipped="0" failures="0" errors="0" time="0.118">
-    <testcase time="0.022" classname="register_handlers" name="parse_logger_message_correctly_works_on_condition_object"/>
-    <testcase time="0.002" classname="register_handlers" name="parse_logger_message_correctly_works_on_condition_object"/>
+  <testsuite name="register_handlers" timestamp="2026-02-06T10:28:28Z" hostname="28c44703ee21" tests="23" skipped="0" failures="0" errors="0" time="0.113">
+    <testcase time="0.019" classname="register_handlers" name="parse_logger_message_correctly_works_on_condition_object"/>
     <testcase time="0.001" classname="register_handlers" name="parse_logger_message_correctly_works_on_condition_object"/>
-    <testcase time="0.004" classname="register_handlers" name="parse_logger_message_concatenates_n_element_message"/>
+    <testcase time="0.002" classname="register_handlers" name="parse_logger_message_correctly_works_on_condition_object"/>
+    <testcase time="0.003" classname="register_handlers" name="parse_logger_message_concatenates_n_element_message"/>
     <testcase time="0.001" classname="register_handlers" name="parse_logger_message_concatenates_n_element_message"/>
     <testcase time="0.001" classname="register_handlers" name="parse_logger_message_concatenates_n_element_message"/>
     <testcase time="0.004" classname="register_handlers" name="parse_logger_message_includes_call_on_warnings_and_errors"/>
@@ -45,37 +45,37 @@
     <testcase time="0.00700000000000001" classname="register_handlers" name="register_handlers_modifies_global_handlers"/>
     <testcase time="0.001" classname="register_handlers" name="register_handlers_modifies_global_handlers"/>
     <testcase time="0.00700000000000001" classname="register_handlers" name="register_handlers_has_no_effect_if_called_multiple_times"/>
-    <testcase time="0.00199999999999989" classname="register_handlers" name="register_handlers_has_no_effect_if_called_multiple_times"/>
+    <testcase time="0.00099999999999989" classname="register_handlers" name="register_handlers_has_no_effect_if_called_multiple_times"/>
     <testcase time="0.003" classname="register_handlers" name="register_handlers_has_no_effect_if_called_multiple_times"/>
     <testcase time="0.005" classname="register_handlers" name="register_handlers_is_not_called_when_within_a_try_block"/>
     <testcase time="0.005" classname="register_handlers" name="register_handlers_is_not_called_when_within_a_withCallingHandlers_block"/>
   </testsuite>
-  <testsuite name="register_logger" timestamp="2026-02-06T10:28:17Z" hostname="31adaee9704a" tests="10" skipped="0" failures="0" errors="0" time="0.25">
-    <testcase time="0.00800000000000001" classname="register_logger" name="register_logger_accepts_a_character"/>
+  <testsuite name="register_logger" timestamp="2026-02-06T10:28:28Z" hostname="28c44703ee21" tests="10" skipped="0" failures="0" errors="0" time="0.134">
+    <testcase time="0.00900000000000001" classname="register_logger" name="register_logger_accepts_a_character"/>
     <testcase time="0.00600000000000001" classname="register_logger" name="register_logger_throws_an_error_when_passed_an_invalid_namespace_argument"/>
-    <testcase time="0.109" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
-    <testcase time="0.01" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
-    <testcase time="0.00900000000000012" classname="register_logger" name="An_additional_logging_namespace_is_created_after_register_logger"/>
-    <testcase time="0.0069999999999999" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_layout"/>
-    <testcase time="0.0700000000000001" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_level"/>
-    <testcase time="0.00499999999999989" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_either_log_layout_or_log_level_and_valid_options_are_set"/>
-    <testcase time="0.00600000000000001" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_arguments_options_are_not_set_and_the_system_variables_are_set_to_valid_value"/>
-    <testcase time="0.02" classname="register_logger" name="log_system_info_does_not_throw_an_error"/>
+    <testcase time="0.0369999999999999" classname="register_logger" name="register_logger_throws_an_error_when_setting_the_logger_layout_fails"/>
+    <testcase time="0.00900000000000012" classname="register_logger" name="register_logger_throws_an_error_if_the_passed_log_level_is_invalid"/>
+    <testcase time="0.00800000000000001" classname="register_logger" name="An_additional_logging_namespace_is_created_after_register_logger"/>
+    <testcase time="0.00499999999999989" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_layout"/>
+    <testcase time="0.00500000000000012" classname="register_logger" name="register_logger_does_not_throw_if_passed_a_correct_logger_level"/>
+    <testcase time="0.00600000000000001" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_either_log_layout_or_log_level_and_valid_options_are_set"/>
+    <testcase time="0.03" classname="register_logger" name="register_logger_does_not_throw_if_passed_NULL_to_arguments_options_are_not_set_and_the_system_variables_are_set_to_valid_value"/>
+    <testcase time="0.0189999999999999" classname="register_logger" name="log_system_info_does_not_throw_an_error"/>
   </testsuite>
-  <testsuite name="supress_logs" timestamp="2026-02-06T10:28:17Z" hostname="31adaee9704a" tests="5" skipped="0" failures="0" errors="0" time="0.026">
+  <testsuite name="supress_logs" timestamp="2026-02-06T10:28:28Z" hostname="28c44703ee21" tests="5" skipped="0" failures="0" errors="0" time="0.026">
     <testcase time="0.00800000000000001" classname="supress_logs" name="suppress_logs_suppresses_logs_for_a_single_namespace"/>
     <testcase time="0.004" classname="supress_logs" name="suppress_logs_suppresses_logs_for_multiple_namespaces"/>
     <testcase time="0.00100000000000011" classname="supress_logs" name="suppress_logs_suppresses_logs_for_multiple_namespaces"/>
-    <testcase time="0.00800000000000001" classname="supress_logs" name="suppress_logs_suppresses_logs_for_default_namespace"/>
-    <testcase time="0.00499999999999989" classname="supress_logs" name="suppress_logs_handles_empty_namespaces_gracefully"/>
+    <testcase time="0.0089999999999999" classname="supress_logs" name="suppress_logs_suppresses_logs_for_default_namespace"/>
+    <testcase time="0.004" classname="supress_logs" name="suppress_logs_handles_empty_namespaces_gracefully"/>
   </testsuite>
-  <testsuite name="utils" timestamp="2026-02-06T10:28:17Z" hostname="31adaee9704a" tests="7" skipped="0" failures="0" errors="0" time="0.033">
-    <testcase time="0.00900000000000012" classname="utils" name="get_val_correctly_reads_envvar"/>
-    <testcase time="0.00499999999999989" classname="utils" name="get_val_uses_option_if_envvar_is_missing"/>
+  <testsuite name="utils" timestamp="2026-02-06T10:28:28Z" hostname="28c44703ee21" tests="7" skipped="0" failures="0" errors="0" time="0.091">
+    <testcase time="0.00800000000000001" classname="utils" name="get_val_correctly_reads_envvar"/>
+    <testcase time="0.00300000000000011" classname="utils" name="get_val_uses_option_if_envvar_is_missing"/>
     <testcase time="0.004" classname="utils" name="get_val_uses_envvar_if_both_envvar_and_option_are_available"/>
-    <testcase time="0.004" classname="utils" name="get_val_uses_the_default_if_both_envvar_and_option_are_missing"/>
-    <testcase time="0.004" classname="utils" name="get_val_default_accepts_different_types_of_data"/>
-    <testcase time="0.00100000000000011" classname="utils" name="get_val_default_accepts_different_types_of_data"/>
-    <testcase time="0.00599999999999978" classname="utils" name="get_val_default_accepts_different_types_of_data"/>
+    <testcase time="0.00299999999999989" classname="utils" name="get_val_uses_the_default_if_both_envvar_and_option_are_missing"/>
+    <testcase time="0.00299999999999989" classname="utils" name="get_val_default_accepts_different_types_of_data"/>
+    <testcase time="0.002" classname="utils" name="get_val_default_accepts_different_types_of_data"/>
+    <testcase time="0.0680000000000001" classname="utils" name="get_val_default_accepts_different_types_of_data"/>
   </testsuite>
 </testsuites>
