@@ -1,6 +1,7 @@
-# teal.logger 0.4.1.9004
-* Fix in vignette
+# teal.logger 0.4.2
 
+* Fix in vignette.
+* Update maintainer.
 
 # teal.logger 0.4.1
 
