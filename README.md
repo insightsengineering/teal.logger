@@ -67,17 +67,3 @@ logger::log_error("Hello from namespace2", namespace = "namespace2")
 ## Getting help
 
 If you encounter a bug or you have a feature request - please file an issue. For questions, discussions and staying up to date, please use the "teal" channel in the [`pharmaverse` slack workspace](https://pharmaverse.slack.com).
-
-## Stargazers and Forkers
-
-### Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/insightsengineering/teal.logger.svg)](https://starchart.cc/insightsengineering/teal.logger)
-
-### Stargazers
-
-[![Stargazers repo roster for @insightsengineering/teal.logger](http://reporoster.com/stars/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/stargazers)
-
-### Forkers
-
-[![Forkers repo roster for @insightsengineering/teal.logger](http://reporoster.com/forks/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/network/members)
