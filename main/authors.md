@@ -2,7 +2,10 @@
 
 ## Authors
 
-- **Dawid Kaledkowski**. Author, maintainer.
+- **Dawid Kaledkowski**. Author.
+  [](https://orcid.org/0000-0001-9533-457X)
+
+- **Dony Unardi**. Reviewer, maintainer.
 
 - **Konrad Pagacz**. Author.
 
@@ -14,13 +17,13 @@ Source:
 [`DESCRIPTION`](https://github.com/insightsengineering/teal.logger/blob/main/DESCRIPTION)
 
 Kaledkowski D, Pagacz K (2026). *teal.logger: Logging Setup for the
-'teal' Family of Packages*. R package version 0.4.1.9004,
+'teal' Family of Packages*. R package version 0.4.2.9000,
 <https://insightsengineering.github.io/teal.logger/>.
 
     @Manual{,
       title = {teal.logger: Logging Setup for the 'teal' Family of Packages},
       author = {Dawid Kaledkowski and Konrad Pagacz},
       year = {2026},
-      note = {R package version 0.4.1.9004},
+      note = {R package version 0.4.2.9000},
       url = {https://insightsengineering.github.io/teal.logger/},
     }

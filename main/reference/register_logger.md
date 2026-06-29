@@ -12,12 +12,12 @@ register_logger(namespace = NA_character_, layout = NULL, level = NULL)
 
 - namespace:
 
-  (`character(1)` or `NA_character_`)  
+  (`character(1)` or `NA_character_`)\
   the name of the logging namespace
 
 - layout:
 
-  (`character(1)`)  
+  (`character(1)`)\
   the log layout. Alongside the standard logging variables provided by
   the `logging` package (e.g. `pid`) the `token` variable can be used
   which will write the last 8 characters of the shiny session token to

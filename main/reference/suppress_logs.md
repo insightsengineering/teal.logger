@@ -23,5 +23,5 @@ testthat::test_that("An example test", {
   suppress_logs()
   testthat::expect_true(TRUE)
 })
-#> Test passed with 1 success 🎊.
+#> Test passed with 1 success 🥇.
 ```

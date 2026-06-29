@@ -1,8 +1,13 @@
 # Changelog
 
-## teal.logger 0.4.1.9004
+## teal.logger 0.4.2.9000
 
-- Fix in vignette
+## teal.logger 0.4.2
+
+CRAN release: 2026-06-29
+
+- Fix in vignette.
+- Update maintainer.
 
 ## teal.logger 0.4.1
 
