@@ -1,3 +1,5 @@
+# teal.logger 0.4.2.9000
+
 # teal.logger 0.4.2
 
 * Fix in vignette.

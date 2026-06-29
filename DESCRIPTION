@@ -1,7 +1,7 @@
 Package: teal.logger
 Title: Logging Setup for the 'teal' Family of Packages
-Version: 0.4.2
-Date: 2026-06-26
+Version: 0.4.2.9000
+Date: 2026-06-29
 Authors@R: c(
     person("Dawid", "Kaledkowski", , "dawid.kaledkowski@roche.com", role = "aut",
            comment = c(ORCID = "0000-0001-9533-457X")),
@@ -36,8 +36,8 @@ VignetteBuilder:
 Config/Needs/verdepcheck: tidyverse/glue, daroczig/logger, rstudio/shiny,
     r-lib/withr, yihui/knitr, rstudio/rmarkdown, r-lib/testthat
 Config/Needs/website: insightsengineering/nesttemplate
+Config/roxygen2/version: 8.0.0
 Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-Config/roxygen2/version: 8.0.0
