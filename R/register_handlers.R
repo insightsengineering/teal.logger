@@ -43,9 +43,10 @@ register_handlers <- function(namespace, package = namespace) {
 }
 
 register_handler_type <- function(
-    namespace,
-    package = namespace,
-    type = c("error", "warning", "message")) {
+  namespace,
+  package = namespace,
+  type = c("error", "warning", "message")
+) {
   if (!(is.character(namespace) && length(namespace) == 1 && !is.na(namespace))) {
     stop("namespace argument must be a single string.")
   }
