@@ -1,5 +1,5 @@
 ---
-url: https://insightsengineering.github.io/teal.logger
+url: https://pharmaverse.github.io/teal.logger
 
 template:
   package: nesttemplate
@@ -20,7 +20,7 @@ navbar:
         href: unit-test-report-non-cran/
     github:
       icon: fa-github
-      href: https://github.com/insightsengineering/teal.logger
+      href: https://github.com/pharmaverse/teal.logger
 
 reference:
   - title: "Log utilities"

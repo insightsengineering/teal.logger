@@ -7,22 +7,22 @@
 [![Last Month Downloads](http://cranlogs.r-pkg.org/badges/last-month/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
 [![Last Week Downloads](http://cranlogs.r-pkg.org/badges/last-week/teal.logger?color=green)](https://cran.r-project.org/package=teal.logger)
 
-[![Check 🛠](https://github.com/insightsengineering/teal.logger/actions/workflows/check.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/main/unit-test-report/)
-[![Docs 📚](https://github.com/insightsengineering/teal.logger/actions/workflows/docs.yaml/badge.svg)](https://insightsengineering.github.io/teal.logger/)
-[![Code Coverage 📔](https://raw.githubusercontent.com/insightsengineering/teal.logger/_xml_coverage_reports/data/main/badge.svg)](https://insightsengineering.github.io/teal.logger/main/coverage-report/)
+[![Check 🛠](https://github.com/pharmaverse/teal.logger/actions/workflows/check.yaml/badge.svg)](https://pharmaverse.github.io/teal.logger/main/unit-test-report/)
+[![Docs 📚](https://github.com/pharmaverse/teal.logger/actions/workflows/docs.yaml/badge.svg)](https://pharmaverse.github.io/teal.logger/)
+[![Code Coverage 📔](https://raw.githubusercontent.com/pharmaverse/teal.logger/_xml_coverage_reports/data/main/badge.svg)](https://pharmaverse.github.io/teal.logger/main/coverage-report/)
 
-![GitHub forks](https://img.shields.io/github/forks/insightsengineering/teal.logger?style=social)
-![GitHub repo stars](https://img.shields.io/github/stars/insightsengineering/teal.logger?style=social)
+![GitHub forks](https://img.shields.io/github/forks/pharmaverse/teal.logger?style=social)
+![GitHub repo stars](https://img.shields.io/github/stars/pharmaverse/teal.logger?style=social)
 
-![GitHub commit activity](https://img.shields.io/github/commit-activity/m/insightsengineering/teal.logger)
-![GitHub contributors](https://img.shields.io/github/contributors/insightsengineering/teal.logger)
-![GitHub last commit](https://img.shields.io/github/last-commit/insightsengineering/teal.logger)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/insightsengineering/teal.logger)
-![GitHub repo size](https://img.shields.io/github/repo-size/insightsengineering/teal.logger)
-![GitHub language count](https://img.shields.io/github/languages/count/insightsengineering/teal.logger)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/pharmaverse/teal.logger)
+![GitHub contributors](https://img.shields.io/github/contributors/pharmaverse/teal.logger)
+![GitHub last commit](https://img.shields.io/github/last-commit/pharmaverse/teal.logger)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/pharmaverse/teal.logger)
+![GitHub repo size](https://img.shields.io/github/repo-size/pharmaverse/teal.logger)
+![GitHub language count](https://img.shields.io/github/languages/count/pharmaverse/teal.logger)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![Current Version](https://img.shields.io/github/r-package/v/insightsengineering/teal.logger/main?color=purple\&label=package%20version)](https://github.com/insightsengineering/teal.logger/tree/main)
-[![Open Issues](https://img.shields.io/github/issues-raw/insightsengineering/teal.logger?color=red\&label=open%20issues)](https://github.com/insightsengineering/teal.logger/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
+[![Current Version](https://img.shields.io/github/r-package/v/pharmaverse/teal.logger/main?color=purple\&label=package%20version)](https://github.com/pharmaverse/teal.logger/tree/main)
+[![Open Issues](https://img.shields.io/github/issues-raw/pharmaverse/teal.logger?color=red\&label=open%20issues)](https://github.com/pharmaverse/teal.logger/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)
 <!-- end badges -->
 
 `teal.logger` is an `R` package providing a unified setup for generating logs using the `logger` package.
@@ -37,12 +37,12 @@ Alternatively, you might want to use the development version.
 
 ```r
 # install.packages("pak")
-pak::pak("insightsengineering/teal.logger")
+pak::pak("pharmaverse/teal.logger")
 ```
 
 ## Usage
 
-To understand how to use this package, please refer to the [Getting Started](https://insightsengineering.github.io/teal.logger/latest-tag/articles/teal-logger.html) article, which provides multiple examples of code implementation.
+To understand how to use this package, please refer to the [Getting Started](https://pharmaverse.github.io/teal.logger/latest-tag/articles/teal-logger.html) article, which provides multiple examples of code implementation.
 
 Below is the showcase of the example usage
 
@@ -68,16 +68,3 @@ logger::log_error("Hello from namespace2", namespace = "namespace2")
 
 If you encounter a bug or you have a feature request - please file an issue. For questions, discussions and staying up to date, please use the "teal" channel in the [`pharmaverse` slack workspace](https://pharmaverse.slack.com).
 
-## Stargazers and Forkers
-
-### Stargazers over time
-
-[![Stargazers over time](https://starchart.cc/insightsengineering/teal.logger.svg)](https://starchart.cc/insightsengineering/teal.logger)
-
-### Stargazers
-
-[![Stargazers repo roster for @insightsengineering/teal.logger](http://reporoster.com/stars/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/stargazers)
-
-### Forkers
-
-[![Forkers repo roster for @insightsengineering/teal.logger](http://reporoster.com/forks/insightsengineering/teal.logger)](https://github.com/insightsengineering/teal.logger/network/members)

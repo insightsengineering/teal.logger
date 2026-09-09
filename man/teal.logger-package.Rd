@@ -11,9 +11,9 @@ Logging Setup for the \code{teal} Family of Packages.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://insightsengineering.github.io/teal.logger/}
-  \item \url{https://github.com/insightsengineering/teal.logger/}
-  \item Report bugs at \url{https://github.com/insightsengineering/teal.logger/issues}
+  \item \url{https://pharmaverse.github.io/teal.logger/}
+  \item \url{https://github.com/pharmaverse/teal.logger/}
+  \item Report bugs at \url{https://github.com/pharmaverse/teal.logger/issues}
 }
 
 }
@@ -22,6 +22,7 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Dawid Kaledkowski \email{dawid.kaledkowski@roche.com}
   \item Konrad Pagacz
 }
 

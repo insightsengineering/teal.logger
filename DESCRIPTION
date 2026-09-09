@@ -12,9 +12,9 @@ Description: Utilizing the 'logger' framework to record events within a
     namespaces, hierarchical logging, various log destinations,
     vectorization, and more.
 License: Apache License 2.0
-URL: https://insightsengineering.github.io/teal.logger/,
-    https://github.com/insightsengineering/teal.logger/
-BugReports: https://github.com/insightsengineering/teal.logger/issues
+URL: https://pharmaverse.github.io/teal.logger/,
+    https://github.com/pharmaverse/teal.logger/
+BugReports: https://github.com/pharmaverse/teal.logger/issues
 Depends:
     R (>= 3.6)
 Imports:
@@ -38,4 +38,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.3
+Config/roxygen2/version: 8.1.0
