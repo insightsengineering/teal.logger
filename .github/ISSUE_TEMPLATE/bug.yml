@@ -33,7 +33,7 @@ body:
     id: code-of-conduct
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct.](https://pharmaverse.github.io/teal/latest-tag/CODE_OF_CONDUCT.html)
+      description: By submitting this issue, you agree to follow our [Code of Conduct.](https://pharmaverse.github.io/teal.logger/latest-tag/CODE_OF_CONDUCT.html)
       options:
         - label: I agree to follow this project's Code of Conduct.
           required: true
