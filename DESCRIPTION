@@ -14,9 +14,9 @@ Description: Utilizing the 'logger' framework to record events within a
     namespaces, hierarchical logging, various log destinations,
     vectorization, and more.
 License: Apache License 2.0
-URL: https://insightsengineering.github.io/teal.logger/,
-    https://github.com/insightsengineering/teal.logger/
-BugReports: https://github.com/insightsengineering/teal.logger/issues
+URL: https://pharmaverse.github.io/teal.logger/,
+    https://github.com/pharmaverse/teal.logger/
+BugReports: https://github.com/pharmaverse/teal.logger/issues
 Depends:
     R (>= 3.6)
 Imports:
@@ -36,7 +36,7 @@ VignetteBuilder:
 Config/Needs/verdepcheck: tidyverse/glue, daroczig/logger, rstudio/shiny,
     r-lib/withr, yihui/knitr, rstudio/rmarkdown, r-lib/testthat
 Config/Needs/website: insightsengineering/nesttemplate
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.0
 Encoding: UTF-8
 Language: en-US
 LazyData: true

@@ -43,9 +43,10 @@ register_handlers <- function(namespace, package = namespace) {
 }
 
 register_handler_type <- function(
-    namespace,
-    package = namespace,
-    type = c("error", "warning", "message")) {
+  namespace,
+  package = namespace,
+  type = c("error", "warning", "message")
+) {
   if (!(is.character(namespace) && length(namespace) == 1 && !is.na(namespace))) {
     stop("namespace argument must be a single string.")
   }
@@ -129,7 +130,7 @@ parse_logger_message <- function(m) {
   if (type %in% c("error", "warning") && !is.null(m$call)) {
     msg <- sprintf("In %s: %s", sQuote(paste0(format(m$call), collapse = "")), msg)
   }
-  return(paste(msg, collapse = "\n"))
+  paste(msg, collapse = "\n")
 }
 
 register_handlers_possible <- function() {
@@ -138,5 +139,5 @@ register_handlers_possible <- function() {
       return(FALSE)
     }
   }
-  return(TRUE) # nocov: impossible to cover because testthat introduces it's own handlers and we want to return FALSE
+  TRUE # nocov: impossible to cover because testthat introduces it's own handlers and we want to return FALSE
 }
